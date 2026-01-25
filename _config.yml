@@ -8,7 +8,7 @@ url: ""
 baseurl: ""
 repository: # GitHub username/repo-name e.g. "username/repository-name"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: "/assets/images/logo.svg" # path of logo image to display in the masthead
+logo: # path of logo image to display in the masthead
 masthead_title: "AIBC 뉴스룸"
 breadcrumbs: true # true, false (default)
 words_per_minute: 200
