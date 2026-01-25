@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.utils import RunLogger, ensure_dir, get_run_date, read_json
-from src.writer import SimpleWriter
+from src.writer import SimpleWriter, validate_writer_output
 
 
 def main() -> None:
@@ -30,6 +30,7 @@ def main() -> None:
         logger.log("Writer start")
         payload = read_json(collector_path)
         body, summary = SimpleWriter().write(payload)
+        validate_writer_output(body)
         writer_markdown.write_text(body, encoding="utf-8")
         writer_meta.write_text(
             json.dumps({"summary": summary}, ensure_ascii=False, indent=2),
