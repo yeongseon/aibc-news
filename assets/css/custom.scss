@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Dark skin - Custom overrides
+   ========================================================================== */
+
+/* Colors */
+$background-color: #1a1a1a !default;
+$footer-background-color: #000000 !important;
+$text-color: #ffffff !default;
+
+/* Footer specific overrides */
+.page__footer {
+  background: #000000 !important;
+  color: #ffffff;
+}
+
+.page__footer-follow .social-icons {
+  li a {
+    color: inherit;
+  }
+}
+
+.page__footer-copyright {
+  color: rgba(255, 255, 255, 0.8);
+}

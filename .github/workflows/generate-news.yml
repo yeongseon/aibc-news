@@ -1,0 +1,46 @@
+name: Generate Daily News
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 자정 (UTC)
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install requests
+        pip install openai  # AI API 사용 시
+    
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+    
+    - name: Generate news posts
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        DEPLOY_ENABLED: false
+      run: |
+        python scripts/generate_news.py
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _posts/
+        git diff --quiet && git diff --staged --quiet || git commit -m "자동 뉴스 업데이트: $(date +'%Y-%m-%d %H:%M')"
+        git push

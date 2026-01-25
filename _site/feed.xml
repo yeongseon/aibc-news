@@ -5,8 +5,8 @@
     <description>AI 기술로 생성되는 일일 뉴스 브리핑 서비스</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Jan 2026 17:34:44 +0900</pubDate>
-    <lastBuildDate>Sun, 25 Jan 2026 17:34:44 +0900</lastBuildDate>
+    <pubDate>Sun, 25 Jan 2026 17:51:21 +0900</pubDate>
+    <lastBuildDate>Sun, 25 Jan 2026 17:51:21 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     <language>ko-KR</language>
     <copyright>© 2026 AIBC 뉴스룸</copyright>

@@ -1,0 +1,19 @@
+---
+---
+
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
+/* Footer background override */
+.page__footer {
+  background: #000000 !important;
+  color: #ffffff;
+}
+
+.page__footer-follow .social-icons li a {
+  color: inherit;
+}
+
+.page__footer-copyright {
+  color: rgba(255, 255, 255, 0.8);
+}
