@@ -1,5 +1,7 @@
 import json
 import os
+import time
+from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -43,3 +45,16 @@ class RunLogger:
             else line,
             encoding="utf-8",
         )
+
+    @contextmanager
+    def step(self, name: str):
+        start = time.time()
+        self.log(f"{name} start")
+        try:
+            yield
+            elapsed = time.time() - start
+            self.log(f"{name} done ({elapsed:.2f}s)")
+        except Exception as exc:  # noqa: BLE001
+            elapsed = time.time() - start
+            self.log(f"{name} failed ({elapsed:.2f}s): {exc}")
+            raise
