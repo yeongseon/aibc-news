@@ -5,7 +5,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.collector import LocalCollector
+import os
+
+from src.collector import LocalCollector, collect_with_retry
 from src.utils import RunLogger, ensure_dir, get_run_date, write_json
 
 
@@ -21,7 +23,14 @@ def main() -> None:
 
     try:
         logger.log("Collector start")
-        payload = LocalCollector().collect(run_date)
+        sleep_seconds = int(os.environ.get("RETRY_SLEEP_SECONDS", "600"))
+        payload = collect_with_retry(
+            LocalCollector(),
+            run_date,
+            retries=2,
+            sleep_seconds=sleep_seconds,
+            logger=logger,
+        )
         write_json(collector_path, payload)
         logger.log("Collector done")
     except Exception as exc:  # noqa: BLE001
