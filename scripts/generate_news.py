@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AIBC 뉴스룸 AI 뉴스 생성 스크립트
+AIBC News AI 뉴스 생성 스크립트
 매일 자동으로 뉴스를 생성하고 Jekyll 포스트로 저장합니다.
 """
 
@@ -77,7 +77,7 @@ excerpt: "{news_data['excerpt']}"
 
 ---
 
-*이 기사는 AIBC 뉴스룸 AI 시스템에 의해 자동 생성되었습니다.*
+*이 기사는 AIBC News AI 시스템에 의해 자동 생성되었습니다.*
 """
         
         filepath = self.posts_dir / filename
@@ -99,7 +99,7 @@ excerpt: "{news_data['excerpt']}"
         return topics[:3]
     
     def run(self):
-        print("🤖 AIBC 뉴스 생성 시작...")
+        print("🤖 AIBC News 생성 시작...")
         
         topics = self.fetch_trending_topics()
         created_posts = []

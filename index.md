@@ -1,5 +1,5 @@
 ---
-title: "AIBC 뉴스룸"
+title: "AIBC News"
 layout: home
 author_profile: false
 classes: wide

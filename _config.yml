@@ -1,5 +1,5 @@
 # Site Settings
-title: AIBC 뉴스룸
+title: AIBC News
 title_separator: "|"
 subtitle: "AI가 전하는 일일 브리핑"
 description: "AI 기술로 생성되는 일일 뉴스 브리핑 서비스"
@@ -9,7 +9,7 @@ baseurl: ""
 repository: # GitHub username/repo-name e.g. "username/repository-name"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead
-masthead_title: "AIBC 뉴스룸"
+masthead_title: "AIBC News"
 breadcrumbs: true # true, false (default)
 words_per_minute: 200
 
@@ -37,7 +37,7 @@ analytics:
 
 # Author
 author:
-  name: "AIBC 뉴스룸"
+  name: "AIBC News"
   bio: "AI 기술로 매일 전하는 기술, 생활, 날씨 소식"
   location: "서울, 대한민국"
   links:
