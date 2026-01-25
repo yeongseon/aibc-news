@@ -16,6 +16,9 @@ on:
 jobs:
   daily-brief:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +44,7 @@ jobs:
           RUN_DATE: ${{ inputs.run_date }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          python scripts/run_collector.py
+          python3 scripts/run_collector.py
 
       - name: Writer
         env:
@@ -49,20 +52,20 @@ jobs:
           RUN_DATE: ${{ inputs.run_date }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          python scripts/run_writer.py
+          python3 scripts/run_writer.py
 
       - name: Quality gate
         env:
           RUN_DATE: ${{ inputs.run_date }}
         run: |
-          python scripts/run_quality_gate.py
+          python3 scripts/run_quality_gate.py
 
       - name: Publisher
         env:
           RUN_DATE: ${{ inputs.run_date }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          python scripts/run_publisher.py
+          python3 scripts/run_publisher.py
 
       - name: Commit and push outputs
         if: ${{ inputs.dry_run != 'true' }}
