@@ -21,8 +21,7 @@ def main() -> None:
         logger.log("Collector skip: already exists")
         return
 
-    try:
-        logger.log("Collector start")
+    with logger.step("Collector"):
         sleep_seconds = int(os.environ.get("RETRY_SLEEP_SECONDS", "600"))
         payload = collect_with_retry(
             LocalCollector(),
@@ -32,10 +31,6 @@ def main() -> None:
             logger=logger,
         )
         write_json(collector_path, payload)
-        logger.log("Collector done")
-    except Exception as exc:  # noqa: BLE001
-        logger.log(f"Collector failed: {exc}")
-        raise
 
 
 if __name__ == "__main__":

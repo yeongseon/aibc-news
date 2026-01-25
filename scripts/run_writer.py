@@ -26,8 +26,7 @@ def main() -> None:
     if not collector_path.exists():
         raise SystemExit("Collector output missing")
 
-    try:
-        logger.log("Writer start")
+    with logger.step("Writer"):
         payload = read_json(collector_path)
         body, summary = SimpleWriter().write(payload)
         validate_writer_output(body)
@@ -36,10 +35,6 @@ def main() -> None:
             json.dumps({"summary": summary}, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        logger.log("Writer done")
-    except Exception as exc:  # noqa: BLE001
-        logger.log(f"Writer failed: {exc}")
-        raise
 
 
 if __name__ == "__main__":
