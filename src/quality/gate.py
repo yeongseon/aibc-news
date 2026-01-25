@@ -24,8 +24,12 @@ class QualityGate:
 
         items = self._split_items(markdown)
         item_count = len(items)
+        payload_items = collector_payload.get("items", [])
         if not (MIN_ITEMS <= item_count <= MAX_ITEMS):
             reasons.append(f"항목 수({item_count})가 기준({MIN_ITEMS}-{MAX_ITEMS})을 벗어남")
+
+        if payload_items and item_count != len(payload_items):
+            reasons.append("Writer 항목 수와 Collector 항목 수 불일치")
 
         for idx, item in enumerate(items, start=1):
             sentence_count = self._count_sentences(item)
@@ -38,12 +42,18 @@ class QualityGate:
         if any(word in markdown for word in FORBIDDEN_WORDS):
             reasons.append("금칙어 포함")
 
+        for idx, item in enumerate(payload_items, start=1):
+            sources_list = item.get("sources", [])
+            if not sources_list:
+                reasons.append(f"항목 {idx} 출처가 없음")
+
         sources = self._collect_sources(collector_payload)
-        if len(sources) < MIN_SOURCES_TOTAL:
-            reasons.append(f"출처 수({len(sources)})가 최소 기준({MIN_SOURCES_TOTAL}) 미달")
+        total_sources = sum(sources.values())
+        if total_sources < MIN_SOURCES_TOTAL:
+            reasons.append(f"출처 수({total_sources})가 최소 기준({MIN_SOURCES_TOTAL}) 미달")
 
         if sources:
-            max_source_ratio = max(sources.values()) / len(sources)
+            max_source_ratio = max(sources.values()) / total_sources
             if max_source_ratio > MAX_SINGLE_SOURCE_RATIO:
                 reasons.append("동일 출처 비중 50% 초과")
 
@@ -53,8 +63,9 @@ class QualityGate:
             "metrics": {
                 "char_count": char_count,
                 "item_count": item_count,
-                "sources_total": sum(sources.values()),
+                "sources_total": total_sources,
                 "sources_unique": len(sources),
+                "collector_item_count": len(payload_items),
             },
         }
 
