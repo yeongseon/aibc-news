@@ -16,6 +16,9 @@ on:
 jobs:
   daily-brief:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -31,13 +34,38 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run pipeline
+      # Environment variables:
+      # - RUN_DATE: YYYY-MM-DD (optional)
+      # - DRY_RUN: true/false (optional)
+      # - OPENAI_API_KEY: required when Writer uses LLM API
+      - name: Collector
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           RUN_DATE: ${{ inputs.run_date }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          python scripts/run_daily_brief.py
+          python3 scripts/run_collector.py
+
+      - name: Writer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RUN_DATE: ${{ inputs.run_date }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          python3 scripts/run_writer.py
+
+      - name: Quality gate
+        env:
+          RUN_DATE: ${{ inputs.run_date }}
+        run: |
+          python3 scripts/run_quality_gate.py
+
+      - name: Publisher
+        env:
+          RUN_DATE: ${{ inputs.run_date }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          python3 scripts/run_publisher.py
 
       - name: Commit and push outputs
         if: ${{ inputs.dry_run != 'true' }}
