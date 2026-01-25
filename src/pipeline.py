@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from typing import Dict, Any
 
-from .collector import LocalCollector
+from .collector import LocalCollector, collect_with_retry
 from .publisher import Publisher
 from .quality import QualityGate
 from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
@@ -26,7 +26,12 @@ def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
     gate = QualityGate()
     publisher = Publisher()
 
-    payload = _collect_with_retry(collector, run_date, logger, collector_path)
+    if collector_path.exists():
+        logger.log("Collector cache hit")
+        payload = read_json(collector_path)
+    else:
+        payload = collect_with_retry(collector, run_date, logger=logger)
+        write_json(collector_path, payload)
 
     logger.log("Writer start")
     markdown_body, summary = writer.write(payload)
@@ -56,31 +61,6 @@ def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
         "quality": quality_result,
         "publish": publish_result,
     }
-
-
-def _collect_with_retry(
-    collector: LocalCollector,
-    run_date: str,
-    logger: RunLogger,
-    collector_path: Path,
-    retries: int = 2,
-) -> Dict[str, Any]:
-    if collector_path.exists():
-        logger.log("Collector cache hit")
-        return read_json(collector_path)
-
-    last_error = None
-    for attempt in range(retries + 1):
-        try:
-            logger.log(f"Collector attempt {attempt + 1}")
-            payload = collector.collect(run_date)
-            write_json(collector_path, payload)
-            return payload
-        except Exception as exc:  # noqa: BLE001
-            last_error = exc
-            logger.log(f"Collector error: {exc}")
-
-    raise RuntimeError(f"Collector failed after retries: {last_error}")
 
 
 def _flatten_sources(payload: Dict[str, Any]) -> list[Dict[str, Any]]:
