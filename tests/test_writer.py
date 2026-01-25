@@ -1,5 +1,5 @@
 from src.collector import LocalCollector
-from src.writer import SimpleWriter
+from src.writer import SimpleWriter, validate_writer_output
 
 
 def test_writer_outputs_markdown():
@@ -10,3 +10,4 @@ def test_writer_outputs_markdown():
     assert "1)" in body
     assert "2)" in body
     assert summary
+    validate_writer_output(body)
