@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "reasons": [],
+  "metrics": {
+    "char_count": 860,
+    "item_count": 4,
+    "sources_total": 4,
+    "sources_unique": 4
+  }
+}
