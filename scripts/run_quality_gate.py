@@ -20,20 +20,15 @@ def main() -> None:
     if not collector_path.exists() or not writer_markdown.exists():
         raise SystemExit("Collector or Writer output missing")
 
-    try:
-        logger.log("Quality gate start")
+    with logger.step("Quality gate"):
         payload = read_json(collector_path)
         markdown = writer_markdown.read_text(encoding="utf-8")
         result = QualityGate().validate(markdown, payload)
         write_json(quality_path, result)
-        logger.log("Quality gate done")
 
         if not result["pass"]:
             logger.log(f"Quality gate failed: {result['reasons']}")
             raise SystemExit("Quality gate failed")
-    except Exception as exc:  # noqa: BLE001
-        logger.log(f"Quality gate error: {exc}")
-        raise
 
 
 if __name__ == "__main__":

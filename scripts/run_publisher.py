@@ -37,8 +37,7 @@ def main() -> None:
         sources.extend(item.get("sources", []))
 
     dry_run = os.environ.get("DRY_RUN", "false").lower() == "true"
-    try:
-        logger.log("Publisher start")
+    with logger.step("Publisher"):
         result = Publisher().publish(
             run_date=run_date,
             markdown_body=markdown,
@@ -46,10 +45,7 @@ def main() -> None:
             sources=sources,
             dry_run=dry_run,
         )
-        logger.log(f"Publisher done: {result['status']}")
-    except Exception as exc:  # noqa: BLE001
-        logger.log(f"Publisher failed: {exc}")
-        raise
+        logger.log(f"Publisher result: {result['status']}")
 
 
 if __name__ == "__main__":

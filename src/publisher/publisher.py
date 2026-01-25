@@ -30,7 +30,15 @@ class Publisher:
         if dry_run:
             return {"status": "dry_run", "path": str(post_path), "content": content}
 
-        post_path.write_text(content, encoding="utf-8")
+        temp_path = post_path.with_suffix(".md.tmp")
+        try:
+            temp_path.write_text(content, encoding="utf-8")
+            temp_path.replace(post_path)
+        except Exception as exc:  # noqa: BLE001
+            if temp_path.exists():
+                temp_path.unlink()
+            raise RuntimeError(f"Publish failed: {exc}")
+
         return {"status": "published", "path": str(post_path)}
 
     def _build_front_matter(
