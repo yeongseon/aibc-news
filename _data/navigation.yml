@@ -1,0 +1,13 @@
+main:
+  - title: "홈"
+    url: /
+  - title: "뉴스"
+    url: /news/
+  - title: "생활"
+    url: /life/
+  - title: "날씨"
+    url: /weather/
+  - title: "소개"
+    url: /about/
+  - title: "정책"
+    url: /policy/

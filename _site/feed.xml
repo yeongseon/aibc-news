@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AIBC 뉴스룸</title>
+    <description>AI 기술로 생성되는 일일 뉴스 브리핑 서비스</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 25 Jan 2026 17:34:44 +0900</pubDate>
+    <lastBuildDate>Sun, 25 Jan 2026 17:34:44 +0900</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    <language>ko-KR</language>
+    <copyright>© 2026 AIBC 뉴스룸</copyright>
+    
+      <item>
+        <title>AIBC 뉴스룸 서비스 시작: AI가 전하는 새로운 뉴스의 시대</title>
+        <description>AIBC 뉴스룸이 AI 기술을 활용한 자동화된 뉴스 브리핑 서비스를 시작합니다. 매일 최신 기술, 생활, 날씨 정보를 AI가 선별하고 요약하여 제공합니다.</description>
+        <pubDate>Sat, 25 Jan 2025 16:00:00 +0900</pubDate>
+        <link>http://localhost:4000/%EB%89%B4%EC%8A%A4/%EA%B8%B0%EC%88%A0/2025/01/25/ai-news-launch/</link>
+        <guid isPermaLink="true">http://localhost:4000/%EB%89%B4%EC%8A%A4/%EA%B8%B0%EC%88%A0/2025/01/25/ai-news-launch/</guid>
+        
+        <category>AI</category>
+        
+        <category>인공지능</category>
+        
+        <category>뉴스룸</category>
+        
+        <category>서비스런칭</category>
+        
+        
+        <category>뉴스</category>
+        
+        <category>기술</category>
+        
+      </item>
+    
+      <item>
+        <title>삼성전자, AI 반도체 &apos;Mach-2&apos; 공개... NVIDIA 대항마 출격</title>
+        <description>삼성전자가 차세대 AI 가속기 &apos;Mach-2&apos;를 공개했습니다. NVIDIA H100 대비 2.3배 높은 성능과 40% 낮은 전력 소비를 자랑합니다.</description>
+        <pubDate>Sat, 25 Jan 2025 14:30:00 +0900</pubDate>
+        <link>http://localhost:4000/%EB%89%B4%EC%8A%A4/%EA%B8%B0%EC%88%A0/2025/01/25/samsung-ai-chip/</link>
+        <guid isPermaLink="true">http://localhost:4000/%EB%89%B4%EC%8A%A4/%EA%B8%B0%EC%88%A0/2025/01/25/samsung-ai-chip/</guid>
+        
+        <category>삼성전자</category>
+        
+        <category>AI반도체</category>
+        
+        <category>Mach-2</category>
+        
+        <category>NVIDIA</category>
+        
+        
+        <category>뉴스</category>
+        
+        <category>기술</category>
+        
+      </item>
+    
+  </channel>
+</rss>
