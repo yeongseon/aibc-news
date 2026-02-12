@@ -5,7 +5,7 @@ from typing import Dict, Any, Tuple
 
 import requests
 
-from ..config import COPILOT_CHAT_URL, COPILOT_MODEL
+from ..config import GITHUB_MODELS_CHAT_URL, GITHUB_MODELS_MODEL
 
 SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news briefs.
 Follow the constraints strictly:
@@ -19,12 +19,12 @@ Return ONLY markdown body (no front matter).
 
 class CopilotWriter:
     def __init__(self, model: str | None = None) -> None:
-        self.model = model or COPILOT_MODEL
+        self.model = model or GITHUB_MODELS_MODEL
 
     def write(self, collector_payload: Dict[str, Any]) -> Tuple[str, str]:
-        api_key = os.environ.get("COPILOT_API_KEY")
+        api_key = os.environ.get("GITHUB_TOKEN")
         if not api_key:
-            raise RuntimeError("COPILOT_API_KEY is not set")
+            raise RuntimeError("GITHUB_TOKEN is not set")
 
         run_date = collector_payload.get("date", "")
         user_prompt = (
@@ -35,7 +35,7 @@ class CopilotWriter:
         )
 
         response = requests.post(
-            COPILOT_CHAT_URL,
+            GITHUB_MODELS_CHAT_URL,
             headers={
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",

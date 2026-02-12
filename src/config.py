@@ -25,5 +25,5 @@ OPENWEATHER_CITY = "Seoul"
 OPENWEATHER_UNITS = "metric"
 OPENWEATHER_LANG = "kr"
 
-COPILOT_CHAT_URL = "https://api.githubcopilot.com/chat/completions"
-COPILOT_MODEL = "gpt-4o"
+GITHUB_MODELS_CHAT_URL = "https://models.inference.ai.azure.com/chat/completions"
+GITHUB_MODELS_MODEL = "gpt-4o"
