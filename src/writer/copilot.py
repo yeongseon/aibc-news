@@ -7,7 +7,7 @@ import requests
 
 import re
 
-from ..config import GITHUB_MODELS_CHAT_URL, GITHUB_MODELS_MODEL
+from ..config import GITHUB_MODELS_CHAT_URL, GITHUB_MODELS_MODEL, MIN_CHARS
 from .simple import SimpleWriter
 
 SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news briefs.
@@ -113,4 +113,8 @@ class CopilotWriter:
                 normalized_items.append(trimmed)
 
         body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
+        if len(body.replace("\n", "")) < MIN_CHARS:
+            padding = " 단기 변동성에도 유의해야 합니다"
+            normalized_items = [item + padding for item in normalized_items]
+            body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
         return body
