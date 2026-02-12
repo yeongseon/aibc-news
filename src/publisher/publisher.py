@@ -41,7 +41,7 @@ class Publisher:
         )
         return (
             "---\n"
-            "layout: post\n"
+            "layout: single\n"
             f"title: \"[AIBC 브리핑] {run_date} 주요 이슈\"\n"
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {DEFAULT_CATEGORY} ]\n"

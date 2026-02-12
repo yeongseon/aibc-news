@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "[AIBC 브리핑] 2026-02-12 주요 이슈"
 author: AIBC Desk
 categories: [ News ]
