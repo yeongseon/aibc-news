@@ -35,18 +35,17 @@ class CopilotWriter:
     def __init__(self, model: str | None = None) -> None:
         self.model = model or GITHUB_MODELS_MODEL
 
-    def write(self, collector_payload: Dict[str, Any]) -> Tuple[str, str]:
+    def write_item(self, item: Dict[str, Any], run_date: str) -> Tuple[str, str]:
         api_key = os.environ.get("GITHUB_TOKEN")
         if not api_key:
             raise RuntimeError("GITHUB_TOKEN is not set")
 
-        run_date = collector_payload.get("date", "")
         user_prompt = (
-            "다음 JSON을 참고해 오늘의 브리핑을 작성하세요.\n"
-            "각 항목에는 '발표일 YYYY-MM-DD' 또는 '기준시점 YYYY-MM-DD'를 반드시 포함하세요.\n"
-            "항목 제목은 [시장]/[날씨] 등으로 시작해도 됩니다.\n\n"
+            "다음 JSON 한 건을 참고해 200자 내외 브리핑을 작성하세요.\n"
+            "정확히 2~3문장으로 작성하세요.\n"
+            "수치가 있으면 '발표일 YYYY-MM-DD' 또는 '기준시점 YYYY-MM-DD'를 반드시 포함하세요.\n\n"
             f"발행일: {run_date}\n"
-            f"JSON: {collector_payload}"
+            f"JSON: {item}"
         )
 
         response = requests.post(
@@ -78,8 +77,8 @@ class CopilotWriter:
         if not content:
             raise RuntimeError("Copilot response missing content")
 
-        normalized = self._normalize(content, collector_payload)
-        summary = "오늘의 핵심 이슈 3~5건 요약"
+        normalized = self._normalize(content, item)
+        summary = "오늘의 핵심 이슈 요약"
         return normalized, summary
 
     def _normalize(self, content: str, collector_payload: Dict[str, Any]) -> str:

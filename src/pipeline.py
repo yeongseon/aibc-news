@@ -30,32 +30,45 @@ def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
     payload = _collect_with_retry(collector, run_date, logger, collector_path)
 
     logger.log("Writer start")
-    markdown_body, summary = _write_with_retry(writer, payload, logger)
+    per_item_results = []
 
-    logger.log("Quality gate start")
-    quality_result = gate.validate(markdown_body, payload)
-    write_json(quality_path, quality_result)
+    for item in payload.get("items", []):
+        markdown_body, summary = _write_item(writer, item, run_date, logger)
 
-    if not quality_result["pass"]:
-        logger.log(f"Quality gate failed: {quality_result['reasons']}")
-        raise SystemExit("Quality gate failed")
+        logger.log("Quality gate start")
+        quality_result = gate.validate(markdown_body, {"items": [item]})
+        write_json(quality_path, quality_result)
 
-    logger.log("Publisher start")
-    sources = _flatten_sources(payload)
-    publish_result = publisher.publish(
-        run_date=run_date,
-        markdown_body=markdown_body,
-        summary=summary,
-        sources=sources,
-        dry_run=dry_run,
-    )
+        if not quality_result["pass"]:
+            logger.log(f"Quality gate failed: {quality_result['reasons']}")
+            raise SystemExit("Quality gate failed")
 
-    logger.log(f"Publisher result: {publish_result['status']}")
+        logger.log("Publisher start")
+        sources = item.get("sources", [])
+        category, slug = _category_for(item)
+        publish_result = publisher.publish(
+            run_date=run_date,
+            markdown_body=markdown_body,
+            summary=summary,
+            sources=sources,
+            category=category,
+            slug_suffix=slug,
+            dry_run=dry_run,
+        )
+
+        per_item_results.append(
+            {
+                "item": item,
+                "quality": quality_result,
+                "publish": publish_result,
+            }
+        )
+        logger.log(f"Publisher result: {publish_result['status']}")
+
     logger.log("Pipeline done")
     return {
         "collector": payload,
-        "quality": quality_result,
-        "publish": publish_result,
+        "publish": per_item_results,
     }
 
 
@@ -66,7 +79,8 @@ def _collect_with_retry(
     collector_path: Path,
     retries: int = 2,
 ) -> Dict[str, Any]:
-    if collector_path.exists():
+    force_collect = os.environ.get("FORCE_COLLECT", "false").lower() == "true"
+    if collector_path.exists() and not force_collect:
         logger.log("Collector cache hit")
         return read_json(collector_path)
 
@@ -90,9 +104,10 @@ def _collect_with_retry(
     raise RuntimeError(f"Collector failed after retries: {last_error}")
 
 
-def _write_with_retry(
+def _write_item(
     writer: CopilotWriter,
-    payload: Dict[str, Any],
+    item: Dict[str, Any],
+    run_date: str,
     logger: RunLogger,
     retries: int = 1,
 ) -> tuple[str, str]:
@@ -100,18 +115,22 @@ def _write_with_retry(
     for attempt in range(retries + 1):
         try:
             logger.log(f"Writer attempt {attempt + 1}")
-            return writer.write(payload)
+            return writer.write_item(item, run_date)
         except Exception as exc:  # noqa: BLE001
             last_error = exc
             logger.log(f"Writer error: {exc}")
     raise RuntimeError(f"Writer failed after retries: {last_error}")
 
 
-def _flatten_sources(payload: Dict[str, Any]) -> list[Dict[str, Any]]:
-    sources = []
-    for item in payload.get("items", []):
-        sources.extend(item.get("sources", []))
-    return sources
+def _category_for(item: Dict[str, Any]) -> tuple[str, str]:
+    item_type = item.get("type", "news")
+    mapping = {
+        "market": ("Market", "market"),
+        "weather": ("Weather", "weather"),
+        "lifestyle": ("Life", "life"),
+        "headline": ("News", "news"),
+    }
+    return mapping.get(item_type, ("News", "news"))
 
 
 def main() -> None:

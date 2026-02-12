@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Dict, Any, List
 
-from ..config import DEFAULT_AUTHOR, DEFAULT_CATEGORY
+from ..config import DEFAULT_AUTHOR
 from ..utils import ensure_dir
 
 
@@ -16,15 +16,17 @@ class Publisher:
         markdown_body: str,
         summary: str,
         sources: List[Dict[str, Any]],
+        category: str,
+        slug_suffix: str,
         dry_run: bool = False,
     ) -> Dict[str, Any]:
-        filename = f"{run_date}-aibc-briefing.md"
+        filename = f"{run_date}-aibc-briefing-{slug_suffix}.md"
         post_path = self.posts_dir / filename
 
         if post_path.exists():
             return {"status": "skipped", "path": str(post_path)}
 
-        front_matter = self._build_front_matter(run_date, summary, sources)
+        front_matter = self._build_front_matter(run_date, summary, sources, category)
         content = front_matter + "\n" + markdown_body + "\n"
 
         if dry_run:
@@ -34,7 +36,7 @@ class Publisher:
         return {"status": "published", "path": str(post_path)}
 
     def _build_front_matter(
-        self, run_date: str, summary: str, sources: List[Dict[str, Any]]
+        self, run_date: str, summary: str, sources: List[Dict[str, Any]], category: str
     ) -> str:
         source_lines = "\n".join(
             f"  - \"{source['name']} - {source['url']}\"" for source in sources
@@ -42,9 +44,9 @@ class Publisher:
         return (
             "---\n"
             "layout: single\n"
-            f"title: \"[AIBC 브리핑] {run_date} 주요 이슈\"\n"
+            f"title: \"[AIBC 브리핑] {run_date} {category}\"\n"
             f"author: {DEFAULT_AUTHOR}\n"
-            f"categories: [ {DEFAULT_CATEGORY} ]\n"
+            f"categories: [ {category} ]\n"
             f"date: {run_date}\n"
             f"summary: \"{summary}\"\n"
             "sources:\n"
