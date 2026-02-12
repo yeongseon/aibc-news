@@ -12,27 +12,39 @@ class YahooFinanceCollector(Collector):
     def collect(self, run_date: str) -> Dict[str, Any]:
         items: List[Dict[str, Any]] = []
 
+        symbols = [entry["symbol"] for entry in YAHOO_SYMBOLS]
+        data = yf.download(
+            symbols,
+            period="2d",
+            interval="1d",
+            group_by="ticker",
+            auto_adjust=False,
+            threads=False,
+            progress=False,
+        )
+
+        if data is None or data.empty:
+            raise RuntimeError("Yahoo Finance returned no data")
+
         for entry in YAHOO_SYMBOLS:
             symbol = entry["symbol"]
             label = entry["label"]
 
-            ticker = yf.Ticker(symbol)
-            info = ticker.info
-            price = info.get("regularMarketPrice")
-            previous = info.get("regularMarketPreviousClose")
-            currency = info.get("currency", "")
-            market_time = info.get("regularMarketTime")
+            if symbol in data.columns.get_level_values(0):
+                close_series = data[symbol]["Close"].dropna()
+            else:
+                close_series = data["Close"].dropna()
+
+            closes = close_series.tail(2).tolist()
+            current = closes[-1] if closes else None
+            previous = closes[-2] if len(closes) > 1 else None
 
             facts = []
-            if price is not None:
-                facts.append(f"현재값 {price} {currency}".strip())
+            if current is not None:
+                facts.append(f"현재값 {current}")
             if previous is not None:
-                facts.append(f"전일 종가 {previous} {currency}".strip())
-            if market_time:
-                facts.append("최근 기준시점 기준")
-
-            if not facts:
-                facts.append("최근 가격 변동 요약")
+                facts.append(f"전일 종가 {previous}")
+            facts.append("최근 기준시점 기준")
 
             items.append(
                 {

@@ -80,6 +80,12 @@ def _collect_with_retry(
         except Exception as exc:  # noqa: BLE001
             last_error = exc
             logger.log(f"Collector error: {exc}")
+            if attempt < retries:
+                backoff = 10 * (attempt + 1)
+                logger.log(f"Collector retry in {backoff}s")
+                import time
+
+                time.sleep(backoff)
 
     raise RuntimeError(f"Collector failed after retries: {last_error}")
 
