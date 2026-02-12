@@ -12,32 +12,30 @@ class YahooFinanceCollector(Collector):
     def collect(self, run_date: str) -> Dict[str, Any]:
         items: List[Dict[str, Any]] = []
 
-        symbols = [entry["symbol"] for entry in YAHOO_SYMBOLS]
-        response = requests.get(
-            "https://query1.finance.yahoo.com/v7/finance/quote",
-            params={"symbols": ",".join(symbols)},
-            headers={"User-Agent": "Mozilla/5.0"},
-            timeout=15,
-        )
-        if response.status_code == 429:
-            raise RuntimeError("Yahoo Finance rate limited (HTTP 429)")
-        response.raise_for_status()
-
-        payload = response.json()
-        results = payload.get("quoteResponse", {}).get("result", [])
-        by_symbol = {item.get("symbol"): item for item in results}
-
-        if not by_symbol:
-            raise RuntimeError("Yahoo Finance returned no data")
-
         for entry in YAHOO_SYMBOLS:
             symbol = entry["symbol"]
             label = entry["label"]
-            data = by_symbol.get(symbol, {})
 
-            current = data.get("regularMarketPrice")
-            previous = data.get("regularMarketPreviousClose")
-            currency = data.get("currency", "")
+            response = requests.get(
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
+                params={"interval": "1d", "range": "5d"},
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=15,
+            )
+            if response.status_code == 429:
+                raise RuntimeError("Yahoo Finance rate limited (HTTP 429)")
+            response.raise_for_status()
+
+            payload = response.json()
+            result = payload.get("chart", {}).get("result", [None])[0]
+            if not result:
+                raise RuntimeError("Yahoo Finance returned no data")
+
+            indicators = result.get("indicators", {}).get("quote", [{}])[0]
+            closes = [c for c in (indicators.get("close") or []) if c is not None]
+            current = closes[-1] if closes else None
+            previous = closes[-2] if len(closes) > 1 else None
+            currency = result.get("meta", {}).get("currency", "")
 
             facts = []
             if current is not None:
@@ -60,5 +58,8 @@ class YahooFinanceCollector(Collector):
                     ],
                 }
             )
+
+        if not items:
+            raise RuntimeError("Yahoo Finance returned no data")
 
         return {"date": run_date, "items": items}
