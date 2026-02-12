@@ -2,11 +2,11 @@ import os
 from pathlib import Path
 from typing import Dict, Any
 
-from .collector import LocalCollector
+from .collector import CompositeCollector
 from .publisher import Publisher
 from .quality import QualityGate
 from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
-from .writer import SimpleWriter
+from .writer import CopilotWriter
 
 
 def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
@@ -21,15 +21,15 @@ def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
     collector_path = data_dir / "collector" / f"{run_date}.json"
     quality_path = data_dir / "quality" / f"{run_date}.json"
 
-    collector = LocalCollector()
-    writer = SimpleWriter()
+    collector = CompositeCollector()
+    writer = CopilotWriter()
     gate = QualityGate()
     publisher = Publisher()
 
     payload = _collect_with_retry(collector, run_date, logger, collector_path)
 
     logger.log("Writer start")
-    markdown_body, summary = writer.write(payload)
+    markdown_body, summary = _write_with_retry(writer, payload, logger)
 
     logger.log("Quality gate start")
     quality_result = gate.validate(markdown_body, payload)
@@ -81,6 +81,23 @@ def _collect_with_retry(
             logger.log(f"Collector error: {exc}")
 
     raise RuntimeError(f"Collector failed after retries: {last_error}")
+
+
+def _write_with_retry(
+    writer: CopilotWriter,
+    payload: Dict[str, Any],
+    logger: RunLogger,
+    retries: int = 1,
+) -> tuple[str, str]:
+    last_error: Exception | None = None
+    for attempt in range(retries + 1):
+        try:
+            logger.log(f"Writer attempt {attempt + 1}")
+            return writer.write(payload)
+        except Exception as exc:  # noqa: BLE001
+            last_error = exc
+            logger.log(f"Writer error: {exc}")
+    raise RuntimeError(f"Writer failed after retries: {last_error}")
 
 
 def _flatten_sources(payload: Dict[str, Any]) -> list[Dict[str, Any]]:
