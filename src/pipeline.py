@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 from .collector import CompositeCollector
+from .collector.base import Collector
 from .publisher import Publisher
 from .quality import QualityGate
 from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
@@ -59,7 +60,7 @@ def run_pipeline(run_date: str, dry_run: bool = False) -> Dict[str, Any]:
 
 
 def _collect_with_retry(
-    collector: LocalCollector,
+    collector: Collector,
     run_date: str,
     logger: RunLogger,
     collector_path: Path,

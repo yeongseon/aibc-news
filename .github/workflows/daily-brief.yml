@@ -62,4 +62,5 @@ jobs:
           gh api --method POST /repos/${{ github.repository }}/issues \
             -f title="Daily brief failed: ${RUN_DATE}" \
             -f body="Workflow run failed. Check logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-            -f labels='["automation","daily-brief"]'
+            -f labels[]=automation \
+            -f labels[]=daily-brief
