@@ -5,12 +5,15 @@ from typing import Dict, Any, Tuple
 
 import requests
 
+import re
+
 from ..config import GITHUB_MODELS_CHAT_URL, GITHUB_MODELS_MODEL
+from .simple import SimpleWriter
 
 SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news briefs.
 Follow the constraints strictly:
-- 3~5 items, each EXACTLY 3 sentences.
-- Include context/insight within those 3 sentences.
+- 3~5 items, each EXACTLY 4 sentences.
+- Include context/insight within those 4 sentences.
 - If you include numbers, add '발표일 YYYY-MM-DD' or '기준시점 YYYY-MM-DD'.
 - No sensational or opinionated language.
 Return ONLY markdown body (no front matter).
@@ -75,5 +78,39 @@ class CopilotWriter:
         if not content:
             raise RuntimeError("Copilot response missing content")
 
+        normalized = self._normalize(content, collector_payload)
         summary = "오늘의 핵심 이슈 3~5건 요약"
-        return content.strip() + "\n", summary
+        return normalized, summary
+
+    def _normalize(self, content: str, collector_payload: Dict[str, Any]) -> str:
+        lines = [line.rstrip() for line in content.splitlines()]
+        items: list[str] = []
+        current: list[str] = []
+        for line in lines:
+            if re.match(r"^\d+\)\s", line):
+                if current:
+                    items.append(" ".join(current).strip())
+                current = [line]
+            elif current:
+                current.append(line)
+        if current:
+            items.append(" ".join(current).strip())
+
+        if not items:
+            fallback_body, _ = SimpleWriter().write(collector_payload)
+            return fallback_body
+
+        normalized_items: list[str] = []
+        for item in items:
+            prefix_match = re.match(r"^(\d+\))\s", item)
+            prefix = prefix_match.group(1) if prefix_match else ""
+            body = item[len(prefix_match.group(0)) :] if prefix_match else item
+            sentences = re.findall(r"[^.!?]+[.!?]", body)
+            trimmed = "".join(sentences[:4]).strip() if sentences else body.strip()
+            if prefix:
+                normalized_items.append(f"{prefix} {trimmed}")
+            else:
+                normalized_items.append(trimmed)
+
+        body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
+        return body
