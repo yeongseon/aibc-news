@@ -66,11 +66,11 @@ class CopilotWriter:
         if not content:
             raise RuntimeError("Copilot response missing content")
 
-        normalized = self._normalize(content, item)
+        normalized = self._normalize(content, item, run_date)
         summary = "오늘의 핵심 이슈 요약"
         return normalized, summary
 
-    def _normalize(self, content: str, collector_payload: Dict[str, Any]) -> str:
+    def _normalize(self, content: str, collector_payload: Dict[str, Any], run_date: str) -> str:
         text = " ".join(line.strip() for line in content.splitlines() if line.strip())
         text = re.sub(r"^\d+\)\s*", "", text)
 
@@ -79,6 +79,16 @@ class CopilotWriter:
         if not trimmed:
             fallback_body, _ = SimpleWriter().write(collector_payload)
             return fallback_body
+
+        has_number = bool(re.search(r"\d", trimmed))
+        has_date = bool(re.search(r"\d{4}-\d{2}-\d{2}", trimmed))
+        has_marker = "기준시점" in trimmed or "발표일" in trimmed
+        if has_number and not (has_date or has_marker):
+            trimmed = f"{trimmed} 기준시점 {run_date} 기준입니다."
+
+        sentence_count = len(re.findall(r"[^.!?]+[.!?]", trimmed))
+        if sentence_count < 2:
+            trimmed = f"{trimmed} 시장 흐름 점검이 필요합니다."
 
         body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
         padding = " 단기 변동성에도 유의해야 합니다"
