@@ -50,7 +50,7 @@ class OpenWeatherCollector(Collector):
         if wind_speed is not None:
             facts.append(f"풍속 {wind_speed}m/s")
 
-        item = {
+        weather_item = {
             "type": "weather",
             "title": f"{OPENWEATHER_CITY} 날씨 요약",
             "facts": facts,
@@ -63,4 +63,25 @@ class OpenWeatherCollector(Collector):
             ],
         }
 
-        return {"date": run_date, "items": [item]}
+        lifestyle_facts: List[str] = []
+        if humidity is not None:
+            lifestyle_facts.append(f"실내 습도 {humidity}%")
+        if wind_speed is not None:
+            lifestyle_facts.append(f"바람 {wind_speed}m/s")
+        if not lifestyle_facts:
+            lifestyle_facts.append("체감 환경 점검 필요")
+
+        lifestyle_item = {
+            "type": "lifestyle",
+            "title": f"{OPENWEATHER_CITY} 체감 환경",
+            "facts": lifestyle_facts,
+            "sources": [
+                {
+                    "name": "OpenWeather",
+                    "url": "https://openweathermap.org",
+                    "published_at": run_date,
+                }
+            ],
+        }
+
+        return {"date": run_date, "items": [weather_item, lifestyle_item]}

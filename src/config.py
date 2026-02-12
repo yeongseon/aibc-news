@@ -16,7 +16,6 @@ DEFAULT_CATEGORY = "News"
 
 YAHOO_SYMBOLS = [
     {"symbol": "^KS11", "label": "코스피"},
-    {"symbol": "^KQ11", "label": "코스닥"},
     {"symbol": "KRW=X", "label": "원/달러 환율"},
 ]
 
