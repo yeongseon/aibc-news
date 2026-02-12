@@ -113,8 +113,8 @@ class CopilotWriter:
                 normalized_items.append(trimmed)
 
         body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
-        if len(body.replace("\n", "")) < MIN_CHARS:
-            padding = " 단기 변동성에도 유의해야 합니다"
+        padding = " 단기 변동성에도 유의해야 합니다"
+        while len(body.replace("\n", "")) < MIN_CHARS:
             normalized_items = [item + padding for item in normalized_items]
             body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
         return body
