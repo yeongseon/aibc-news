@@ -1,0 +1,8 @@
+[2026-02-12 14:22:56] Pipeline start
+[2026-02-12 14:22:56] Collector attempt 1
+[2026-02-12 14:22:56] Writer start
+[2026-02-12 14:22:56] Writer attempt 1
+[2026-02-12 14:23:00] Quality gate start
+[2026-02-12 14:23:00] Publisher start
+[2026-02-12 14:23:00] Publisher result: published
+[2026-02-12 14:23:00] Pipeline done
