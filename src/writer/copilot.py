@@ -12,22 +12,11 @@ from .simple import SimpleWriter
 
 SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news briefs.
 Follow the constraints strictly:
-- 3~5 items, each EXACTLY 4 sentences.
-- Include context/insight within those 4 sentences.
+- 1 item only.
+- EXACTLY 2~3 sentences.
 - If you include numbers, add '발표일 YYYY-MM-DD' or '기준시점 YYYY-MM-DD'.
 - No sensational or opinionated language.
-Return ONLY markdown body (no front matter).
-Output format must follow EXACTLY:
-## 오늘의 주요 이슈
-
-1) ...
-...
-
-2) ...
-...
-
-3) ...
-...
+Return ONLY the sentences (no numbering, no title).
 """
 
 
@@ -82,38 +71,18 @@ class CopilotWriter:
         return normalized, summary
 
     def _normalize(self, content: str, collector_payload: Dict[str, Any]) -> str:
-        lines = [line.rstrip() for line in content.splitlines()]
-        items: list[str] = []
-        current: list[str] = []
-        for line in lines:
-            if re.match(r"^\d+\)\s", line):
-                if current:
-                    items.append(" ".join(current).strip())
-                current = [line]
-            elif current:
-                current.append(line)
-        if current:
-            items.append(" ".join(current).strip())
+        text = " ".join(line.strip() for line in content.splitlines() if line.strip())
+        text = re.sub(r"^\d+\)\s*", "", text)
 
-        if not items:
+        sentences = re.findall(r"[^.!?]+[.!?]", text)
+        trimmed = "".join(sentences[:3]).strip() if sentences else text.strip()
+        if not trimmed:
             fallback_body, _ = SimpleWriter().write(collector_payload)
             return fallback_body
 
-        normalized_items: list[str] = []
-        for item in items:
-            prefix_match = re.match(r"^(\d+\))\s", item)
-            prefix = prefix_match.group(1) if prefix_match else ""
-            body = item[len(prefix_match.group(0)) :] if prefix_match else item
-            sentences = re.findall(r"[^.!?]+[.!?]", body)
-            trimmed = "".join(sentences[:4]).strip() if sentences else body.strip()
-            if prefix:
-                normalized_items.append(f"{prefix} {trimmed}")
-            else:
-                normalized_items.append(trimmed)
-
-        body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
+        body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
         padding = " 단기 변동성에도 유의해야 합니다"
         while len(body.replace("\n", "")) < MIN_CHARS:
-            normalized_items = [item + padding for item in normalized_items]
-            body = "## 오늘의 주요 이슈\n\n" + "\n\n".join(normalized_items) + "\n"
+            trimmed = f"{trimmed}{padding}"
+            body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
         return body

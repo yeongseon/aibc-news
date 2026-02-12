@@ -73,6 +73,10 @@ class QualityGate:
                 current.append(line)
         if current:
             blocks.append(" ".join(current).strip())
+        if not blocks:
+            stripped = markdown.replace("## 오늘의 주요 이슈", "").strip()
+            if stripped:
+                blocks.append(stripped)
         return blocks
 
     def _count_sentences(self, text: str) -> int:
