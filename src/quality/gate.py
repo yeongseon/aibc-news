@@ -39,11 +39,14 @@ class QualityGate:
             reasons.append("금칙어 포함")
 
         sources = self._collect_sources(collector_payload)
-        if len(sources) < MIN_SOURCES_TOTAL:
-            reasons.append(f"출처 수({len(sources)})가 최소 기준({MIN_SOURCES_TOTAL}) 미달")
+        sources_total = sum(sources.values())
+        if sources_total < MIN_SOURCES_TOTAL:
+            reasons.append(
+                f"출처 수({sources_total})가 최소 기준({MIN_SOURCES_TOTAL}) 미달"
+            )
 
-        if sources:
-            max_source_ratio = max(sources.values()) / len(sources)
+        if sources_total:
+            max_source_ratio = max(sources.values()) / sources_total
             if max_source_ratio > MAX_SINGLE_SOURCE_RATIO:
                 reasons.append("동일 출처 비중 50% 초과")
 
@@ -53,7 +56,7 @@ class QualityGate:
             "metrics": {
                 "char_count": char_count,
                 "item_count": item_count,
-                "sources_total": sum(sources.values()),
+                "sources_total": sources_total,
                 "sources_unique": len(sources),
             },
         }
