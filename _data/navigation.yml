@@ -1,8 +1,8 @@
 main:
   - title: "홈"
     url: /
-  - title: "뉴스"
-    url: /categories/news/
+  - title: "시장"
+    url: /market/
   - title: "생활"
     url: /life/
   - title: "날씨"

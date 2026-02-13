@@ -1,8 +1,6 @@
 ---
-title: "뉴스"
-permalink: /categories/news/
-layout: posts
-entries_layout: grid
-classes: wide
+title: "카테고리"
+permalink: /categories/
+layout: categories
 author_profile: false
 ---

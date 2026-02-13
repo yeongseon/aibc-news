@@ -44,7 +44,7 @@ class Publisher:
         return (
             "---\n"
             "layout: single\n"
-            f"title: \"[AIBC 브리핑] {run_date} {category}\"\n"
+            f"title: \"[AIBC 브리핑] {run_date} {category.upper()}\"\n"
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category} ]\n"
             f"date: {run_date}\n"

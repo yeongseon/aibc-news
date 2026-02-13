@@ -2,7 +2,7 @@
 layout: single
 title: "[AIBC 브리핑] 2026-02-13 Market"
 author: AIBC Desk
-categories: [ Market ]
+categories: [ market ]
 date: 2026-02-13
 summary: "오늘의 핵심 이슈 요약"
 sources:

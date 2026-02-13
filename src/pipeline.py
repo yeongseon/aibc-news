@@ -125,12 +125,12 @@ def _write_item(
 def _category_for(item: Dict[str, Any]) -> tuple[str, str]:
     item_type = item.get("type", "news")
     mapping = {
-        "market": ("Market", "market"),
-        "weather": ("Weather", "weather"),
-        "lifestyle": ("Life", "life"),
-        "headline": ("News", "news"),
+        "market": ("market", "market"),
+        "weather": ("weather", "weather"),
+        "lifestyle": ("life", "life"),
+        "headline": ("news", "news"),
     }
-    return mapping.get(item_type, ("News", "news"))
+    return mapping.get(item_type, ("news", "news"))
 
 
 def main() -> None:
