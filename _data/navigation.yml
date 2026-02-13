@@ -1,12 +1,14 @@
 main:
   - title: "홈"
     url: /
+  - title: "뉴스"
+    url: /news/
   - title: "시장"
     url: /market/
-  - title: "생활"
-    url: /life/
   - title: "날씨"
     url: /weather/
+  - title: "생활"
+    url: /life/
   - title: "소개"
     url: /about/
   - title: "정책"

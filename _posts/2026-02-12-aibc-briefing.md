@@ -2,7 +2,7 @@
 layout: single
 title: "[AIBC 브리핑] 2026-02-12 주요 이슈"
 author: AIBC Desk
-categories: [ News ]
+categories: [ news ]
 date: 2026-02-12
 summary: "오늘의 핵심 이슈 3~5건 요약"
 sources:

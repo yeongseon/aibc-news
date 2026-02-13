@@ -1,7 +1,8 @@
 ---
-title: "카테고리"
-permalink: /categories/
-layout: categories
+title: "뉴스"
+permalink: /news/
+layout: category
+taxonomy: news
 author_profile: false
 sidebar: false
 ---

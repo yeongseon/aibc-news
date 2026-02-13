@@ -1,9 +1,8 @@
 ---
 title: "AIBC News 서비스 시작: AI가 전하는 새로운 뉴스의 시대"
 date: 2025-01-25 16:00:00 +0900
-categories: 
-  - AIBC News
-  - 기술
+categories:
+  - news
 tags:
   - AI
   - 인공지능
