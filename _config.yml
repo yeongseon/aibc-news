@@ -162,8 +162,7 @@ defaults:
       share: true
       related: true
       show_date: true
-      sidebar:
-        nav: "main"
+      sidebar: false
   # _pages
   - scope:
       path: "_pages"
@@ -171,5 +170,4 @@ defaults:
     values:
       layout: single
       author_profile: false
-      sidebar:
-        nav: "main"
+      sidebar: false
