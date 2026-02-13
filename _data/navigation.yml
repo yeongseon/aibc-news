@@ -2,7 +2,7 @@ main:
   - title: "홈"
     url: /
   - title: "뉴스"
-    url: /news/
+    url: /categories/news/
   - title: "생활"
     url: /life/
   - title: "날씨"
