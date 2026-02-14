@@ -95,7 +95,7 @@ def _collect_with_retry(
             last_error = exc
             logger.log(f"Collector error: {exc}")
             if attempt < retries:
-                backoff = 10 * (attempt + 1)
+                backoff = 15 * (attempt + 1)
                 logger.log(f"Collector retry in {backoff}s")
                 import time
 
@@ -119,6 +119,12 @@ def _write_item(
         except Exception as exc:  # noqa: BLE001
             last_error = exc
             logger.log(f"Writer error: {exc}")
+            if attempt < retries:
+                backoff = 10 * (attempt + 1)
+                logger.log(f"Writer retry in {backoff}s")
+                import time
+
+                time.sleep(backoff)
     raise RuntimeError(f"Writer failed after retries: {last_error}")
 
 
