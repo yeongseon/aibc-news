@@ -86,13 +86,21 @@ class CopilotWriter:
         if has_number and not (has_date or has_marker):
             trimmed = f"{trimmed} 기준시점 {run_date} 기준입니다."
 
-        sentence_count = len(re.findall(r"[^.!?]+[.!?]", trimmed))
-        if sentence_count < 2:
+        base_sentences = re.findall(r"[^.!?]+[.!?]", trimmed)
+        if len(base_sentences) < 2:
             trimmed = f"{trimmed} 시장 흐름 점검이 필요합니다."
+        elif len(base_sentences) > 3:
+            trimmed = "".join(base_sentences[:3]).strip()
 
         body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
-        padding = " 단기 변동성에도 유의해야 합니다"
-        while len(body.replace("\n", "")) < MIN_CHARS:
-            trimmed = f"{trimmed}{padding}"
-            body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
+        if len(body.replace("\n", "")) < MIN_CHARS:
+            additions = [
+                "단기 변동성에도 유의해야 합니다.",
+                "발표 내용의 후속 변화를 함께 살펴볼 필요가 있습니다.",
+            ]
+            for extra in additions:
+                if len(body.replace("\n", "")) >= MIN_CHARS:
+                    break
+                trimmed = f"{trimmed} {extra}"
+                body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
         return body
