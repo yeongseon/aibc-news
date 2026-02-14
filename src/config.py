@@ -20,7 +20,7 @@ YAHOO_SYMBOLS = [
 ]
 
 OPENWEATHER_BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
-OPENWEATHER_CITY = "Seoul"
+OPENWEATHER_CITIES = ["Seoul", "Busan", "Daegu", "Daejeon", "Gwangju"]
 OPENWEATHER_UNITS = "metric"
 OPENWEATHER_LANG = "kr"
 
