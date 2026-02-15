@@ -22,3 +22,64 @@ $text-color: #ffffff !default;
 .page__footer-copyright {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* Mobile UX improvements */
+@media (max-width: 768px) {
+  .page__content {
+    padding: 0 16px;
+  }
+
+  .page__title,
+  .archive__item-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+
+  .archive__item-excerpt,
+  .page__meta {
+    font-size: 0.9rem;
+  }
+
+  .masthead__menu-item {
+    padding: 0.35rem 0.6rem;
+  }
+
+  .greedy-nav .visible-links a {
+    padding: 0.5rem 0.55rem;
+  }
+
+  .archive__item {
+    margin-bottom: 1.2rem;
+  }
+
+  .archive__item-title a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .page__meta-sep,
+  .page__meta-readtime {
+    display: none;
+  }
+
+  .page__meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .page__title,
+  .archive__item-title {
+    font-size: 1.0rem;
+  }
+
+  .archive__item-excerpt {
+    display: none;
+  }
+
+  .archive__item-teaser {
+    margin-bottom: 0.6rem;
+  }
+}
