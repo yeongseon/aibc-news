@@ -39,14 +39,13 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
 커밋/푸시는 GitHub Actions 단계에서 수행합니다.
 
-### REST Trigger (workflow_dispatch)
+### REST Trigger (repository_dispatch)
 
-Azure Functions `trigger_daily_brief`는 **Actions를 트리거하는 리모컨** 역할만 수행합니다.
+Azure Functions `trigger_daily_brief`는 **repository_dispatch를 호출하는 리모컨** 역할만 수행합니다.
 
 **Required env:**
 - `GITHUB_TOKEN`
 - `GITHUB_REPO` (예: `yeongseon/aibc-news`)
-- `WORKFLOW_ID` (default: `daily-brief.yml`)
 
 **Request JSON:**
 ```json
@@ -60,8 +59,67 @@ Azure Functions `trigger_daily_brief`는 **Actions를 트리거하는 리모컨*
 ```
 
 **동작:**
-- REST → `workflow_dispatch`
+- REST → `repository_dispatch` (event_type: publish)
 - 실제 발행/커밋은 Actions에서 처리
+
+### External Trigger Recipes
+
+#### curl
+```bash
+curl -X POST \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/yeongseon/aibc-news/dispatches \
+  -d '{"event_type":"publish","client_payload":{"category":"market","run_date":"2026-02-15","force":false}}'
+```
+
+#### GitHub CLI
+```bash
+gh api repos/yeongseon/aibc-news/dispatches \
+  -f event_type=publish \
+  -f client_payload.category=market \
+  -f client_payload.run_date=2026-02-15 \
+  -F client_payload.force=false
+```
+
+#### Python
+```python
+import requests
+
+url = "https://api.github.com/repos/yeongseon/aibc-news/dispatches"
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Accept": "application/vnd.github+json",
+}
+body = {
+    "event_type": "publish",
+    "client_payload": {"category": "market", "run_date": "2026-02-15", "force": False},
+}
+requests.post(url, headers=headers, json=body, timeout=15)
+```
+
+#### Node.js
+```js
+import fetch from "node-fetch";
+
+const res = await fetch("https://api.github.com/repos/yeongseon/aibc-news/dispatches", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
+    "Accept": "application/vnd.github+json",
+  },
+  body: JSON.stringify({
+    event_type: "publish",
+    client_payload: { category: "market", run_date: "2026-02-15", force: false },
+  }),
+});
+```
+
+### Token 최소 권한 가이드
+
+- **Fine-grained PAT** 권장
+- Repository scope: `Actions`(read/write)
+- Contents 권한은 불필요 (dispatch만 호출)
 
 ## 배포 (GitHub Pages)
 

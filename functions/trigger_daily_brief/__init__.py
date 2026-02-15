@@ -14,27 +14,31 @@ def _get_payload(req: func.HttpRequest) -> Dict[str, Any]:
     return body if isinstance(body, dict) else {}
 
 
-def _bool_value(value: Any) -> str:
+def _bool_value(value: Any) -> bool:
     if isinstance(value, bool):
-        return "true" if value else "false"
+        return value
     if value is None:
-        return "false"
-    return str(value).lower()
+        return False
+    return str(value).lower() == "true"
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     payload = _get_payload(req)
     run_date = payload.get("run_date")
     category = payload.get("category")
+    force = _bool_value(payload.get("force"))
     dry_run = _bool_value(payload.get("dry_run"))
-    force_publish = _bool_value(payload.get("force"))
     idempotency_key = payload.get("idempotency_key")
 
-    repo = os.environ.get("GITHUB_REPO") or os.environ.get("GITHUB_REPOSITORY")
-    workflow_id = os.environ.get("WORKFLOW_ID", "daily-brief.yml")
-    ref = os.environ.get("GITHUB_REF", "main")
-    token = os.environ.get("GITHUB_TOKEN")
+    if not category:
+        return func.HttpResponse(
+            json.dumps({"error": "Missing category"}, ensure_ascii=False),
+            status_code=400,
+            mimetype="application/json",
+        )
 
+    repo = os.environ.get("GITHUB_REPO") or os.environ.get("GITHUB_REPOSITORY")
+    token = os.environ.get("GITHUB_TOKEN")
     if not repo or not token:
         return func.HttpResponse(
             json.dumps({"error": "Missing GITHUB_REPO/GITHUB_TOKEN"}, ensure_ascii=False),
@@ -42,18 +46,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             mimetype="application/json",
         )
 
-    url = f"https://api.github.com/repos/{repo}/actions/workflows/{workflow_id}/dispatches"
-    inputs: Dict[str, str] = {}
-    if run_date:
-        inputs["run_date"] = run_date
-    if category:
-        inputs["category"] = category
-    if dry_run:
-        inputs["dry_run"] = dry_run
-    if force_publish:
-        inputs["force_publish"] = force_publish
+    url = f"https://api.github.com/repos/{repo}/dispatches"
+    body: Dict[str, Any] = {
+        "event_type": "publish",
+        "client_payload": {
+            "category": category,
+            "run_date": run_date,
+            "force": force,
+            "dry_run": dry_run,
+        },
+    }
     if idempotency_key:
-        inputs["idempotency_key"] = str(idempotency_key)
+        body["client_payload"]["idempotency_key"] = str(idempotency_key)
 
     response = requests.post(
         url,
@@ -61,7 +65,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "Authorization": f"Bearer {token}",
             "Accept": "application/vnd.github+json",
         },
-        json={"ref": ref, "inputs": inputs},
+        json=body,
         timeout=15,
     )
 
@@ -83,11 +87,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         json.dumps(
             {
                 "status": "queued",
-                "workflow": workflow_id,
+                "event_type": "publish",
                 "run_date": run_date,
                 "category": category,
+                "force": force,
                 "dry_run": dry_run,
-                "force_publish": force_publish,
                 "idempotency_key": idempotency_key,
             },
             ensure_ascii=False,

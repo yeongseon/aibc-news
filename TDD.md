@@ -22,7 +22,7 @@ GitHub Actions (cron)           REST (Azure Functions)
 scripts/run_daily_brief.py     /api/publish
         │                              │
         ▼                              ▼
-src/pipeline.py               workflow_dispatch
+src/pipeline.py               repository_dispatch
   ├─ Collector (category)        └─ Actions 실행
   ├─ Writer
   ├─ QualityGate
@@ -42,7 +42,7 @@ src/pipeline.py               workflow_dispatch
 
 ### 3.2 REST
 1. `POST /api/publish`
-2. workflow_dispatch 트리거
+2. repository_dispatch 트리거
 3. Actions가 파이프라인 실행 및 `_posts/` 반영
 
 ---

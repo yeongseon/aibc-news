@@ -16,9 +16,12 @@ on:
         description: "Overwrite existing posts"
         required: false
         default: "false"
+  repository_dispatch:
+    types: [publish]
 
 jobs:
   daily-brief-weather:
+    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'weather' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -43,10 +46,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-          RUN_DATE: ${{ inputs.run_date }}
-          DRY_RUN: ${{ inputs.dry_run }}
-          FORCE_PUBLISH: ${{ inputs.force_publish }}
-          CATEGORY: "weather"
+          RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
+          DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
+          FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
+          PIPELINE_KIND: "weather"
         run: |
           python scripts/run_daily_brief.py
 
