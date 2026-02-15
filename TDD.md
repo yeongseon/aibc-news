@@ -21,7 +21,7 @@ GitHub Actions + REST API 병행 발행을 지원한다.
 GitHub Actions (cron)           REST (Azure Functions)
         │                              │
         ▼                              ▼
-scripts/run_publish_article.py     /api/publish
+scripts/run_publish_article.py     /api/trigger_publish_article
         │                              │
         ▼                              ▼
 src/pipeline.py               repository_dispatch
