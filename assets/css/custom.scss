@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Colors */
-$background-color: #1a1a1a !default;
+$background-color: #000000 !default;
 $footer-background-color: #000000 !important;
 $text-color: #ffffff !default;
 
@@ -86,8 +86,8 @@ $text-color: #ffffff !default;
 
 /* JTBC/연합뉴스 스타일 카드형 리스트 */
 .archive__item {
-  background: #22252b;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 16px 16px 12px;
   margin-bottom: 14px;
