@@ -30,7 +30,7 @@ def _load_pipeline():
 
     sys.path.insert(0, str(ROOT))
     from src.app import generate_posts
-    from src.collector import CompositeCollector
+    from src.collector import CompositeCollector, MarketCollector, WeatherCollector, LifestyleCollector, HeadlineCollector
     from src.publisher import Publisher
     from src.quality import QualityGate
     from src.slug import make_filename
@@ -39,7 +39,11 @@ def _load_pipeline():
 
     return {
         "generate_posts": generate_posts,
-        "collector": CompositeCollector(),
+        "collector_all": CompositeCollector(),
+        "collector_market": MarketCollector(),
+        "collector_weather": WeatherCollector(),
+        "collector_life": LifestyleCollector(),
+        "collector_news": HeadlineCollector(),
         "writer": CopilotWriter(),
         "gate": QualityGate(),
         "publisher": Publisher(),
@@ -98,6 +102,8 @@ def _create_or_update_file(
     content: str,
     message: str,
     force: bool,
+    *,
+    conflict_on_exists: bool = False,
 ) -> Dict[str, Any]:
     url = f"https://api.github.com/repos/{repo}/contents/{path}"
     headers = _gh_headers(token)
@@ -106,6 +112,8 @@ def _create_or_update_file(
     sha = None
     if existing.status_code == 200:
         sha = existing.json().get("sha")
+        if conflict_on_exists and not force:
+            return {"status": "conflict", "path": path}
         if not force:
             return {"status": "skipped", "path": path}
     elif existing.status_code not in (404,):
@@ -130,6 +138,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     force_publish = _bool_value(payload.get("force"))
     idempotency_key = payload.get("idempotency_key")
 
+    if not category:
+        return func.HttpResponse(
+            json.dumps({"error": "Missing category"}, ensure_ascii=False),
+            status_code=400,
+            mimetype="application/json",
+        )
+
     repo = _get_repo()
     token = os.environ.get("GITHUB_TOKEN")
     if not repo or not token:
@@ -145,15 +160,56 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     logger = pipeline["logger_factory"](Path("/tmp") / "rest-publish.log")
 
-    collector = pipeline["collector"]
+    if category == "market":
+        collector = pipeline["collector_market"]
+    elif category == "weather":
+        collector = pipeline["collector_weather"]
+    elif category == "life":
+        collector = pipeline["collector_life"]
+    elif category == "news":
+        collector = pipeline["collector_news"]
+    else:
+        collector = pipeline["collector_all"]
     writer = pipeline["writer"]
     gate = pipeline["gate"]
     publisher = pipeline["publisher"]
     generate_posts = pipeline["generate_posts"]
 
     collected = collector.collect(run_date)
-    if category:
+    if collector == pipeline["collector_all"]:
         collected = _filter_payload(collected, category)
+
+    if not collected.get("items"):
+        return func.HttpResponse(
+            json.dumps({"error": "No items for category"}, ensure_ascii=False),
+            status_code=404,
+            mimetype="application/json",
+        )
+
+    if idempotency_key:
+        lock_path = f"data/idempotency/{idempotency_key}.json"
+        lock_result = _create_or_update_file(
+            token=token,
+            repo=repo,
+            path=lock_path,
+            content=json.dumps({"run_date": run_date, "category": category}),
+            message=f"Idempotency lock: {idempotency_key}",
+            force=force_publish,
+            conflict_on_exists=True,
+        )
+        if lock_result.get("status") == "conflict":
+            return func.HttpResponse(
+                json.dumps(
+                    {
+                        "status": "conflict",
+                        "idempotency_key": idempotency_key,
+                        "path": lock_path,
+                    },
+                    ensure_ascii=False,
+                ),
+                status_code=409,
+                mimetype="application/json",
+            )
 
     drafts, _quality = generate_posts(
         collected,

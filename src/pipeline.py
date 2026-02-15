@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 from .application.use_case import RunDailyBriefUseCase
-from .collector import CompositeCollector
+from .collector import CompositeCollector, MarketCollector, WeatherCollector, LifestyleCollector, HeadlineCollector
 from .publisher import Publisher
 from .quality import QualityGate
 from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
@@ -18,7 +18,16 @@ def run_pipeline(run_date: str, dry_run: bool = False, category: str | None = No
     logger = RunLogger(logs_dir / f"{run_date}.log")
     logger.log("Pipeline start")
 
-    collector = CompositeCollector()
+    if category == "market":
+        collector = MarketCollector()
+    elif category == "weather":
+        collector = WeatherCollector()
+    elif category == "life":
+        collector = LifestyleCollector()
+    elif category == "news":
+        collector = HeadlineCollector()
+    else:
+        collector = CompositeCollector()
     writer = CopilotWriter()
     gate = QualityGate()
     publisher = Publisher()

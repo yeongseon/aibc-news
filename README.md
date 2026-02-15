@@ -32,10 +32,12 @@ bundle exec jekyll build
 
 ## 자동 발행
 
-GitHub Actions로 정기 실행을 구성했습니다. 자동 발행을 사용하려면 다음을 설정하세요.
+GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
-2. 워크플로우(`.github/workflows/daily-brief.yml`) 확인
+2. 워크플로우(`.github/workflows/daily-brief-*.yml`) 확인
+
+Publisher가 `_posts` 생성 후 **Git 커밋/푸시**까지 수행합니다.
 
 ### REST Trigger (direct publish)
 

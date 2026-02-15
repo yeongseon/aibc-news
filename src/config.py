@@ -9,6 +9,49 @@ MAX_SENTENCES = 4
 MIN_SOURCES_TOTAL = 1
 MAX_SINGLE_SOURCE_RATIO = 1.0
 
+CATEGORY_RULES = {
+    "market": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "weather": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "life": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "news": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+}
+
 FORBIDDEN_WORDS = ["충격", "대박", "속보", "확정 수익"]
 
 DEFAULT_AUTHOR = "AIBC Desk"
