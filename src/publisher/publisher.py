@@ -50,6 +50,8 @@ class Publisher:
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"
+            f"created_at: {run_date}\n"
+            f"updated_at: {run_date}\n"
             f'summary: "{summary}"\n'
             "sources:\n"
             f"{source_lines}\n"
