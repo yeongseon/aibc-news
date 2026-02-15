@@ -140,7 +140,7 @@
 │  ├─ quality/
 │  └─ publisher/
 └─ .github/workflows/
-   └─ daily-brief-*.yml
+   └─ publish-article-*.yml
 ```
 
 ---

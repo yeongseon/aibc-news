@@ -1,6 +1,6 @@
 # AIBC News
 
-AI 기반 자동 편집국이 운영하는 데일리 뉴스 브리핑 사이트입니다. Jekyll + Minimal Mistakes 테마를 사용하고, GitHub Actions로 자동 발행을 지원합니다.
+AI 기반 자동 편집국이 운영하는 **카테고리별 기사 발행** 사이트입니다. Jekyll + Minimal Mistakes 테마를 사용하고, GitHub Actions로 자동 발행을 지원합니다.
 
 ## 주요 기능
 - 한국어 UI 및 콘텐츠
@@ -35,13 +35,13 @@ bundle exec jekyll build
 GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
-2. 워크플로우(`.github/workflows/daily-brief-*.yml`) 확인
+2. 워크플로우(`.github/workflows/publish-article-*.yml`) 확인
 
 커밋/푸시는 GitHub Actions 단계에서 수행합니다.
 
 ### REST Trigger (repository_dispatch)
 
-Azure Functions `trigger_daily_brief`는 **repository_dispatch를 호출하는 리모컨** 역할만 수행합니다.
+Azure Functions `trigger_publish_article`는 **repository_dispatch를 호출하는 리모컨** 역할만 수행합니다.
 
 **Required env:**
 - `GITHUB_TOKEN`
@@ -59,7 +59,7 @@ Azure Functions `trigger_daily_brief`는 **repository_dispatch를 호출하는 �
 ```
 
 **동작:**
-- REST → `repository_dispatch` (event_type: publish)
+- REST → `repository_dispatch` (event_type: publish_article)
 - 실제 발행/커밋은 Actions에서 처리
 
 ### External Trigger Recipes
@@ -70,13 +70,13 @@ curl -X POST \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github+json" \
   https://api.github.com/repos/yeongseon/aibc-news/dispatches \
-  -d '{"event_type":"publish","client_payload":{"category":"market","run_date":"2026-02-15","force":false}}'
+  -d '{"event_type":"publish_article","client_payload":{"category":"market","run_date":"2026-02-15","force":false}}'
 ```
 
 #### GitHub CLI
 ```bash
 gh api repos/yeongseon/aibc-news/dispatches \
-  -f event_type=publish \
+  -f event_type=publish_article \
   -f client_payload.category=market \
   -f client_payload.run_date=2026-02-15 \
   -F client_payload.force=false
@@ -92,7 +92,7 @@ headers = {
     "Accept": "application/vnd.github+json",
 }
 body = {
-    "event_type": "publish",
+    "event_type": "publish_article",
     "client_payload": {"category": "market", "run_date": "2026-02-15", "force": False},
 }
 requests.post(url, headers=headers, json=body, timeout=15)
@@ -109,7 +109,7 @@ const res = await fetch("https://api.github.com/repos/yeongseon/aibc-news/dispat
     "Accept": "application/vnd.github+json",
   },
   body: JSON.stringify({
-    event_type: "publish",
+    event_type: "publish_article",
     client_payload: { category: "market", run_date: "2026-02-15", force: false },
   }),
 });

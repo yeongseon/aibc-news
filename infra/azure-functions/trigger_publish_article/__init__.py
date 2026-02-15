@@ -48,7 +48,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     url = f"https://api.github.com/repos/{repo}/dispatches"
     body: Dict[str, Any] = {
-        "event_type": "publish",
+        "event_type": "publish_article",
         "client_payload": {
             "category": category,
             "run_date": run_date,
@@ -87,7 +87,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         json.dumps(
             {
                 "status": "queued",
-                "event_type": "publish",
+                "event_type": "publish_article",
                 "run_date": run_date,
                 "category": category,
                 "force": force,

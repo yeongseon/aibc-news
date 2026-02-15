@@ -1,4 +1,4 @@
-# [TDD] AIBC Daily Brief Pipeline
+# [TDD] AIBC Publish Article Pipeline
 
 **작성일:** 2026-02-12  
 **최종 수정:** 2026-02-15  
@@ -19,7 +19,7 @@ GitHub Actions + REST API 병행 발행을 지원한다.
 GitHub Actions (cron)           REST (Azure Functions)
         │                              │
         ▼                              ▼
-scripts/run_daily_brief.py     /api/publish
+scripts/run_publish_article.py     /api/publish
         │                              │
         ▼                              ▼
 src/pipeline.py               repository_dispatch
@@ -35,7 +35,7 @@ src/pipeline.py               repository_dispatch
 
 ### 3.1 Actions
 1. GitHub Actions 스케줄 실행
-2. `scripts/run_daily_brief.py`
+2. `scripts/run_publish_article.py`
 3. `pipeline.run_pipeline(category=...)`
 4. Collector → Writer → Quality Gate → Publisher
 5. `_posts/` 커밋/푸시
@@ -92,10 +92,10 @@ src/pipeline.py               repository_dispatch
 ## 7. GitHub Actions
 
 카테고리별 워크플로 구성:
-- `daily-brief-market.yml`
-- `daily-brief-weather.yml`
-- `daily-brief-life.yml`
-- `daily-brief-news.yml`
+- `publish-article-market.yml`
+- `publish-article-weather.yml`
+- `publish-article-life.yml`
+- `publish-article-news.yml`
 
 ---
 

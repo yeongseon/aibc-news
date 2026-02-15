@@ -1,8 +1,8 @@
-name: Daily Brief News
+name: Publish Article Market
 
 on:
   schedule:
-    - cron: "45 21 * * *" # 06:45 KST (news)
+    - cron: "30 21 * * *" # 06:30 KST (market)
   workflow_dispatch:
     inputs:
       run_date:
@@ -17,11 +17,11 @@ on:
         required: false
         default: "false"
   repository_dispatch:
-    types: [publish]
+    types: [publish_article]
 
 jobs:
-  daily-brief-news:
-    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'news' }}
+  publish-article-market:
+    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'market' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -49,9 +49,9 @@ jobs:
           RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
           DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
           FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
-          PIPELINE_KIND: "news"
+          PIPELINE_KIND: "market"
         run: |
-          python scripts/run_daily_brief.py
+          python scripts/run_publish_article.py
 
       - name: Commit and push outputs
         if: ${{ inputs.dry_run != 'true' }}
@@ -66,7 +66,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-news-${{ inputs.run_date || github.run_id }}
+          name: pipeline-market-${{ inputs.run_date || github.run_id }}
           path: |
             data/**
             logs/**
@@ -79,7 +79,7 @@ jobs:
           RUN_DATE=${{ inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
           gh api --method POST /repos/${{ github.repository }}/issues \
-            -f title="Daily brief (news) failed: ${RUN_DATE}" \
+            -f title="Article publish (market) failed: ${RUN_DATE}" \
             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             -f labels[]=automation \
-            -f labels[]=daily-brief
+            -f labels[]=publish-article

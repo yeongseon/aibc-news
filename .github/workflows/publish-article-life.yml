@@ -1,8 +1,8 @@
-name: Daily Brief Pipeline
+name: Publish Article Life
 
 on:
   schedule:
-    - cron: "30 21 * * *" # 06:30 KST
+    - cron: "40 21 * * *" # 06:40 KST (life)
   workflow_dispatch:
     inputs:
       run_date:
@@ -16,19 +16,12 @@ on:
         description: "Overwrite existing posts"
         required: false
         default: "false"
-      category:
-        description: "Limit to a single category (market|weather|life|news)"
-        required: false
-      idempotency_key:
-        description: "Idempotency key for dispatch"
-        required: false
-
-concurrency:
-  group: daily-brief-${{ inputs.idempotency_key || inputs.run_date || github.run_id }}
-  cancel-in-progress: false
+  repository_dispatch:
+    types: [publish_article]
 
 jobs:
-  daily-brief:
+  publish-article-life:
+    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'life' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -53,12 +46,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-          RUN_DATE: ${{ inputs.run_date }}
-          DRY_RUN: ${{ inputs.dry_run }}
-          FORCE_PUBLISH: ${{ inputs.force_publish }}
-          CATEGORY: ${{ inputs.category }}
+          RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
+          DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
+          FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
+          PIPELINE_KIND: "life"
         run: |
-          python scripts/run_daily_brief.py
+          python scripts/run_publish_article.py
 
       - name: Commit and push outputs
         if: ${{ inputs.dry_run != 'true' }}
@@ -73,7 +66,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-${{ inputs.run_date || github.run_id }}
+          name: pipeline-life-${{ inputs.run_date || github.run_id }}
           path: |
             data/**
             logs/**
@@ -86,7 +79,7 @@ jobs:
           RUN_DATE=${{ inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
           gh api --method POST /repos/${{ github.repository }}/issues \
-            -f title="Daily brief failed: ${RUN_DATE}" \
+            -f title="Article publish (life) failed: ${RUN_DATE}" \
             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             -f labels[]=automation \
-            -f labels[]=daily-brief
+            -f labels[]=publish-article

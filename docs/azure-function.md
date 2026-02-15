@@ -20,7 +20,7 @@ Azure Function은 **repository_dispatch를 호출하는 리모컨** 역할만 �
 ```
 
 ## 3) 동작
-- REST → `repository_dispatch` (event_type: publish)
+- REST → `repository_dispatch` (event_type: publish_article)
 - 실제 발행/커밋은 Actions에서 처리
 
 ## 4) 권장 권한

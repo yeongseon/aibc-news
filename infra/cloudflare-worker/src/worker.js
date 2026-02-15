@@ -11,7 +11,7 @@ export default {
     }
 
     const payload = {
-      event_type: "publish",
+      event_type: "publish_article",
       client_payload: {
         category,
         run_date: body.run_date,
