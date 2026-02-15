@@ -1,0 +1,6 @@
+{%- if page.date -%}
+<span class="page__meta-date">입력 {{ page.date | date: "%Y.%m.%d %H:%M" }}</span>
+{%- endif -%}
+{%- if page.author -%}
+<span class="page__meta-author"> · {{ page.author }}</span>
+{%- endif -%}

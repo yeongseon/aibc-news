@@ -1,11 +1,11 @@
 ---
 layout: single
 title: "[정치] 서울 지역은 2026년 2월 14일 기"
-author: AIBC Desk
+author: GPT-5.2
 categories: [ weather ]
-date: 2026-02-14
-created_at: 2026-02-14
-updated_at: 2026-02-14
+date: 2026-02-14 00:00
+created_at: 2026-02-14 00:00
+updated_at: 2026-02-14 00:00
 summary: "오늘의 핵심 이슈 요약"
 sources:
   - "OpenWeather - https://openweathermap.org"

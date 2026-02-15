@@ -1,11 +1,11 @@
 ---
 layout: single
 title: "[정치] 서울 지역의 실내 습도가 100%로 측"
-author: AIBC Desk
+author: GPT-5.2
 categories: [ life ]
-date: 2026-02-13
-created_at: 2026-02-13
-updated_at: 2026-02-13
+date: 2026-02-13 00:00
+created_at: 2026-02-13 00:00
+updated_at: 2026-02-13 00:00
 summary: "오늘의 핵심 이슈 요약"
 sources:
   - "OpenWeather - https://openweathermap.org"

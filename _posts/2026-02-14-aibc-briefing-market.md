@@ -1,11 +1,11 @@
 ---
 layout: single
 title: "[정치] 코스피 지수는 기준시점 2026-02-"
-author: AIBC Desk
+author: GPT-5.2
 categories: [ market ]
-date: 2026-02-14
-created_at: 2026-02-14
-updated_at: 2026-02-14
+date: 2026-02-14 00:00
+created_at: 2026-02-14 00:00
+updated_at: 2026-02-14 00:00
 summary: "오늘의 핵심 이슈 요약"
 sources:
   - "Yahoo Finance - https://finance.yahoo.com/quote/^KS11"

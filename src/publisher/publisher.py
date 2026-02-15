@@ -1,8 +1,9 @@
 from pathlib import Path
 from typing import Dict, Any, List
-import os
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
-from ..config import DEFAULT_AUTHOR, CATEGORY_LABELS, DEFAULT_MODEL_NAME
+from ..config import DEFAULT_AUTHOR, CATEGORY_LABELS, KST_TZ
 from ..utils import ensure_dir
 
 
@@ -57,15 +58,16 @@ class Publisher:
         category_label = CATEGORY_LABELS.get(category, category)
         image_line = f"image: {image}\n" if image else ""
         safe_title = title or category_label
+        now_kst = datetime.now(ZoneInfo(KST_TZ)).strftime("%Y-%m-%d %H:%M")
         return (
             "---\n"
             "layout: single\n"
             f'title: "{safe_title}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
-            f"date: {run_date}\n"
-            f"created_at: {run_date}\n"
-            f"updated_at: {run_date}\n"
+            f"date: {now_kst}\n"
+            f"created_at: {now_kst}\n"
+            f"updated_at: {now_kst}\n"
             f"{image_line}"
             f'summary: "{summary}"\n'
             "sources:\n"

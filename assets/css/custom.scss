@@ -117,3 +117,8 @@ $text-color: #ffffff !default;
 .page__meta {
   color: rgba(255, 255, 255, 0.65);
 }
+
+.page__meta-date,
+.page__meta-author {
+  font-size: 0.9rem;
+}
