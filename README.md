@@ -38,12 +38,15 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
 이미지는 `/assets/images/`에 저장하고 `image:`에 경로를 사용합니다.
 
-1) 최적화 스크립트
+1) 자동 최적화 (GitHub Actions)
+- `assets/images/`에 JPG/PNG 업로드하면 자동으로 WEBP로 변환됩니다.
+
+2) 수동 최적화
 ```bash
 python scripts/optimize_image.py <path/to/image.jpg>
 ```
 
-2) 생성된 파일 경로 사용
+3) 생성된 파일 경로 사용
 ```yaml
 image: /assets/images/your-image.webp
 ```

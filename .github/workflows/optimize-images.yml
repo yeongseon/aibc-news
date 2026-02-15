@@ -1,0 +1,41 @@
+name: Optimize Images
+
+on:
+  push:
+    paths:
+      - "assets/images/**.jpg"
+      - "assets/images/**.jpeg"
+      - "assets/images/**.png"
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Optimize images
+        run: |
+          python scripts/optimize_images_batch.py
+
+      - name: Commit optimized images
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/images
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore(images): optimize" 
+          git push
