@@ -131,6 +131,7 @@ const res = await fetch("https://api.github.com/repos/yeongseon/aibc-news/dispat
 
 - 제품 요구사항: `PRD.md`
 - 아키텍처: `ARCHITECTURE.md`
+- Cloudflare Worker 트리거: `docs/cloudflare-worker.md`
 
 ## 라이선스
 
