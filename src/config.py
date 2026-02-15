@@ -12,7 +12,7 @@ MAX_SINGLE_SOURCE_RATIO = 1.0
 CATEGORY_RULES = {
     "politics": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -22,7 +22,7 @@ CATEGORY_RULES = {
     },
     "economy": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -32,7 +32,7 @@ CATEGORY_RULES = {
     },
     "society": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -42,7 +42,7 @@ CATEGORY_RULES = {
     },
     "world": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -52,7 +52,7 @@ CATEGORY_RULES = {
     },
     "tech": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -62,7 +62,7 @@ CATEGORY_RULES = {
     },
     "culture": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -72,7 +72,7 @@ CATEGORY_RULES = {
     },
     "sports": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -82,7 +82,7 @@ CATEGORY_RULES = {
     },
     "entertainment": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -92,7 +92,7 @@ CATEGORY_RULES = {
     },
     "life": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
@@ -102,7 +102,7 @@ CATEGORY_RULES = {
     },
     "weather": {
         "min_chars": 160,
-        "max_chars": 160,
+        "max_chars": 240,
         "min_items": 1,
         "max_items": 1,
         "min_sentences": 2,
