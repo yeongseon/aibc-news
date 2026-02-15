@@ -55,13 +55,12 @@ class Publisher:
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
         )
         category_label = CATEGORY_LABELS.get(category, category)
-        model_name = os.environ.get("ARTICLE_MODEL_NAME", DEFAULT_MODEL_NAME)
         image_line = f"image: {image}\n" if image else ""
         safe_title = title or category_label
         return (
             "---\n"
             "layout: single\n"
-            f'title: "{safe_title} - {model_name}"\n'
+            f'title: "{safe_title}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"
