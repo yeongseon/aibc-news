@@ -86,6 +86,7 @@ class OpenWeatherCollector(Collector):
             "type": "weather",
             "title": "전국 및 주요 도시 날씨",
             "facts": facts,
+            "slug": "kr",
             "sources": [
                 {
                     "name": "OpenWeather",
@@ -102,6 +103,7 @@ class OpenWeatherCollector(Collector):
                 "전국 평균 체감 환경은 지역별 편차가 있으니 이동 계획을 점검하세요.",
                 "실내외 온도 차와 습도 변화에 유의할 필요가 있습니다.",
             ],
+            "slug": "kr-env",
             "sources": [
                 {
                     "name": "OpenWeather",

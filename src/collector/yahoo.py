@@ -49,6 +49,7 @@ class YahooFinanceCollector(Collector):
                     "type": "market",
                     "title": f"{label} 최신 흐름",
                     "facts": facts,
+                    "slug": symbol.lower().replace("^", "").replace("=", "-"),
                     "sources": [
                         {
                             "name": "Yahoo Finance",
