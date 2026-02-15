@@ -1,6 +1,8 @@
 from pathlib import Path
 from typing import Dict, Any, List
-from ..config import DEFAULT_AUTHOR, CATEGORY_LABELS
+import os
+
+from ..config import DEFAULT_AUTHOR, CATEGORY_LABELS, DEFAULT_MODEL_NAME
 from ..utils import ensure_dir
 
 
@@ -51,11 +53,12 @@ class Publisher:
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
         )
         category_label = CATEGORY_LABELS.get(category, category)
+        model_name = os.environ.get("ARTICLE_MODEL_NAME", DEFAULT_MODEL_NAME)
         image_line = f"image: {image}\n" if image else ""
         return (
             "---\n"
             "layout: single\n"
-            f'title: "[AIBC] {run_date} {category_label}"\n'
+            f'title: "[AIBC] {run_date} {category_label} - {model_name}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"

@@ -116,6 +116,7 @@ FORBIDDEN_WORDS = ["충격", "대박", "속보", "확정 수익"]
 
 DEFAULT_AUTHOR = "AIBC Desk"
 DEFAULT_CATEGORY = "정치"
+DEFAULT_MODEL_NAME = "GPT-5.2"
 
 CATEGORY_LABELS = {
     "politics": "정치",

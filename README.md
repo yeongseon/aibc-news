@@ -60,6 +60,8 @@ image: /assets/images/your-image.webp
 
 커밋/푸시는 GitHub Actions 단계에서 수행합니다.
 
+> 제목에 모델명을 표시합니다. (환경변수 `ARTICLE_MODEL_NAME`, 기본값: GPT-5.2)
+
 ### REST Trigger (repository_dispatch)
 
 Azure Functions `trigger_publish_article`는 **repository_dispatch를 호출하는 리모컨** 역할만 수행합니다.
