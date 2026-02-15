@@ -155,6 +155,6 @@
 ## 9. 결정 사항 요약
 
 * 카테고리별 독립 발행 구조
-* Actions/REST 병행 지원
-* Publisher가 커밋/푸시 책임
-* 멱등성은 파일명 규칙 + idempotency_key로 보장
+* Actions/REST 병행 지원 (REST는 workflow_dispatch 트리거)
+* 커밋/푸시는 Actions에서 수행
+* 멱등성은 파일명 규칙 + Actions 재실행 정책으로 보장

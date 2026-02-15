@@ -37,29 +37,31 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
 2. 워크플로우(`.github/workflows/daily-brief-*.yml`) 확인
 
-Publisher가 `_posts` 생성 후 **Git 커밋/푸시**까지 수행합니다.
+커밋/푸시는 GitHub Actions 단계에서 수행합니다.
 
-### REST Trigger (direct publish)
+### REST Trigger (workflow_dispatch)
 
-Azure Functions `trigger_daily_brief`에서 REST 호출로 즉시 발행합니다.
+Azure Functions `trigger_daily_brief`는 **Actions를 트리거하는 리모컨** 역할만 수행합니다.
 
 **Required env:**
 - `GITHUB_TOKEN`
 - `GITHUB_REPO` (예: `yeongseon/aibc-news`)
+- `WORKFLOW_ID` (default: `daily-brief.yml`)
 
 **Request JSON:**
 ```json
 {
   "run_date": "2026-02-15",
   "category": "market",
+  "dry_run": false,
   "force": false,
   "idempotency_key": "2026-02-15-market-ks11"
 }
 ```
 
 **동작:**
-- REST → 즉시 `_posts/` 반영
-- 파일명 규칙 기반 멱등성 (기본 skip, `force=true` 시 overwrite)
+- REST → `workflow_dispatch`
+- 실제 발행/커밋은 Actions에서 처리
 
 ## 배포 (GitHub Pages)
 

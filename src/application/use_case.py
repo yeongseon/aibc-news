@@ -92,12 +92,6 @@ class RunDailyBriefUseCase:
             },
         )
 
-        if not dry_run:
-            self.publisher.commit_changes(
-                message=f"자동 브리핑 발행: {run_date}"
-                + (f" ({category})" if category else "")
-            )
-
         return {
             "collector": payload,
             "publish": results,
