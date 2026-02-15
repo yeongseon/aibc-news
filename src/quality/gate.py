@@ -97,7 +97,7 @@ class QualityGate:
         if current:
             blocks.append(" ".join(current).strip())
         if not blocks:
-            stripped = markdown.replace("## 오늘의 주요 이슈", "").strip()
+            stripped = markdown.strip()
             if stripped:
                 blocks.append(stripped)
         return blocks

@@ -6,7 +6,7 @@ class SimpleWriter:
         run_date = collector_payload["date"]
         items: List[Dict[str, Any]] = collector_payload["items"]
 
-        lines = ["## 오늘의 주요 이슈", ""]
+        lines = []
 
         for idx, item in enumerate(items, start=1):
             title = item["title"]
@@ -28,5 +28,5 @@ class SimpleWriter:
             lines.append("")
 
         body = "\n".join(lines).strip() + "\n"
-        summary = "오늘의 핵심 이슈 3~5건 요약"
+        summary = "핵심 이슈 요약"
         return body, summary

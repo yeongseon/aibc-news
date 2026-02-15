@@ -92,7 +92,7 @@ class CopilotWriter:
         elif len(base_sentences) > 3:
             trimmed = "".join(base_sentences[:3]).strip()
 
-        body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
+        body = trimmed + "\n"
         if len(body.replace("\n", "")) < MIN_CHARS:
             additions = [
                 "단기 변동성에도 유의해야 합니다.",
@@ -102,5 +102,5 @@ class CopilotWriter:
                 if len(body.replace("\n", "")) >= MIN_CHARS:
                     break
                 trimmed = f"{trimmed} {extra}"
-                body = "## 오늘의 주요 이슈\n\n" + trimmed + "\n"
+                body = trimmed + "\n"
         return body
