@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[AIBC 기사] 2026-02-12 주요 이슈"
+title: " 2026-02-12 주요 이슈"
 author: AIBC Desk
 categories: [ news ]
 date: 2026-02-12

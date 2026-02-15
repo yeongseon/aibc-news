@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[AIBC 기사] 2026-02-13 Life"
+title: " 2026-02-13 Life"
 author: AIBC Desk
 categories: [ life ]
 date: 2026-02-13
