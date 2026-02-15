@@ -72,7 +72,8 @@ AIBC는 두 가지 발행 경로를 지원한다.
 - Azure Function에서 HTTP 요청 수신
 - 특정 카테고리만 발행 가능
 - 멱등성 보장
-- 즉시 GitHub Repository에 반영
+- **REST는 workflow_dispatch 트리거(리모컨 역할)**
+- 실제 발행/커밋/배포는 GitHub Actions가 수행
 
 ---
 

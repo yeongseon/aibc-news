@@ -22,11 +22,11 @@ GitHub Actions (cron)           REST (Azure Functions)
 scripts/run_daily_brief.py     /api/publish
         │                              │
         ▼                              ▼
-src/pipeline.py               src/pipeline.py
-  ├─ Collector (category)        ├─ Collector (category)
-  ├─ Writer                      ├─ Writer
-  ├─ QualityGate                 ├─ QualityGate
-  └─ Publisher (commit/push)     └─ Publisher (commit/push)
+src/pipeline.py               workflow_dispatch
+  ├─ Collector (category)        └─ Actions 실행
+  ├─ Writer
+  ├─ QualityGate
+  └─ Publisher (commit/push)
 ```
 
 ---
@@ -42,8 +42,8 @@ src/pipeline.py               src/pipeline.py
 
 ### 3.2 REST
 1. `POST /api/publish`
-2. 동일 파이프라인 호출
-3. 즉시 `_posts/` 반영
+2. workflow_dispatch 트리거
+3. Actions가 파이프라인 실행 및 `_posts/` 반영
 
 ---
 

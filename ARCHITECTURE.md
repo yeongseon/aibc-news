@@ -10,7 +10,7 @@
 ## 1. 문서 목적 및 범위
 
 * AIBC Phase 1의 아키텍처를 정의한다.
-* **카테고리별 독립 발행**과 **REST 즉시 발행**을 포함한다.
+* **카테고리별 독립 발행**과 **REST 트리거(workflow_dispatch)**를 포함한다.
 * 배포 대상은 Jekyll 기반 GitHub Pages이며, 운영은 GitHub Actions + REST 병행한다.
 
 ---
@@ -57,7 +57,7 @@
    * 실패 시 알림 전송
 
 2) **REST Trigger (Azure Functions)**
-   * HTTP 요청으로 즉시 발행
+   * HTTP 요청으로 workflow_dispatch 트리거
    * 멱등성 보장
 
 3) **Collector Agent**
@@ -118,7 +118,8 @@
 
 * `POST /api/publish`
 * `category`, `run_date`, `force`, `idempotency_key` 지원
-* 즉시 `_posts` 반영
+* REST는 **workflow_dispatch 트리거** 역할만 수행
+* 실제 발행/커밋은 Actions에서 처리
 
 ---
 
