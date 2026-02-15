@@ -122,3 +122,17 @@ $text-color: #ffffff !default;
 .page__meta-author {
   font-size: 0.9rem;
 }
+
+/* 상단 네비: 홈만 노출, 나머지는 메뉴 */
+.greedy-nav .visible-links {
+  max-width: 80px; /* 홈만 보이게 */
+  overflow: hidden;
+}
+
+.greedy-nav .visible-links li:not(:first-child) {
+  display: none;
+}
+
+.greedy-nav__toggle {
+  display: block !important;
+}
