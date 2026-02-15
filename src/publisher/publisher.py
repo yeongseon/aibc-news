@@ -58,7 +58,7 @@ class Publisher:
         return (
             "---\n"
             "layout: single\n"
-            f'title: "{run_date} {category_label} - {model_name}"\n'
+            f'title: "{run_date} - {model_name}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"
