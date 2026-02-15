@@ -16,6 +16,12 @@ on:
         description: "Overwrite existing posts"
         required: false
         default: "false"
+      max_chars:
+        description: "Override max chars"
+        required: false
+      min_chars:
+        description: "Override min chars"
+        required: false
       category:
         description: "Limit to a single category (politics|economy|society|world|tech|culture|sports|entertainment|life|weather)"
         required: false
@@ -57,6 +63,8 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run }}
           FORCE_PUBLISH: ${{ inputs.force_publish }}
           CATEGORY: ${{ inputs.category }}
+          ARTICLE_MAX_CHARS: ${{ inputs.max_chars }}
+          ARTICLE_MIN_CHARS: ${{ inputs.min_chars }}
         run: |
           python scripts/run_publish_article.py
 

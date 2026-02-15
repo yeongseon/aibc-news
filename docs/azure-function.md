@@ -15,7 +15,9 @@ Azure Function은 **repository_dispatch를 호출하는 리모컨** 역할만 �
   "category": "economy",
   "force": false,
   "dry_run": false,
-  "idempotency_key": "2026-02-15-economy-ks11"
+  "idempotency_key": "2026-02-15-economy-ks11",
+  "max_chars": 160,
+  "min_chars": 160
 }
 ```
 

@@ -49,6 +49,8 @@ jobs:
           RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
           DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
           FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
+          ARTICLE_MAX_CHARS: ${{ inputs.max_chars || github.event.client_payload.max_chars }}
+          ARTICLE_MIN_CHARS: ${{ inputs.min_chars || github.event.client_payload.min_chars }}
           PIPELINE_KIND: "weather"
         run: |
           python scripts/run_publish_article.py

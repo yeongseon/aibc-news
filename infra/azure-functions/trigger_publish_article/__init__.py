@@ -54,6 +54,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "run_date": run_date,
             "force": force,
             "dry_run": dry_run,
+            "max_chars": payload.get("max_chars"),
+            "min_chars": payload.get("min_chars"),
         },
     }
     if idempotency_key:

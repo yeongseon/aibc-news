@@ -56,7 +56,9 @@ Azure Functions `trigger_publish_article`는 **repository_dispatch를 호출하�
   "category": "economy",
   "dry_run": false,
   "force": false,
-  "idempotency_key": "2026-02-15-economy-ks11"
+  "idempotency_key": "2026-02-15-economy-ks11",
+  "max_chars": 160,
+  "min_chars": 160
 }
 ```
 

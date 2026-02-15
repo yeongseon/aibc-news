@@ -18,6 +18,8 @@ export default {
         force: Boolean(body.force),
         dry_run: Boolean(body.dry_run),
         idempotency_key: body.idempotency_key,
+        max_chars: body.max_chars,
+        min_chars: body.min_chars,
       },
     };
 

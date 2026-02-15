@@ -1,3 +1,4 @@
+import os
 import re
 from typing import Dict, Any, List
 
@@ -23,6 +24,12 @@ class QualityGate:
 
         min_chars = rules.get("min_chars", MIN_CHARS)
         max_chars = rules.get("max_chars", MAX_CHARS)
+        min_override = os.environ.get("ARTICLE_MIN_CHARS")
+        max_override = os.environ.get("ARTICLE_MAX_CHARS")
+        if min_override:
+            min_chars = int(min_override)
+        if max_override:
+            max_chars = int(max_override)
         min_items = rules.get("min_items", MIN_ITEMS)
         max_items = rules.get("max_items", MAX_ITEMS)
         min_sentences = rules.get("min_sentences", MIN_SENTENCES)
