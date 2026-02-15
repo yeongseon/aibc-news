@@ -1,0 +1,82 @@
+name: Daily Brief Life
+
+on:
+  schedule:
+    - cron: "40 21 * * *" # 06:40 KST (life)
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "Run date (YYYY-MM-DD)"
+        required: false
+      dry_run:
+        description: "Dry run without publishing"
+        required: false
+        default: "false"
+      force_publish:
+        description: "Overwrite existing posts"
+        required: false
+        default: "false"
+
+jobs:
+  daily-brief-life:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      models: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          RUN_DATE: ${{ inputs.run_date }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          FORCE_PUBLISH: ${{ inputs.force_publish }}
+          CATEGORY: "life"
+        run: |
+          python scripts/run_daily_brief.py
+
+      - name: Commit and push outputs
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/ data/ logs/
+          git diff --quiet && git diff --staged --quiet || git commit -m "자동 브리핑 발행(생활): $(date +'%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Upload pipeline artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-life-${{ inputs.run_date || github.run_id }}
+          path: |
+            data/**
+            logs/**
+
+      - name: Create failure issue
+        if: ${{ failure() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN_DATE=${{ inputs.run_date }}
+          if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
+          gh api --method POST /repos/${{ github.repository }}/issues \
+            -f title="Daily brief (life) failed: ${RUN_DATE}" \
+            -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            -f labels[]=automation \
+            -f labels[]=daily-brief

@@ -50,7 +50,8 @@ Azure Functions `trigger_daily_brief`에서 REST 호출로 즉시 발행합니�
 {
   "run_date": "2026-02-15",
   "category": "market",
-  "force": false
+  "force": false,
+  "idempotency_key": "2026-02-15-market-ks11"
 }
 ```
 

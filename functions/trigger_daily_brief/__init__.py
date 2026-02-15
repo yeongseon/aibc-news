@@ -128,6 +128,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     run_date = payload.get("run_date")
     category = payload.get("category")
     force_publish = _bool_value(payload.get("force"))
+    idempotency_key = payload.get("idempotency_key")
 
     repo = _get_repo()
     token = os.environ.get("GITHUB_TOKEN")
@@ -197,6 +198,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 "run_date": run_date,
                 "category": category,
                 "force": force_publish,
+                "idempotency_key": idempotency_key,
                 "results": results,
             },
             ensure_ascii=False,
