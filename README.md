@@ -37,29 +37,26 @@ GitHub Actions로 정기 실행을 구성했습니다. 자동 발행을 사용�
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
 2. 워크플로우(`.github/workflows/daily-brief.yml`) 확인
 
-### REST Trigger (workflow_dispatch)
+### REST Trigger (direct publish)
 
-Azure Functions `trigger_daily_brief`에서 REST 호출로 Actions를 트리거합니다.
+Azure Functions `trigger_daily_brief`에서 REST 호출로 즉시 발행합니다.
 
 **Required env:**
 - `GITHUB_TOKEN`
 - `GITHUB_REPO` (예: `yeongseon/aibc-news`)
-- `WORKFLOW_ID` (default: `daily-brief.yml`)
 
 **Request JSON:**
 ```json
 {
   "run_date": "2026-02-15",
-  "dry_run": false,
-  "force_publish": false,
-  "idempotency_key": "2026-02-15-market-ks11"
+  "category": "market",
+  "force": false
 }
 ```
 
 **동작:**
-- REST → `workflow_dispatch`
-- 발행 로직은 Actions 한 곳만 사용
-- 파일명 규칙 기반 멱등성 (기본 skip, `force_publish=true` 시 overwrite)
+- REST → 즉시 `_posts/` 반영
+- 파일명 규칙 기반 멱등성 (기본 skip, `force=true` 시 overwrite)
 
 ## 배포 (GitHub Pages)
 

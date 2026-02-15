@@ -38,6 +38,7 @@ class RunDailyBriefUseCase:
         dry_run: bool,
         force_collect: bool = False,
         force_publish: bool = False,
+        category: str | None = None,
         read_json,
         write_json,
     ) -> Dict[str, Any]:
@@ -54,6 +55,9 @@ class RunDailyBriefUseCase:
 
             def write_item(self, item, run_date: str):
                 return self.parent._write_item_with_retry(item, run_date)
+
+        if category:
+            payload = self._filter_payload(payload, category)
 
         try:
             drafts, quality_results = generate_posts(
@@ -144,6 +148,27 @@ class RunDailyBriefUseCase:
     ) -> Dict[str, Any] | Any:
         self.logger.log("Quality gate start")
         return self.gate.validate(markdown_body, {"items": [item_payload]})
+
+    @staticmethod
+    def _filter_payload(payload: Dict[str, Any], category: str) -> Dict[str, Any]:
+        def _category_for(item_type: str) -> str:
+            mapping = {
+                "market": "market",
+                "weather": "weather",
+                "lifestyle": "life",
+                "headline": "news",
+            }
+            return mapping.get(item_type, "news")
+
+        filtered_items = [
+            item
+            for item in payload.get("items", [])
+            if _category_for(item.get("type", "news")) == category
+        ]
+        return {
+            "date": payload.get("date", ""),
+            "items": filtered_items,
+        }
 
     @staticmethod
     def _slug_for(item_type: str) -> str:

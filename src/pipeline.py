@@ -9,7 +9,7 @@ from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
 from .writer import CopilotWriter
 
 
-def run_pipeline(run_date: str, dry_run: bool = False):
+def run_pipeline(run_date: str, dry_run: bool = False, category: str | None = None):
     data_dir = Path("data")
     logs_dir = Path("logs")
     ensure_dir(data_dir)
@@ -38,6 +38,7 @@ def run_pipeline(run_date: str, dry_run: bool = False):
         dry_run=dry_run,
         force_collect=os.environ.get("FORCE_COLLECT", "false").lower() == "true",
         force_publish=os.environ.get("FORCE_PUBLISH", "false").lower() == "true",
+        category=category,
         read_json=read_json,
         write_json=write_json,
     )
