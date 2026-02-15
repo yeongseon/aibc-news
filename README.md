@@ -34,6 +34,22 @@ bundle exec jekyll build
 
 GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
+## 이미지 업로드 (Repo 저장)
+
+이미지는 `/assets/images/`에 저장하고 `image:`에 경로를 사용합니다.
+
+1) 최적화 스크립트
+```bash
+python scripts/optimize_image.py <path/to/image.jpg>
+```
+
+2) 생성된 파일 경로 사용
+```yaml
+image: /assets/images/your-image.webp
+```
+
+기본 설정: **WEBP, 최대 1200px, 품질 82**
+
 > 내부 카테고리 키(영문): politics, economy, society, world, tech, culture, sports, entertainment, life, weather
 
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
