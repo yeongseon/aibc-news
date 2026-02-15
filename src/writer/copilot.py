@@ -30,7 +30,7 @@ class CopilotWriter:
             raise RuntimeError("GITHUB_TOKEN is not set")
 
         user_prompt = (
-            "다음 JSON 한 건을 참고해 200자 내외 브리핑을 작성하세요.\n"
+            "다음 JSON 한 건을 참고해 200자 내외 기사 요약을 작성하세요.\n"
             "정확히 2~3문장으로 작성하세요.\n"
             "수치가 있으면 '발표일 YYYY-MM-DD' 또는 '기준시점 YYYY-MM-DD'를 반드시 포함하세요.\n\n"
             f"발행일: {run_date}\n"
