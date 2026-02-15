@@ -1,20 +1,3 @@
-# Cloudflare Worker Trigger (repository_dispatch)
-
-Cloudflare Workers를 **리모컨 래퍼**로 사용해 `/trigger` 엔드포인트를 제공할 수 있습니다.
-
-## 1) Worker 코드
-
-> 코드 위치: `infra/cloudflare-worker/`
-
-`wrangler.toml`
-```toml
-name = "aibc-trigger"
-main = "src/worker.js"
-compatibility_date = "2025-01-01"
-```
-
-`src/worker.js`
-```js
 export default {
   async fetch(request, env) {
     if (request.method !== "POST") {
@@ -51,24 +34,3 @@ export default {
     return new Response(text, { status: resp.status, headers: { "Content-Type": "application/json" } });
   },
 };
-```
-
-## 2) Secrets/Env
-
-```
-wrangler secret put GITHUB_TOKEN
-wrangler secret put GITHUB_REPO
-```
-
-## 3) 호출 예시
-
-```bash
-curl -X POST https://<your-worker>.workers.dev/trigger \
-  -H "Content-Type: application/json" \
-  -d '{"category":"market","run_date":"2026-02-15","force":false}'
-```
-
-## 4) 권장 권한
-
-- Fine-grained PAT
-- Repository: `Actions` read/write
