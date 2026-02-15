@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "코스피 지수는 기준시점 2026-02-13 현재 5522.27포인트를 기록하며 전일 종가 5354.49포인트…"
+title: "[정치] 코스피 지수는 기준시점 2026-02-"
 author: AIBC Desk
 categories: [ market ]
 date: 2026-02-13

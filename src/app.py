@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Dict, List
 
 from .domain.models import CollectorPayload, PostDraft
+from .config import CATEGORY_LABELS
 from .slug import make_filename
 
 
@@ -56,6 +57,8 @@ def generate_posts(
 
         category = _category_for(item_payload.get("type", "politics"))
         filename = make_filename(run_date, item_payload)
+        raw_title = item_payload.get("title", "")
+        title = _normalize_title(raw_title, category)
         drafts.append(
             PostDraft(
                 category=category,
@@ -63,7 +66,7 @@ def generate_posts(
                 markdown_body=markdown_body,
                 summary=summary,
                 sources=item_payload.get("sources", []),
-                title=item_payload.get("title", ""),
+                title=title,
                 image=item_payload.get("image"),
             )
         )
@@ -104,3 +107,15 @@ def _category_for(item_type: str) -> str:
         "weather": "weather",
     }
     return mapping.get(item_type, "politics")
+
+
+def _normalize_title(raw_title: str, category: str) -> str:
+    prefix = CATEGORY_LABELS.get(category, category)
+    title = raw_title.strip()
+    if prefix and not title.startswith(prefix):
+        title = f"[{prefix}] {title}"
+    # normalize length 18-26 chars
+    title = title[:26]
+    if len(title) < 18:
+        title = (title + " " * 18)[:18].strip()
+    return title

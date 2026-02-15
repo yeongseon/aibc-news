@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "서울 지역은 2026년 2월 13일 기준 박무가 낀 가운데 기온은 1.76°C, 체감온도는 -1.46°C로…"
+title: "[정치] 서울 지역은 2026년 2월 13일 기"
 author: AIBC Desk
 categories: [ weather ]
 date: 2026-02-13
