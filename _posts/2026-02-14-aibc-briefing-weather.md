@@ -1,6 +1,6 @@
 ---
 layout: single
-title: " 2026-02-14 WEATHER"
+title: "서울 지역은 2026년 2월 14일 기준 박무가 관측되었으며, 기온은 3.76°C, 체감온도도 동일하게 3.…"
 author: AIBC Desk
 categories: [ weather ]
 date: 2026-02-14

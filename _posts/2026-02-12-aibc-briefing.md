@@ -1,6 +1,6 @@
 ---
 layout: single
-title: " 2026-02-12 주요 이슈"
+title: "1) [시장] 코스피 최신 흐름 코스피 지수는 기준시점 2026-02-12 기준 5484.17포인트를 기록하…"
 author: AIBC Desk
 categories: [ news ]
 date: 2026-02-12

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: " 2026-02-13 Life"
+title: "서울 지역의 실내 습도가 100%로 측정되었으며, 바람은 초속 3.09m로 기록되었습니다(발표일 2026-0…"
 author: AIBC Desk
 categories: [ life ]
 date: 2026-02-13
