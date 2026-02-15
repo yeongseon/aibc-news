@@ -12,6 +12,17 @@ on:
         description: "Dry run without publishing"
         required: false
         default: "false"
+      force_publish:
+        description: "Overwrite existing posts"
+        required: false
+        default: "false"
+      idempotency_key:
+        description: "Idempotency key for dispatch"
+        required: false
+
+concurrency:
+  group: daily-brief-${{ inputs.idempotency_key || inputs.run_date || github.run_id }}
+  cancel-in-progress: false
 
 jobs:
   daily-brief:
@@ -41,6 +52,7 @@ jobs:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           RUN_DATE: ${{ inputs.run_date }}
           DRY_RUN: ${{ inputs.dry_run }}
+          FORCE_PUBLISH: ${{ inputs.force_publish }}
         run: |
           python scripts/run_daily_brief.py
 
