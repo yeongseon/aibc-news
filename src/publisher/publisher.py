@@ -19,6 +19,7 @@ class Publisher:
         sources: List[Dict[str, Any]],
         category: str = "politics",
         filename: str = "",
+        title: str = "",
         image: str | None = None,
         dry_run: bool = False,
         force: bool = False,
@@ -31,7 +32,7 @@ class Publisher:
             return {"status": "skipped", "path": str(post_path)}
 
         front_matter = self._build_front_matter(
-            run_date, summary, sources, category, image=image
+            run_date, summary, sources, category, title=title, image=image
         )
         content = front_matter + "\n" + markdown_body + "\n"
 
@@ -47,6 +48,7 @@ class Publisher:
         summary: str,
         sources: List[Dict[str, Any]],
         category: str,
+        title: str,
         image: str | None = None,
     ) -> str:
         source_lines = "\n".join(
@@ -55,10 +57,11 @@ class Publisher:
         category_label = CATEGORY_LABELS.get(category, category)
         model_name = os.environ.get("ARTICLE_MODEL_NAME", DEFAULT_MODEL_NAME)
         image_line = f"image: {image}\n" if image else ""
+        safe_title = title or category_label
         return (
             "---\n"
             "layout: single\n"
-            f'title: "{run_date} - {model_name}"\n'
+            f'title: "{safe_title} - {model_name}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"

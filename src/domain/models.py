@@ -102,4 +102,5 @@ class PostDraft:
     markdown_body: str
     summary: str
     sources: List[Dict[str, Any]]
+    title: str
     image: str | None = None
