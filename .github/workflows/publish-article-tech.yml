@@ -1,8 +1,8 @@
-name: Publish Article Market
+name: Publish Article Tech
 
 on:
   schedule:
-    - cron: "30 21 * * *" # 06:30 KST (market)
+    - cron: "00 22 * * *" # 07:00 KST (tech)
   workflow_dispatch:
     inputs:
       run_date:
@@ -20,8 +20,8 @@ on:
     types: [publish_article]
 
 jobs:
-  publish-article-market:
-    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'market' }}
+  publish-article-tech:
+    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'tech' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -49,24 +49,15 @@ jobs:
           RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
           DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
           FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
-          PIPELINE_KIND: "market"
+          PIPELINE_KIND: "tech"
         run: |
           python scripts/run_publish_article.py
-
-      - name: Commit and push outputs
-        if: ${{ inputs.dry_run != 'true' }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add _posts/ data/ logs/
-          git diff --quiet && git diff --staged --quiet || git commit -m "자동 브리핑 발행: $(date +'%Y-%m-%d %H:%M')"
-          git push
 
       - name: Upload pipeline artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-market-${{ inputs.run_date || github.run_id }}
+          name: pipeline-tech-${{ inputs.run_date || github.run_id }}
           path: |
             data/**
             logs/**
@@ -78,8 +69,4 @@ jobs:
         run: |
           RUN_DATE=${{ inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
-          gh api --method POST /repos/${{ github.repository }}/issues \
-            -f title="Article publish (market) failed: ${RUN_DATE}" \
-            -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-            -f labels[]=automation \
-            -f labels[]=publish-article
+          gh api --method POST /repos/${{ github.repository }}/issues             -f title="Article publish (tech) failed: ${RUN_DATE}"             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             -f labels[]=automation             -f labels[]=publish-article

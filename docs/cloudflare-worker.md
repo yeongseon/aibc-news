@@ -65,7 +65,7 @@ wrangler secret put GITHUB_REPO
 ```bash
 curl -X POST https://<your-worker>.workers.dev/trigger \
   -H "Content-Type: application/json" \
-  -d '{"category":"market","run_date":"2026-02-15","force":false}'
+  -d '{"category":"economy","run_date":"2026-02-15","force":false}'
 ```
 
 ## 4) 권장 권한

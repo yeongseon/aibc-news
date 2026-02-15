@@ -97,7 +97,7 @@ class OpenWeatherCollector(Collector):
         }
 
         lifestyle_item = {
-            "type": "lifestyle",
+            "type": "life",
             "title": "체감 환경 요약",
             "facts": [
                 "전국 평균 체감 환경은 지역별 편차가 있으니 이동 계획을 점검하세요.",

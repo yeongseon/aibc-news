@@ -17,14 +17,14 @@ class _FilteredCollector(Collector):
         payload = self.source.collect(run_date)
         items: List[Dict[str, Any]] = []
         for item in payload.get("items", []):
-            if _category_for(item.get("type", "news")) == self.category:
+            if _category_for(item.get("type", "politics")) == self.category:
                 items.append(item)
         return {"date": payload.get("date", run_date), "items": items}
 
 
-class MarketCollector(_FilteredCollector):
+class EconomyCollector(_FilteredCollector):
     def __init__(self) -> None:
-        super().__init__(YahooFinanceCollector(), "market")
+        super().__init__(YahooFinanceCollector(), "economy")
 
 
 class WeatherCollector(_FilteredCollector):
@@ -32,21 +32,57 @@ class WeatherCollector(_FilteredCollector):
         super().__init__(OpenWeatherCollector(), "weather")
 
 
-class LifestyleCollector(_FilteredCollector):
+class LifeCollector(_FilteredCollector):
     def __init__(self) -> None:
         super().__init__(OpenWeatherCollector(), "life")
 
 
-class HeadlineCollector(_FilteredCollector):
+class PoliticsCollector(_FilteredCollector):
     def __init__(self) -> None:
-        super().__init__(LocalCollector(), "news")
+        super().__init__(LocalCollector(), "politics")
+
+
+class SocietyCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "society")
+
+
+class WorldCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "world")
+
+
+class TechCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "tech")
+
+
+class CultureCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "culture")
+
+
+class SportsCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "sports")
+
+
+class EntertainmentCollector(_FilteredCollector):
+    def __init__(self) -> None:
+        super().__init__(LocalCollector(), "entertainment")
 
 
 def _category_for(item_type: str) -> str:
     mapping = {
-        "market": "market",
+        "politics": "politics",
+        "economy": "economy",
+        "society": "society",
+        "world": "world",
+        "tech": "tech",
+        "culture": "culture",
+        "sports": "sports",
+        "entertainment": "entertainment",
+        "life": "life",
         "weather": "weather",
-        "lifestyle": "life",
-        "headline": "news",
     }
-    return mapping.get(item_type, "news")
+    return mapping.get(item_type, "politics")

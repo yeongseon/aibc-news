@@ -11,6 +11,8 @@
 AIBC 파이프라인을 **카테고리별 독립 실행** 구조로 설계하고,
 GitHub Actions + REST API 병행 발행을 지원한다.
 
+카테고리(한글): 정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨
+
 ---
 
 ## 2. 아키텍처 개요
@@ -54,7 +56,7 @@ src/pipeline.py               repository_dispatch
   "date": "YYYY-MM-DD",
   "items": [
     {
-      "type": "headline|market|weather|lifestyle",
+      "type": "politics|economy|society|world|tech|culture|sports|entertainment|life|weather",
       "title": "...",
       "facts": ["...", "..."],
       "sources": [
@@ -81,9 +83,9 @@ src/pipeline.py               repository_dispatch
 ```json
 {
   "run_date": "2026-02-15",
-  "category": "market",
+  "category": "economy",
   "force": false,
-  "idempotency_key": "2026-02-15-market-ks11"
+  "idempotency_key": "2026-02-15-economy-ks11"
 }
 ```
 
@@ -92,10 +94,16 @@ src/pipeline.py               repository_dispatch
 ## 7. GitHub Actions
 
 카테고리별 워크플로 구성:
-- `publish-article-market.yml`
-- `publish-article-weather.yml`
+- `publish-article-politics.yml`
+- `publish-article-economy.yml`
+- `publish-article-society.yml`
+- `publish-article-world.yml`
+- `publish-article-tech.yml`
+- `publish-article-culture.yml`
+- `publish-article-sports.yml`
+- `publish-article-entertainment.yml`
 - `publish-article-life.yml`
-- `publish-article-news.yml`
+- `publish-article-weather.yml`
 
 ---
 

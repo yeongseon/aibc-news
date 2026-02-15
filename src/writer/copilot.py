@@ -10,7 +10,7 @@ import re
 from ..config import GITHUB_MODELS_CHAT_URL, GITHUB_MODELS_MODEL, MIN_CHARS
 from .simple import SimpleWriter
 
-SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news briefs.
+SYSTEM_PROMPT = """You are a newsroom writer. Write neutral, broadcast-style Korean news articles.
 Follow the constraints strictly:
 - 1 item only.
 - EXACTLY 2~3 sentences.

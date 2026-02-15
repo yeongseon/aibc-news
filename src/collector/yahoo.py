@@ -46,7 +46,7 @@ class YahooFinanceCollector(Collector):
 
             items.append(
                 {
-                    "type": "market",
+                    "type": "economy",
                     "title": f"{label} 최신 흐름",
                     "facts": facts,
                     "slug": symbol.lower().replace("^", "").replace("=", "-"),

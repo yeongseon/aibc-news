@@ -5,7 +5,7 @@ AI 기반 자동 편집국이 운영하는 **카테고리별 기사 발행** 사
 ## 주요 기능
 - 한국어 UI 및 콘텐츠
 - 다크 테마 적용 (Minimal Mistakes)
-- 카테고리별 뉴스 제공 (뉴스, 생활, 날씨, 정책)
+- 카테고리별 뉴스 제공 (정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨)
 - RSS 피드 제공 (`/feed.xml`)
 - 자동 뉴스 생성 스크립트 (`scripts/generate_news.py`)
 
@@ -34,6 +34,8 @@ bundle exec jekyll build
 
 GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 
+> 내부 카테고리 키(영문): politics, economy, society, world, tech, culture, sports, entertainment, life, weather
+
 1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
 2. 워크플로우(`.github/workflows/publish-article-*.yml`) 확인
 
@@ -51,10 +53,10 @@ Azure Functions `trigger_publish_article`는 **repository_dispatch를 호출하�
 ```json
 {
   "run_date": "2026-02-15",
-  "category": "market",
+  "category": "economy",
   "dry_run": false,
   "force": false,
-  "idempotency_key": "2026-02-15-market-ks11"
+  "idempotency_key": "2026-02-15-economy-ks11"
 }
 ```
 
@@ -70,14 +72,14 @@ curl -X POST \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github+json" \
   https://api.github.com/repos/yeongseon/aibc-news/dispatches \
-  -d '{"event_type":"publish_article","client_payload":{"category":"market","run_date":"2026-02-15","force":false}}'
+  -d '{"event_type":"publish_article","client_payload":{"category":"economy","run_date":"2026-02-15","force":false}}'
 ```
 
 #### GitHub CLI
 ```bash
 gh api repos/yeongseon/aibc-news/dispatches \
   -f event_type=publish_article \
-  -f client_payload.category=market \
+  -f client_payload.category=economy \
   -f client_payload.run_date=2026-02-15 \
   -F client_payload.force=false
 ```
@@ -93,7 +95,7 @@ headers = {
 }
 body = {
     "event_type": "publish_article",
-    "client_payload": {"category": "market", "run_date": "2026-02-15", "force": False},
+    "client_payload": {"category": "economy", "run_date": "2026-02-15", "force": False},
 }
 requests.post(url, headers=headers, json=body, timeout=15)
 ```
@@ -110,7 +112,7 @@ const res = await fetch("https://api.github.com/repos/yeongseon/aibc-news/dispat
   },
   body: JSON.stringify({
     event_type: "publish_article",
-    client_payload: { category: "market", run_date: "2026-02-15", force: false },
+    client_payload: { category: "economy", run_date: "2026-02-15", force: false },
   }),
 });
 ```

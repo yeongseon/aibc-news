@@ -11,6 +11,7 @@
 
 * AIBC Phase 1의 아키텍처를 정의한다.
 * **카테고리별 독립 발행**과 **REST 트리거(repository_dispatch)**를 포함한다.
+* 카테고리(한글): 정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨
 * 배포 대상은 Jekyll 기반 GitHub Pages이며, 운영은 GitHub Actions + REST 병행한다.
 
 ---

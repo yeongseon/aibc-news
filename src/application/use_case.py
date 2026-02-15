@@ -153,17 +153,23 @@ class RunDailyBriefUseCase:
     def _filter_payload(payload: Dict[str, Any], category: str) -> Dict[str, Any]:
         def _category_for(item_type: str) -> str:
             mapping = {
-                "market": "market",
+                "politics": "politics",
+                "economy": "economy",
+                "society": "society",
+                "world": "world",
+                "tech": "tech",
+                "culture": "culture",
+                "sports": "sports",
+                "entertainment": "entertainment",
+                "life": "life",
                 "weather": "weather",
-                "lifestyle": "life",
-                "headline": "news",
             }
-            return mapping.get(item_type, "news")
+            return mapping.get(item_type, "politics")
 
         filtered_items = [
             item
             for item in payload.get("items", [])
-            if _category_for(item.get("type", "news")) == category
+            if _category_for(item.get("type", "politics")) == category
         ]
         return {
             "date": payload.get("date", ""),
@@ -173,9 +179,15 @@ class RunDailyBriefUseCase:
     @staticmethod
     def _slug_for(item_type: str) -> str:
         mapping = {
-            "market": "market",
+            "politics": "politics",
+            "economy": "economy",
+            "society": "society",
+            "world": "world",
+            "tech": "tech",
+            "culture": "culture",
+            "sports": "sports",
+            "entertainment": "entertainment",
+            "life": "life",
             "weather": "weather",
-            "lifestyle": "life",
-            "headline": "news",
         }
-        return mapping.get(item_type, "news")
+        return mapping.get(item_type, "politics")

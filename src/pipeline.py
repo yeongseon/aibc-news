@@ -2,7 +2,19 @@ import os
 from pathlib import Path
 
 from .application.use_case import RunDailyBriefUseCase
-from .collector import CompositeCollector, MarketCollector, WeatherCollector, LifestyleCollector, HeadlineCollector
+from .collector import (
+    CompositeCollector,
+    EconomyCollector,
+    WeatherCollector,
+    LifeCollector,
+    PoliticsCollector,
+    SocietyCollector,
+    WorldCollector,
+    TechCollector,
+    CultureCollector,
+    SportsCollector,
+    EntertainmentCollector,
+)
 from .publisher import Publisher
 from .quality import QualityGate
 from .utils import RunLogger, ensure_dir, get_run_date, read_json, write_json
@@ -18,14 +30,26 @@ def run_pipeline(run_date: str, dry_run: bool = False, category: str | None = No
     logger = RunLogger(logs_dir / f"{run_date}.log")
     logger.log("Pipeline start")
 
-    if category == "market":
-        collector = MarketCollector()
+    if category == "economy":
+        collector = EconomyCollector()
     elif category == "weather":
         collector = WeatherCollector()
     elif category == "life":
-        collector = LifestyleCollector()
-    elif category == "news":
-        collector = HeadlineCollector()
+        collector = LifeCollector()
+    elif category == "politics":
+        collector = PoliticsCollector()
+    elif category == "society":
+        collector = SocietyCollector()
+    elif category == "world":
+        collector = WorldCollector()
+    elif category == "tech":
+        collector = TechCollector()
+    elif category == "culture":
+        collector = CultureCollector()
+    elif category == "sports":
+        collector = SportsCollector()
+    elif category == "entertainment":
+        collector = EntertainmentCollector()
     else:
         collector = CompositeCollector()
     writer = CopilotWriter()

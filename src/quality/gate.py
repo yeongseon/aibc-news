@@ -111,15 +111,21 @@ class QualityGate:
     def _category_from_payload(collector_payload: Dict[str, Any]) -> str:
         items = collector_payload.get("items", [])
         if not items:
-            return "news"
-        item_type = items[0].get("type", "news")
+            return "politics"
+        item_type = items[0].get("type", "politics")
         mapping = {
-            "market": "market",
+            "politics": "politics",
+            "economy": "economy",
+            "society": "society",
+            "world": "world",
+            "tech": "tech",
+            "culture": "culture",
+            "sports": "sports",
+            "entertainment": "entertainment",
+            "life": "life",
             "weather": "weather",
-            "lifestyle": "life",
-            "headline": "news",
         }
-        return mapping.get(item_type, "news")
+        return mapping.get(item_type, "politics")
 
     def _contains_number_without_date(self, text: str) -> bool:
         has_number = bool(re.search(r"\d", text))

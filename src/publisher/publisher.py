@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import Dict, Any, List
-from ..config import DEFAULT_AUTHOR
+from ..config import DEFAULT_AUTHOR, CATEGORY_LABELS
 from ..utils import ensure_dir
 
 
@@ -15,13 +15,13 @@ class Publisher:
         markdown_body: str,
         summary: str,
         sources: List[Dict[str, Any]],
-        category: str = "news",
+        category: str = "politics",
         filename: str = "",
         dry_run: bool = False,
         force: bool = False,
     ) -> Dict[str, Any]:
         if not filename:
-            filename = f"{run_date}-news-unknown.md"
+            filename = f"{run_date}-politics-unknown.md"
         post_path = self.posts_dir / filename
 
         if post_path.exists() and not force:
@@ -42,12 +42,13 @@ class Publisher:
         source_lines = "\n".join(
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
         )
+        category_label = CATEGORY_LABELS.get(category, category)
         return (
             "---\n"
             "layout: single\n"
-            f'title: "[AIBC 브리핑] {run_date} {category.upper()}"\n'
+            f'title: "[AIBC] {run_date} {category_label}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
-            f"categories: [ {category} ]\n"
+            f"categories: [ {category_label} ]\n"
             f"date: {run_date}\n"
             f'summary: "{summary}"\n'
             "sources:\n"

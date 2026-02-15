@@ -2,7 +2,7 @@ name: Publish Article Weather
 
 on:
   schedule:
-    - cron: "35 21 * * *" # 06:35 KST (weather)
+    - cron: "30 21 * * *" # 06:30 KST (weather)
   workflow_dispatch:
     inputs:
       run_date:
@@ -53,15 +53,6 @@ jobs:
         run: |
           python scripts/run_publish_article.py
 
-      - name: Commit and push outputs
-        if: ${{ inputs.dry_run != 'true' }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add _posts/ data/ logs/
-          git diff --quiet && git diff --staged --quiet || git commit -m "자동 브리핑 발행: $(date +'%Y-%m-%d %H:%M')"
-          git push
-
       - name: Upload pipeline artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -78,8 +69,4 @@ jobs:
         run: |
           RUN_DATE=${{ inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
-          gh api --method POST /repos/${{ github.repository }}/issues \
-            -f title="Article publish (weather) failed: ${RUN_DATE}" \
-            -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-            -f labels[]=automation \
-            -f labels[]=publish-article
+          gh api --method POST /repos/${{ github.repository }}/issues             -f title="Article publish (weather) failed: ${RUN_DATE}"             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             -f labels[]=automation             -f labels[]=publish-article

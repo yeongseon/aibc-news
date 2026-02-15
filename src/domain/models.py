@@ -37,7 +37,7 @@ class BriefItem:
     @classmethod
     def from_dict(cls, payload: Dict[str, Any]) -> "BriefItem":
         return cls(
-            type=payload.get("type", "news"),
+            type=payload.get("type", "politics"),
             title=payload.get("title", ""),
             facts=list(payload.get("facts", [])),
             sources=[

@@ -10,7 +10,7 @@ MIN_SOURCES_TOTAL = 1
 MAX_SINGLE_SOURCE_RATIO = 1.0
 
 CATEGORY_RULES = {
-    "market": {
+    "politics": {
         "min_chars": 160,
         "max_chars": 1200,
         "min_items": 1,
@@ -20,7 +20,67 @@ CATEGORY_RULES = {
         "min_sources_total": 1,
         "max_single_source_ratio": 1.0,
     },
-    "weather": {
+    "economy": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "society": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "world": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "tech": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "culture": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "sports": {
+        "min_chars": 160,
+        "max_chars": 1200,
+        "min_items": 1,
+        "max_items": 1,
+        "min_sentences": 2,
+        "max_sentences": 4,
+        "min_sources_total": 1,
+        "max_single_source_ratio": 1.0,
+    },
+    "entertainment": {
         "min_chars": 160,
         "max_chars": 1200,
         "min_items": 1,
@@ -40,7 +100,7 @@ CATEGORY_RULES = {
         "min_sources_total": 1,
         "max_single_source_ratio": 1.0,
     },
-    "news": {
+    "weather": {
         "min_chars": 160,
         "max_chars": 1200,
         "min_items": 1,
@@ -55,7 +115,20 @@ CATEGORY_RULES = {
 FORBIDDEN_WORDS = ["충격", "대박", "속보", "확정 수익"]
 
 DEFAULT_AUTHOR = "AIBC Desk"
-DEFAULT_CATEGORY = "News"
+DEFAULT_CATEGORY = "정치"
+
+CATEGORY_LABELS = {
+    "politics": "정치",
+    "economy": "경제",
+    "society": "사회",
+    "world": "세계",
+    "tech": "기술",
+    "culture": "문화",
+    "sports": "스포츠",
+    "entertainment": "연예",
+    "life": "생활",
+    "weather": "날씨",
+}
 
 YAHOO_SYMBOLS = [
     {"symbol": "^KS11", "label": "코스피"},

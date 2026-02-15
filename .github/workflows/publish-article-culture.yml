@@ -1,8 +1,8 @@
-name: Publish Article Life
+name: Publish Article Culture
 
 on:
   schedule:
-    - cron: "40 21 * * *" # 06:40 KST (life)
+    - cron: "05 22 * * *" # 07:05 KST (culture)
   workflow_dispatch:
     inputs:
       run_date:
@@ -20,8 +20,8 @@ on:
     types: [publish_article]
 
 jobs:
-  publish-article-life:
-    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'life' }}
+  publish-article-culture:
+    if: ${{ github.event_name != 'repository_dispatch' || github.event.client_payload.category == 'culture' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -49,7 +49,7 @@ jobs:
           RUN_DATE: ${{ inputs.run_date || github.event.client_payload.run_date }}
           DRY_RUN: ${{ inputs.dry_run || github.event.client_payload.dry_run }}
           FORCE_PUBLISH: ${{ inputs.force_publish || github.event.client_payload.force }}
-          PIPELINE_KIND: "life"
+          PIPELINE_KIND: "culture"
         run: |
           python scripts/run_publish_article.py
 
@@ -57,7 +57,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-life-${{ inputs.run_date || github.run_id }}
+          name: pipeline-culture-${{ inputs.run_date || github.run_id }}
           path: |
             data/**
             logs/**
@@ -69,4 +69,4 @@ jobs:
         run: |
           RUN_DATE=${{ inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
-          gh api --method POST /repos/${{ github.repository }}/issues             -f title="Article publish (life) failed: ${RUN_DATE}"             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             -f labels[]=automation             -f labels[]=publish-article
+          gh api --method POST /repos/${{ github.repository }}/issues             -f title="Article publish (culture) failed: ${RUN_DATE}"             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             -f labels[]=automation             -f labels[]=publish-article

@@ -34,7 +34,7 @@ def generate_posts(
 
         quality_results.append(
             {
-                "type": item_payload.get("type", "news"),
+                "type": item_payload.get("type", "politics"),
                 "title": item_payload.get("title", ""),
                 "quality": quality_result,
             }
@@ -54,7 +54,7 @@ def generate_posts(
             logger.log(f"Quality gate failed: {reasons}")
             raise QualityGateError(quality_results, reasons)
 
-        category = _category_for(item_payload.get("type", "news"))
+        category = _category_for(item_payload.get("type", "politics"))
         filename = make_filename(run_date, item_payload)
         drafts.append(
             PostDraft(
@@ -88,9 +88,15 @@ def publish_posts(drafts: List[PostDraft], *, publisher, dry_run: bool, force: b
 
 def _category_for(item_type: str) -> str:
     mapping = {
-        "market": "market",
+        "politics": "politics",
+        "economy": "economy",
+        "society": "society",
+        "world": "world",
+        "tech": "tech",
+        "culture": "culture",
+        "sports": "sports",
+        "entertainment": "entertainment",
+        "life": "life",
         "weather": "weather",
-        "lifestyle": "life",
-        "headline": "news",
     }
-    return mapping.get(item_type, "news")
+    return mapping.get(item_type, "politics")

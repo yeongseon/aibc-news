@@ -7,7 +7,7 @@ from typing import Dict, Any
 
 def slugify(value: str) -> str:
     cleaned = re.sub(r"[^a-zA-Z0-9]+", "-", value.lower()).strip("-")
-    return cleaned or "news"
+    return cleaned or "article"
 
 
 def _hash(value: str, size: int = 8) -> str:
@@ -19,10 +19,10 @@ def _symbol_slug(symbol: str) -> str:
 
 
 def make_post_id(item: Dict[str, Any]) -> str:
-    item_type = item.get("type", "news")
+    item_type = item.get("type", "politics")
     slug = item.get("slug")
 
-    if not slug and item_type == "market":
+    if not slug and item_type == "economy":
         sources = item.get("sources", [])
         if sources:
             url = sources[0].get("url", "")
@@ -33,7 +33,7 @@ def make_post_id(item: Dict[str, Any]) -> str:
         slug = item.get("city", "kr")
 
     if not slug:
-        title = item.get("title", "news")
+        title = item.get("title", "article")
         slug = f"{slugify(title)}-{_hash(title, 6)}"
 
     return f"{item_type}-{slug}"

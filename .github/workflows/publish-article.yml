@@ -17,7 +17,7 @@ on:
         required: false
         default: "false"
       category:
-        description: "Limit to a single category (market|weather|life|news)"
+        description: "Limit to a single category (politics|economy|society|world|tech|culture|sports|entertainment|life|weather)"
         required: false
       idempotency_key:
         description: "Idempotency key for dispatch"

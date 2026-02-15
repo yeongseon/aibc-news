@@ -12,10 +12,10 @@ Azure Function은 **repository_dispatch를 호출하는 리모컨** 역할만 �
 ```json
 {
   "run_date": "2026-02-15",
-  "category": "market",
+  "category": "economy",
   "force": false,
   "dry_run": false,
-  "idempotency_key": "2026-02-15-market-ks11"
+  "idempotency_key": "2026-02-15-economy-ks11"
 }
 ```
 

@@ -19,6 +19,9 @@ AIBC는 공개 데이터를 수집하여 AI가 **중립적 뉴스 형식**으로
 - GitHub Actions + REST API 병행 발행
 - 유연한 편성 구성 지원
 
+**카테고리(한글 표기):** 정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨  
+**내부 키(영문):** politics, economy, society, world, tech, culture, sports, entertainment, life, weather
+
 ---
 
 ## 2. 발행 구조 원칙
@@ -83,7 +86,7 @@ AIBC는 두 가지 발행 경로를 지원한다.
 `YYYY-MM-DD-<category>-<slug>.md`
 
 ### 5.2 slug 규칙
-- market → symbol 기반
+- economy → symbol 기반
 - weather → city 기반
 - 기타 → title slug + short hash
 
@@ -131,7 +134,7 @@ Request:
 ```json
 {
   "run_date": "2026-02-15",
-  "category": "market",
+  "category": "economy",
   "force": false
 }
 ```
