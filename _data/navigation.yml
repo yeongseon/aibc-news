@@ -1,14 +1,26 @@
 main:
   - title: "홈"
     url: /
-  - title: "뉴스"
-    url: /news/
-  - title: "시장"
-    url: /market/
-  - title: "날씨"
-    url: /weather/
+  - title: "정치"
+    url: /politics/
+  - title: "경제"
+    url: /economy/
+  - title: "사회"
+    url: /society/
+  - title: "세계"
+    url: /world/
+  - title: "기술"
+    url: /tech/
+  - title: "문화"
+    url: /culture/
+  - title: "스포츠"
+    url: /sports/
+  - title: "연예"
+    url: /entertainment/
   - title: "생활"
     url: /life/
+  - title: "날씨"
+    url: /weather/
   - title: "소개"
     url: /about/
   - title: "정책"
