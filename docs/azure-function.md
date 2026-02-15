@@ -2,6 +2,8 @@
 
 Azure Function은 **repository_dispatch를 호출하는 리모컨** 역할만 수행합니다.
 
+> 코드 위치: `infra/azure-functions/`
+
 ## 1) 환경 변수
 - `GITHUB_TOKEN`
 - `GITHUB_REPO` (예: `yeongseon/aibc-news`)
