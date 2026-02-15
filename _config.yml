@@ -38,7 +38,7 @@ analytics:
 # Author
 author:
   name: "AIBC News"
-  bio: "AI 기술로 매일 전하는 기술, 생활, 날씨 소식"
+  bio: "AI가 전하는 정치·경제·사회·세계·기술·문화·스포츠·연예·생활·날씨 기사"
   location: "서울, 대한민국"
   links:
     - label: "Email"
@@ -157,10 +157,10 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
       show_date: true
       sidebar: false
   # _pages

@@ -83,3 +83,37 @@ $text-color: #ffffff !default;
     margin-bottom: 0.6rem;
   }
 }
+
+/* JTBC/연합뉴스 스타일 카드형 리스트 */
+.archive__item {
+  background: #22252b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px 16px 12px;
+  margin-bottom: 14px;
+}
+
+.archive__item-title a {
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.archive__item-excerpt {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Top story 강조 */
+.archive__item:nth-of-type(1) {
+  padding: 18px 18px 14px;
+  border-color: rgba(77, 194, 211, 0.35);
+  box-shadow: 0 0 0 1px rgba(77, 194, 211, 0.15);
+}
+
+.archive__item:nth-of-type(1) .archive__item-title {
+  font-size: 1.25rem;
+}
+
+/* 메타 최소화 */
+.page__meta {
+  color: rgba(255, 255, 255, 0.65);
+}
