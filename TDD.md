@@ -59,6 +59,7 @@ src/pipeline.py               repository_dispatch
       "type": "politics|economy|society|world|tech|culture|sports|entertainment|life|weather",
       "title": "...",
       "facts": ["...", "..."],
+      "image": "https://...",
       "sources": [
         {"name": "기관/매체", "url": "https://...", "published_at": "YYYY-MM-DD"}
       ]

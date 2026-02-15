@@ -17,6 +17,7 @@ class Publisher:
         sources: List[Dict[str, Any]],
         category: str = "politics",
         filename: str = "",
+        image: str | None = None,
         dry_run: bool = False,
         force: bool = False,
     ) -> Dict[str, Any]:
@@ -27,7 +28,9 @@ class Publisher:
         if post_path.exists() and not force:
             return {"status": "skipped", "path": str(post_path)}
 
-        front_matter = self._build_front_matter(run_date, summary, sources, category)
+        front_matter = self._build_front_matter(
+            run_date, summary, sources, category, image=image
+        )
         content = front_matter + "\n" + markdown_body + "\n"
 
         if dry_run:
@@ -37,12 +40,18 @@ class Publisher:
         return {"status": "published", "path": str(post_path)}
 
     def _build_front_matter(
-        self, run_date: str, summary: str, sources: List[Dict[str, Any]], category: str
+        self,
+        run_date: str,
+        summary: str,
+        sources: List[Dict[str, Any]],
+        category: str,
+        image: str | None = None,
     ) -> str:
         source_lines = "\n".join(
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
         )
         category_label = CATEGORY_LABELS.get(category, category)
+        image_line = f"image: {image}\n" if image else ""
         return (
             "---\n"
             "layout: single\n"
@@ -52,6 +61,7 @@ class Publisher:
             f"date: {run_date}\n"
             f"created_at: {run_date}\n"
             f"updated_at: {run_date}\n"
+            f"{image_line}"
             f'summary: "{summary}"\n'
             "sources:\n"
             f"{source_lines}\n"

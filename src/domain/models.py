@@ -33,6 +33,7 @@ class BriefItem:
     facts: List[str]
     sources: List[BriefSource]
     slug: str | None = None
+    image: str | None = None
 
     @classmethod
     def from_dict(cls, payload: Dict[str, Any]) -> "BriefItem":
@@ -44,6 +45,7 @@ class BriefItem:
                 BriefSource.from_dict(source) for source in payload.get("sources", [])
             ],
             slug=payload.get("slug"),
+            image=payload.get("image"),
         )
 
     def to_dict(self) -> Dict[str, Any]:
@@ -55,6 +57,8 @@ class BriefItem:
         }
         if self.slug:
             payload["slug"] = self.slug
+        if self.image:
+            payload["image"] = self.image
         return payload
 
 
@@ -98,3 +102,4 @@ class PostDraft:
     markdown_body: str
     summary: str
     sources: List[Dict[str, Any]]
+    image: str | None = None

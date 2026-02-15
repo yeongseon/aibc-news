@@ -63,6 +63,7 @@ def generate_posts(
                 markdown_body=markdown_body,
                 summary=summary,
                 sources=item_payload.get("sources", []),
+                image=item_payload.get("image"),
             )
         )
 
@@ -79,6 +80,7 @@ def publish_posts(drafts: List[PostDraft], *, publisher, dry_run: bool, force: b
             sources=draft.sources,
             category=draft.category,
             filename=draft.filename,
+            image=draft.image,
             dry_run=dry_run,
             force=force,
         )
