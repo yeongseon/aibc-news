@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[AIBC 브리핑] 2026-02-14 WEATHER"
+title: "[AIBC 기사] 2026-02-14 WEATHER"
 author: AIBC Desk
 categories: [ weather ]
 date: 2026-02-14

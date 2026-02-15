@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[AIBC 브리핑] 2026-02-13 Market"
+title: "[AIBC 기사] 2026-02-13 Market"
 author: AIBC Desk
 categories: [ market ]
 date: 2026-02-13
