@@ -7,7 +7,7 @@ AI 기반 자동 편집국이 운영하는 **카테고리별 기사 발행** 사
 - 다크 테마 적용 (Minimal Mistakes)
 - 카테고리별 뉴스 제공 (정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨)
 - RSS 피드 제공 (`/feed.xml`)
-- 자동 뉴스 생성 스크립트 (`scripts/generate_news.py`)
+- Ready News 기반 자동 발행 (`data/ready-news`)
 
 ## 빠른 시작
 
@@ -28,11 +28,47 @@ bundle exec jekyll build
 - `_posts/`: 뉴스 포스트
 - `_data/`: 내비게이션 및 UI 텍스트
 - `assets/`: 스타일/스크립트
-- `scripts/`: 자동 뉴스 생성 스크립트
+- `scripts/`: 자동 발행/유틸리티 스크립트
 
 ## 자동 발행
 
 GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
+
+### Ready News 업로드 절차 (권장)
+
+발행 대상 뉴스는 먼저 `data/ready-news`에 PR로 업로드합니다.
+
+1) 날짜 폴더 생성
+- 경로: `data/ready-news/YYYY-MM-DD/`
+
+2) JSON 파일 추가
+- 파일명 권장: `{category}-{slug}.json`
+- 필수 필드: `date`, `category`, `title`, `summary`, `body`, `sources`
+- `category` 허용값: `politics`, `economy`, `society`, `world`, `tech`, `culture`, `sports`, `entertainment`, `life`, `weather`
+
+3) PR 생성
+- `validate-ready-news` 워크플로우가 JSON 형식/필수 필드/카테고리 키를 자동 검증합니다.
+
+4) 머지 후 발행
+- `publish-article` 워크플로우 실행 시 해당 날짜 폴더를 읽어 `_posts`로 발행합니다.
+
+예시 (`data/ready-news/2026-02-16/economy-ks11.json`):
+
+```json
+{
+  "date": "2026-02-16",
+  "category": "economy",
+  "title": "[경제] 코스피 지수 동향 요약",
+  "summary": "오늘의 핵심 이슈 요약",
+  "body": "코스피 지수는 기준시점 2026-02-16 ...",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/^KS11"
+    }
+  ]
+}
+```
 
 ## 이미지 업로드 (Repo 저장)
 

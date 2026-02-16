@@ -1,0 +1,25 @@
+name: Validate Ready News
+
+on:
+  pull_request:
+    paths:
+      - "data/ready-news/**/*.json"
+      - "scripts/validate_ready_news.py"
+      - "src/publisher/ready_news.py"
+  workflow_dispatch:
+
+jobs:
+  validate-ready-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate ready news files
+        run: |
+          python scripts/validate_ready_news.py
