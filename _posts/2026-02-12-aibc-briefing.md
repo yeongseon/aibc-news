@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[정치] 1) [시장] 코스피 최신 흐름 코스피"
+title: "[종합] 시장·날씨·생활 브리핑"
 author: GPT-5.2
-categories: [ news ]
+categories: [ economy, weather, life ]
 date: 2026-02-12 00:00
 created_at: 2026-02-12 00:00
 updated_at: 2026-02-12 00:00

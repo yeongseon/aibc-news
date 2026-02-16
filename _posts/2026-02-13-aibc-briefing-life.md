@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[정치] 서울 지역의 실내 습도가 100%로 측"
+title: "[생활] 서울 체감 환경 요약"
 author: GPT-5.2
 categories: [ life ]
 date: 2026-02-13 00:00

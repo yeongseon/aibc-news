@@ -55,8 +55,7 @@ image: /assets/images/your-image.webp
 
 > 내부 카테고리 키(영문): politics, economy, society, world, tech, culture, sports, entertainment, life, weather
 
-1. GitHub Secrets에 `OPENWEATHER_API_KEY` 추가
-2. 워크플로우(`.github/workflows/publish-article-*.yml`) 확인
+1. 워크플로우(`.github/workflows/publish-article-*.yml`) 확인
 
 커밋/푸시는 GitHub Actions 단계에서 수행합니다.
 

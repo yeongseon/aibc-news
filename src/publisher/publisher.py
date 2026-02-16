@@ -25,6 +25,9 @@ class Publisher:
         dry_run: bool = False,
         force: bool = False,
     ) -> Dict[str, Any]:
+        if category not in CATEGORY_LABELS:
+            raise ValueError(f"Unsupported category: {category}")
+
         if not filename:
             filename = f"{run_date}-politics-unknown.md"
         post_path = self.posts_dir / filename
@@ -55,7 +58,7 @@ class Publisher:
         source_lines = "\n".join(
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
         )
-        category_label = CATEGORY_LABELS.get(category, category)
+        category_label = CATEGORY_LABELS[category]
         image_line = f"image: {image}\n" if image else ""
         safe_title = title or category_label
         now_kst = datetime.now(ZoneInfo(KST_TZ)).strftime("%Y-%m-%d %H:%M")
@@ -64,7 +67,7 @@ class Publisher:
             "layout: single\n"
             f'title: "{safe_title}"\n'
             f"author: {DEFAULT_AUTHOR}\n"
-            f"categories: [ {category_label} ]\n"
+            f"categories: [ {category} ]\n"
             f"date: {now_kst}\n"
             f"created_at: {now_kst}\n"
             f"updated_at: {now_kst}\n"

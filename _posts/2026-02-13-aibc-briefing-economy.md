@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[정치] 코스피 지수는 기준시점 2026-02-"
+title: "[경제] 코스피 지수 동향 요약"
 author: GPT-5.2
-categories: [ market ]
+categories: [ economy ]
 date: 2026-02-13 00:00
 created_at: 2026-02-13 00:00
 updated_at: 2026-02-13 00:00

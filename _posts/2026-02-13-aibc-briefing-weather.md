@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[정치] 서울 지역은 2026년 2월 13일 기"
+title: "[날씨] 서울 날씨 요약"
 author: GPT-5.2
 categories: [ weather ]
 date: 2026-02-13 00:00
