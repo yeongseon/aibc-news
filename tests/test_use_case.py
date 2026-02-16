@@ -56,11 +56,14 @@ class _FakePublisher:
         sources: list[dict[str, object]],
         category: str,
         filename: str,
+        title: str = "",
+        image: str | None = None,
         dry_run: bool = False,
         force: bool = False,
     ) -> dict[str, object]:
         assert category
         assert filename
+        assert title
         return {
             "status": "published",
             "path": f"/tmp/{filename}",

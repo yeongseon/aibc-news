@@ -70,14 +70,16 @@ class CopilotWriter:
         summary = "오늘의 핵심 이슈 요약"
         return normalized, summary
 
-    def _normalize(self, content: str, collector_payload: Dict[str, Any], run_date: str) -> str:
+    def _normalize(
+        self, content: str, collector_payload: Dict[str, Any], run_date: str
+    ) -> str:
         text = " ".join(line.strip() for line in content.splitlines() if line.strip())
         text = re.sub(r"^\d+\)\s*", "", text)
 
         sentences = re.findall(r"[^.!?]+[.!?]", text)
         trimmed = "".join(sentences[:3]).strip() if sentences else text.strip()
         if not trimmed:
-            fallback_body, _ = SimpleWriter().write(collector_payload)
+            fallback_body, _ = SimpleWriter().write_item(collector_payload, run_date)
             return fallback_body
 
         has_number = bool(re.search(r"\d", trimmed))

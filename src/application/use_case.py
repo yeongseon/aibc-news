@@ -2,9 +2,8 @@ from __future__ import annotations
 
 import time
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict
 
-from ..domain.models import CollectorPayload
 from ..app import generate_posts, publish_posts, QualityGateError
 from .ports import CollectorPort, LoggerPort, PublisherPort, QualityPort, WriterPort
 
@@ -49,6 +48,7 @@ class RunDailyBriefUseCase:
             read_json=read_json,
             write_json=write_json,
         )
+
         class _RetryWriter:
             def __init__(self, parent: "RunDailyBriefUseCase"):
                 self.parent = parent

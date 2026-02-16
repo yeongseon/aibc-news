@@ -28,6 +28,8 @@ class PublisherPort(Protocol):
         sources: List[Dict[str, object]],
         category: str,
         filename: str,
+        title: str = "",
+        image: str | None = None,
         dry_run: bool = False,
         force: bool = False,
     ) -> Dict[str, object]: ...
