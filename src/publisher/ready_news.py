@@ -120,6 +120,16 @@ def _validate_item(item: Dict[str, Any], path: Path) -> None:
         if not hero_image.get("alt"):
             raise ValueError(f"Field 'media.hero_image.alt' is required in {path}")
 
+    generation = item.get("generation")
+    if generation is not None:
+        if not isinstance(generation, dict):
+            raise ValueError(f"Field 'generation' must be an object in {path}")
+        reporter_id = generation.get("reporter_id")
+        if reporter_id is not None and not str(reporter_id).strip():
+            raise ValueError(
+                f"Field 'generation.reporter_id' must be non-empty in {path}"
+            )
+
 
 def _resolve_image_url(item: Dict[str, Any]) -> str | None:
     media = item.get("media")

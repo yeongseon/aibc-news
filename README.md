@@ -68,6 +68,7 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
   "schema_version": "1.1",
   "generation": {
     "model": "gpt-5",
+    "reporter_id": "economy-reporter",
     "data_sources": [
       {
         "name": "Yahoo Finance",
