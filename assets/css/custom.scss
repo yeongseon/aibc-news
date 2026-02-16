@@ -5,7 +5,7 @@
   --text-primary: #f5f5f5;
   --text-muted: #9ca3af;
   --border: #232323;
-  --accent: #1d9bf0;
+  --accent: #ffffff;
 }
 
 html,
@@ -20,8 +20,25 @@ body {
 .page__hero,
 .sidebar,
 .archive,
-.layout--single .page {
+.layout--single .page,
+.layout--home,
+.layout--archive,
+.layout--categories,
+.layout--tags {
   background: var(--bg);
+}
+
+.sidebar,
+.author__content,
+.author__urls,
+.author__urls-wrapper,
+.sidebar__right,
+.archive__subtitle,
+.taxonomy__section,
+.search-content,
+.search-content .results {
+  background: var(--bg) !important;
+  color: var(--text-primary);
 }
 
 .masthead {
@@ -48,6 +65,7 @@ body {
 .archive__item-title a:hover,
 .page__content a:hover {
   color: var(--accent);
+  opacity: 0.84;
 }
 
 .page__content p,
@@ -78,13 +96,65 @@ body {
 
 .archive__item:first-of-type {
   background: var(--surface-elevated);
-  border-color: #1f3d52;
-  box-shadow: 0 0 0 1px rgba(29, 155, 240, 0.16);
+  border-color: #4b4b4b;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
 }
 
 .page__content a {
-  color: #8ccfff;
+  color: var(--text-primary);
   text-underline-offset: 3px;
+}
+
+.page__content strong,
+.archive__item-title,
+.nav__title,
+.author__name,
+.site-title,
+.page__lead {
+  color: var(--text-primary);
+}
+
+.page__content code,
+pre,
+pre code,
+figure.highlight,
+.highlighter-rouge {
+  background: #0e0e0e !important;
+  color: #f0f0f0 !important;
+  border-color: var(--border) !important;
+}
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  background: transparent !important;
+  color: var(--text-primary);
+  border-color: var(--border) !important;
+}
+
+input,
+select,
+textarea,
+.search-input,
+.search-input:focus {
+  background: #101010 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7a7a7a;
+}
+
+.navicon,
+.social-icons .fa,
+.social-icons .fab,
+.social-icons .fas {
+  color: var(--text-primary);
 }
 
 .btn,
@@ -98,8 +168,29 @@ body {
 .btn:hover,
 .greedy-nav__toggle:hover,
 .pagination--pager:hover {
-  border-color: #31556f;
+  border-color: #6b6b6b;
   color: var(--accent);
+}
+
+.btn--primary,
+.btn--inverse,
+.btn--info,
+.btn--success,
+.btn--warning,
+.btn--danger {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+.btn--primary:hover,
+.btn--inverse:hover,
+.btn--info:hover,
+.btn--success:hover,
+.btn--warning:hover,
+.btn--danger:hover {
+  background: #dcdcdc !important;
+  color: #000000 !important;
 }
 
 .page__footer {
@@ -116,6 +207,7 @@ body {
 .page__footer a:hover,
 .page__footer-follow .social-icons li a:hover {
   color: var(--accent);
+  opacity: 0.84;
 }
 
 .page__footer-copyright {
@@ -129,18 +221,70 @@ body {
 
 @media (max-width: 768px) {
   .masthead {
-    position: sticky;
-    top: 0;
-    z-index: 40;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 80;
+    border-top: 1px solid var(--border);
+    border-bottom: 0;
+    background: rgba(0, 0, 0, 0.94);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .initial-content,
+  .page,
+  .layout--single .page,
+  .archive {
+    padding-bottom: 4.6rem;
+  }
+
+  .greedy-nav {
+    width: 100%;
+    min-height: 52px;
+    background: transparent;
+  }
+
+  .greedy-nav .visible-links {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.28rem 0.45rem 0.38rem;
+  }
+
+  .greedy-nav .visible-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .greedy-nav .visible-links li {
+    float: none;
   }
 
   .greedy-nav .visible-links a,
-  .greedy-nav__toggle,
   .masthead__menu-item a {
-    min-height: 42px;
-    padding: 0.6rem 0.72rem;
+    min-height: 40px;
+    padding: 0.48rem 0.68rem;
+    border-radius: 999px;
     display: inline-flex;
     align-items: center;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+  }
+
+  .greedy-nav .visible-links .active > a,
+  .greedy-nav .visible-links a:hover {
+    color: var(--text-primary);
+    background: var(--surface-elevated);
+  }
+
+  .greedy-nav__toggle,
+  .greedy-nav .hidden-links {
+    display: none !important;
   }
 
   .page {
