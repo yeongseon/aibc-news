@@ -44,6 +44,10 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
 2) JSON 파일 추가
 - 파일명 권장: `{category}-{slug}.json`
 - 필수 필드: `date`, `category`, `title`, `summary`, `body`, `sources`
+- 권장 필드: `schema_version` (`1.1`), `generation.model`, `generation.data_sources`
+- 이미지 확장 필드(선택): `media.hero_image`
+  - `url`, `alt`는 hero image를 넣을 때 필수
+  - `asset_id`, `credit`, `license`, `variants.thumb|card|original` 지원
 - `category` 허용값: `politics`, `economy`, `society`, `world`, `tech`, `culture`, `sports`, `entertainment`, `life`, `weather`
 
 3) PR 생성
@@ -61,6 +65,27 @@ GitHub Actions로 **카테고리별 정기 실행**을 구성했습니다.
   "title": "[경제] 코스피 지수 동향 요약",
   "summary": "오늘의 핵심 이슈 요약",
   "body": "코스피 지수는 기준시점 2026-02-16 ...",
+  "schema_version": "1.1",
+  "generation": {
+    "model": "gpt-5",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/^KS11"
+      }
+    ]
+  },
+  "media": {
+    "hero_image": {
+      "url": "/assets/images/2026-02-16/ks11.webp",
+      "alt": "코스피 지수 차트",
+      "credit": "Yahoo Finance",
+      "variants": {
+        "thumb": "/assets/images/2026-02-16/ks11-thumb.webp",
+        "card": "/assets/images/2026-02-16/ks11-card.webp"
+      }
+    }
+  },
   "sources": [
     {
       "name": "Yahoo Finance",

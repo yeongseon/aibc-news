@@ -69,6 +69,8 @@ def publish_ready_items(
         }
         filename = item.get("filename") or make_filename(item["date"], item_payload)
 
+        image_url = _resolve_image_url(item)
+
         result = publisher.publish(
             run_date=item["date"],
             markdown_body=item["body"],
@@ -77,7 +79,7 @@ def publish_ready_items(
             category=item["category"],
             filename=filename,
             title=item["title"],
-            image=item.get("image"),
+            image=image_url,
             dry_run=dry_run,
             force=force,
         )
@@ -105,3 +107,31 @@ def _validate_item(item: Dict[str, Any], path: Path) -> None:
             or not source.get("url")
         ):
             raise ValueError(f"Each source must include 'name' and 'url' in {path}")
+
+    media = item.get("media")
+    if media is not None:
+        if not isinstance(media, dict):
+            raise ValueError(f"Field 'media' must be an object in {path}")
+        hero_image = media.get("hero_image")
+        if not isinstance(hero_image, dict):
+            raise ValueError(f"Field 'media.hero_image' must be an object in {path}")
+        if not hero_image.get("url"):
+            raise ValueError(f"Field 'media.hero_image.url' is required in {path}")
+        if not hero_image.get("alt"):
+            raise ValueError(f"Field 'media.hero_image.alt' is required in {path}")
+
+
+def _resolve_image_url(item: Dict[str, Any]) -> str | None:
+    media = item.get("media")
+    if isinstance(media, dict):
+        hero_image = media.get("hero_image")
+        if isinstance(hero_image, dict):
+            url = hero_image.get("url")
+            if isinstance(url, str) and url.strip():
+                return url.strip()
+
+    image = item.get("image")
+    if isinstance(image, str) and image.strip():
+        return image.strip()
+
+    return None
