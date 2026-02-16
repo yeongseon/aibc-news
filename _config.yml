@@ -6,7 +6,7 @@ description: "AI 기술로 생성되는 카테고리별 자동 기사 서비스"
 locale: "ko-KR"
 url: "https://aibc-news.com"
 baseurl: ""
-repository: # GitHub username/repo-name e.g. "username/repository-name"
+repository: "yeongseon/aibc-news"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead
 masthead_title: "AIBC News"
@@ -46,14 +46,14 @@ author:
       url: "mailto:contact@aibc-newsroom.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com"
+      url: "https://github.com/yeongseon/aibc-news"
 
 # Site Footer
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com"
+      url: "https://github.com/yeongseon/aibc-news"
     - label: "RSS"
       icon: "fas fa-fw fa-rss-square"
       url: "/feed.xml"
