@@ -72,7 +72,7 @@ src/pipeline.py               repository_dispatch
 
 ## 5. 파일 규칙
 
-- 파일명: `YYYY-MM-DD-<category>-<slug>.md`
+- 파일명: `YYYY-MM-DD-HHMM-<category>-<slug>.md`
 - 멱등성: 기본 skip, `force=true` 시 overwrite
 
 ---

@@ -39,6 +39,20 @@ def make_post_id(item: Dict[str, Any]) -> str:
     return f"{item_type}-{slug}"
 
 
-def make_filename(run_date: str, item: Dict[str, Any]) -> str:
+def _extract_time_token(value: str | None) -> str:
+    if not value:
+        return "0000"
+    match = re.search(r"(\d{1,2}):(\d{2})", value)
+    if not match:
+        return "0000"
+    hour = int(match.group(1))
+    minute = int(match.group(2))
+    return f"{hour:02d}{minute:02d}"
+
+
+def make_filename(
+    run_date: str, item: Dict[str, Any], published_at: str | None = None
+) -> str:
     post_id = make_post_id(item)
-    return f"{run_date}-{post_id}.md"
+    time_token = _extract_time_token(published_at)
+    return f"{run_date}-{time_token}-{post_id}.md"

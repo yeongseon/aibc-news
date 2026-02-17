@@ -103,7 +103,7 @@
 ### 5.4 Publisher
 
 * Front Matter 생성
-* 파일명 규칙 적용: `YYYY-MM-DD-<category>-<slug>.md`
+* 파일명 규칙 적용: `YYYY-MM-DD-HHMM-<category>-<slug>.md`
 * 멱등성 검사 (기본 skip, force 시 overwrite)
 * Git 커밋/푸시 수행
 
@@ -130,7 +130,7 @@
 ```
 .
 ├─ _posts/
-│  └─ YYYY-MM-DD-<category>-<slug>.md
+│  └─ YYYY-MM-DD-HHMM-<category>-<slug>.md
 ├─ data/
 │  ├─ collector/YYYY-MM-DD.json
 │  └─ quality/YYYY-MM-DD.json

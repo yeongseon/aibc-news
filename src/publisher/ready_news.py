@@ -67,11 +67,17 @@ def publish_ready_items(
             "slug": item.get("slug"),
             "sources": item["sources"],
         }
-        filename = item.get("filename") or make_filename(item["date"], item_payload)
+        input_at = _meta_str(item, "input_at")
+        updated_at = _meta_str(item, "updated_at")
+        author = _meta_str(item, "author")
+        filename = item.get("filename") or make_filename(
+            item["date"],
+            item_payload,
+            input_at or updated_at,
+        )
 
         image_url = _resolve_image_url(item)
 
-        meta = item.get("meta") if isinstance(item.get("meta"), dict) else {}
         result = publisher.publish(
             run_date=item["date"],
             markdown_body=item["body"],
@@ -81,9 +87,9 @@ def publish_ready_items(
             filename=filename,
             title=item["title"],
             image=image_url,
-            input_at=str(meta.get("input_at", "")).strip() or None,
-            updated_at=str(meta.get("updated_at", "")).strip() or None,
-            author=str(meta.get("author", "")).strip() or None,
+            input_at=input_at,
+            updated_at=updated_at,
+            author=author,
             dry_run=dry_run,
             force=force,
         )
@@ -157,3 +163,14 @@ def _resolve_image_url(item: Dict[str, Any]) -> str | None:
         return image.strip()
 
     return None
+
+
+def _meta_str(item: Dict[str, Any], key: str) -> str | None:
+    meta_value = item.get("meta")
+    if not isinstance(meta_value, dict):
+        return None
+    value = meta_value.get(key)
+    if not isinstance(value, str):
+        return None
+    stripped = value.strip()
+    return stripped or None

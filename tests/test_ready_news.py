@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -82,6 +83,10 @@ def test_publish_ready_items_dry_run(tmp_path: Path) -> None:
             "title": "코스피 동향",
             "summary": "요약",
             "body": "본문",
+            "meta": {
+                "input_at": "2026.02.16 09:15 KST",
+                "updated_at": "2026.02.16 09:20 KST",
+            },
             "sources": [{"name": "Yahoo Finance", "url": "https://finance.yahoo.com/"}],
         }
     ]
@@ -91,6 +96,7 @@ def test_publish_ready_items_dry_run(tmp_path: Path) -> None:
     assert len(results) == 1
     assert results[0]["status"] == "dry_run"
     assert "categories: [ economy ]" in results[0]["content"]
+    assert re.match(r"2026-02-16-0915-.*\.md$", Path(results[0]["path"]).name)
 
 
 def test_publish_ready_items_uses_media_hero_image(tmp_path: Path) -> None:

@@ -86,7 +86,7 @@ AIBC는 두 가지 발행 경로를 지원합니다.
 ## 5. 멱등성 정책
 
 ### 5.1 파일명 규칙
-`YYYY-MM-DD-<category>-<slug>.md`
+`YYYY-MM-DD-HHMM-<category>-<slug>.md`
 
 ### 5.2 slug 규칙
 - economy → symbol 기반
