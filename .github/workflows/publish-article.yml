@@ -73,7 +73,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUN_DATE: ${{ env.RUN_DATE || inputs.run_date }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
-          FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.force_publish || 'false' }}
+          FORCE_PUBLISH: ${{ github.event_name == 'push' && 'true' || (github.event_name == 'workflow_dispatch' && inputs.force_publish || 'false') }}
           CATEGORY: ${{ inputs.category }}
           ARTICLE_MAX_CHARS: ${{ github.event_name == 'workflow_dispatch' && inputs.max_chars || '' }}
           ARTICLE_MIN_CHARS: ${{ github.event_name == 'workflow_dispatch' && inputs.min_chars || '' }}
