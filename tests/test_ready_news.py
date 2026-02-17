@@ -16,6 +16,10 @@ def test_load_ready_items_filters_category(tmp_path: Path) -> None:
         "title": "코스피 동향",
         "summary": "요약",
         "body": "본문",
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
         "sources": [{"name": "Yahoo Finance", "url": "https://finance.yahoo.com/"}],
     }
     weather_item = {
@@ -23,6 +27,10 @@ def test_load_ready_items_filters_category(tmp_path: Path) -> None:
         "title": "날씨 동향",
         "summary": "요약",
         "body": "본문",
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
         "sources": [{"name": "OpenWeather", "url": "https://openweathermap.org"}],
     }
 
@@ -52,6 +60,10 @@ def test_load_ready_items_rejects_invalid_category(tmp_path: Path) -> None:
         "title": "시장",
         "summary": "요약",
         "body": "본문",
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
         "sources": [{"name": "출처", "url": "https://example.com"}],
     }
     (ready_dir / "market.json").write_text(
@@ -115,6 +127,10 @@ def test_load_ready_items_rejects_media_without_alt(tmp_path: Path) -> None:
         "title": "시장",
         "summary": "요약",
         "body": "본문",
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
         "sources": [{"name": "출처", "url": "https://example.com"}],
         "media": {
             "hero_image": {
