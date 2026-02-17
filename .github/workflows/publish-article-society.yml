@@ -1,8 +1,6 @@
 name: Publish Article Society
 
 on:
-  schedule:
-    - cron: "50 21 * * *" # 06:50 KST (society)
   workflow_dispatch:
     inputs:
       run_date:

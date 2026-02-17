@@ -1,8 +1,6 @@
 name: Publish Article Entertainment
 
 on:
-  schedule:
-    - cron: "15 22 * * *" # 07:15 KST (entertainment)
   workflow_dispatch:
     inputs:
       run_date:

@@ -1,8 +1,6 @@
 name: Publish Article Economy
 
 on:
-  schedule:
-    - cron: "35 21 * * *" # 06:35 KST (economy)
   workflow_dispatch:
     inputs:
       run_date:

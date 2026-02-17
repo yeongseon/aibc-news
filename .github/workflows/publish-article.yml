@@ -1,8 +1,10 @@
 name: Publish Article Pipeline
 
 on:
-  schedule:
-    - cron: "30 21 * * *" # 06:30 KST
+  push:
+    branches: ["main"]
+    paths:
+      - "data/ready-news/**/*.json"
   workflow_dispatch:
     inputs:
       run_date:
@@ -55,20 +57,30 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Resolve run date from changed ready-news files
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          RUN_DATE=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep '^data/ready-news/' | cut -d/ -f3 | sort -u | tail -n1)
+          if [ -z "$RUN_DATE" ]; then
+            echo "No ready-news date folder found in push diff"
+            exit 1
+          fi
+          echo "RUN_DATE=$RUN_DATE" >> "$GITHUB_ENV"
+
       - name: Run pipeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RUN_DATE: ${{ inputs.run_date }}
-          DRY_RUN: ${{ inputs.dry_run }}
-          FORCE_PUBLISH: ${{ inputs.force_publish }}
+          RUN_DATE: ${{ env.RUN_DATE || inputs.run_date }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.force_publish || 'false' }}
           CATEGORY: ${{ inputs.category }}
-          ARTICLE_MAX_CHARS: ${{ inputs.max_chars }}
-          ARTICLE_MIN_CHARS: ${{ inputs.min_chars }}
+          ARTICLE_MAX_CHARS: ${{ github.event_name == 'workflow_dispatch' && inputs.max_chars || '' }}
+          ARTICLE_MIN_CHARS: ${{ github.event_name == 'workflow_dispatch' && inputs.min_chars || '' }}
         run: |
           python scripts/run_publish_article.py
 
       - name: Commit and push outputs
-        if: ${{ inputs.dry_run != 'true' }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true' }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -80,7 +92,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-${{ inputs.run_date || github.run_id }}
+          name: pipeline-${{ env.RUN_DATE || inputs.run_date || github.run_id }}
           path: |
             data/**
             logs/**
@@ -90,7 +102,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          RUN_DATE=${{ inputs.run_date }}
+          RUN_DATE=${{ env.RUN_DATE || inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
           gh api --method POST /repos/${{ github.repository }}/issues \
             -f title="Article publish failed: ${RUN_DATE}" \

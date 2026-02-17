@@ -1,8 +1,6 @@
 name: Publish Article World
 
 on:
-  schedule:
-    - cron: "55 21 * * *" # 06:55 KST (world)
   workflow_dispatch:
     inputs:
       run_date:

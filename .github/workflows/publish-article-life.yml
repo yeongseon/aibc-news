@@ -1,8 +1,6 @@
 name: Publish Article Life
 
 on:
-  schedule:
-    - cron: "40 21 * * *" # 06:40 KST (life)
   workflow_dispatch:
     inputs:
       run_date:

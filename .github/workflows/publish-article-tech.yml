@@ -1,8 +1,6 @@
 name: Publish Article Tech
 
 on:
-  schedule:
-    - cron: "00 22 * * *" # 07:00 KST (tech)
   workflow_dispatch:
     inputs:
       run_date:

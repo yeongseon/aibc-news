@@ -1,8 +1,6 @@
 name: Publish Article Weather
 
 on:
-  schedule:
-    - cron: "30 21 * * *" # 06:30 KST (weather)
   workflow_dispatch:
     inputs:
       run_date:
