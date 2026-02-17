@@ -1,0 +1,24 @@
+{
+  "date": "2026-02-16",
+  "category": "weather",
+  "title": "[날씨] 서울 포함 주요 도시 영하권 지속",
+  "summary": "서울·인천 영하권, 대전은 -7°C로 낮고 부산은 +6°C로 온도 차가 크다.",
+  "body": "입력 2026.02.16 03:20 KST 수정 2026.02.16 03:30 KST 2026-02-16 기준, 서울 -1°C·인천 -1°C로 영하권 기온이 이어지고 있다. 대전은 -7°C로 더 낮았고 부산은 +6°C, 대구는 0°C로 남부와 중부의 온도 차가 컸다. 광주는 -2°C를 기록했으며 바람은 약~중간 수준이지만 체감 온도는 더 낮을 수 있다. 이른 출근길 방한 대비가 필요하고, 도로 결빙 구간에 주의가 요구된다. 아침 체감 추위가 이어질 전망이다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "schema_version": "1.1"
+}
