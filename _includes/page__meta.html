@@ -1,6 +1,6 @@
-{%- if page.date -%}
-<span class="page__meta-date">입력 {{ page.date | date: "%Y.%m.%d %H:%M" }}</span>
+{%- if page.input_at -%}
+<span class="page__meta-date">입력 {{ page.input_at }}</span>
 {%- endif -%}
-{%- if page.author -%}
-<span class="page__meta-author"> · {{ page.author }}</span>
+{%- if page.updated_at -%}
+<span class="page__meta-date"> 수정 {{ page.updated_at }}</span>
 {%- endif -%}
