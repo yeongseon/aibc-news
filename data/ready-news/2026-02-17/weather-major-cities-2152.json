@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-17",
+  "category": "weather",
+  "title": "[날씨] 중부 체감 낮고 영남은 비교적 온화",
+  "summary": "서울·인천은 2°C 안팎이지만 체감은 영하권이며, 대구는 6°C로 남부가 한층 포근합니다.",
+  "body": "2026-02-17 기준 주요 도시 날씨입니다. 서울 2°C(체감 -1°C), 인천 2°C(체감 -3°C, 서쪽바람 19km/h)로 수도권 체감이 낮습니다. 대전 -1°C(체감 -3°C). 남부는 대구 6°C(체감 5°C), 부산 4°C(체감 1°C), 광주 2°C(체감 1°C)로 비교적 온화합니다. 전반적으로 맑고 건조해 실내 환기 후 보습을 챙기면 좋겠습니다. 외출 시 목도리 등 방한용품을 준비해 주세요. 아침·야간에는 도로 결빙 가능성이 있어 보행과 운전에 유의해 주시기 바랍니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.17 21:52 KST",
+    "updated_at": "2026.02.17 21:55 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
