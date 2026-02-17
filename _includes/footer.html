@@ -29,3 +29,48 @@
 {% endif %}
 
 <div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} {{ site.copyright | default: site.title | escape_once | strip }}.</div>
+
+<div class="bottom-nav-bar" role="navigation" aria-label="하단 메뉴">
+  <a class="bottom-nav-bar__item" href="{{ '/' | relative_url }}" aria-label="홈">홈</a>
+  <a class="bottom-nav-bar__item" href="{{ '/search/' | relative_url }}" aria-label="검색">검색</a>
+  <button class="bottom-nav-bar__item bottom-nav-toggle" type="button" aria-label="전체 메뉴 열기">☰</button>
+</div>
+<div class="bottom-nav-sheet" id="bottom-nav-sheet" aria-hidden="true">
+  <div class="bottom-nav-sheet__overlay" data-bottom-nav-close></div>
+  <div class="bottom-nav-sheet__panel" role="dialog" aria-modal="true" aria-label="전체 카테고리">
+    <div class="bottom-nav-sheet__handle"></div>
+    <div class="bottom-nav-sheet__title">전체 카테고리</div>
+    <ul class="bottom-nav-sheet__list">
+      {% for item in site.data.navigation.main %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<script>
+  (function() {
+    const toggle = document.querySelector('.bottom-nav-toggle');
+    const sheet = document.getElementById('bottom-nav-sheet');
+    if (!toggle || !sheet) return;
+    const closeEls = sheet.querySelectorAll('[data-bottom-nav-close]');
+    const open = () => {
+      sheet.classList.add('is-open');
+      sheet.setAttribute('aria-hidden', 'false');
+    };
+    const close = () => {
+      sheet.classList.remove('is-open');
+      sheet.setAttribute('aria-hidden', 'true');
+    };
+    toggle.addEventListener('click', open);
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+    closeEls.forEach(el => el.addEventListener('click', close));
+    sheet.addEventListener('click', (e) => {
+      if (e.target === sheet) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>

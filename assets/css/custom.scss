@@ -336,6 +336,108 @@ textarea::placeholder {
   .pagination {
     padding: 0.35rem;
   }
+
+  .bottom-nav-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 120;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 8px 12px calc(env(safe-area-inset-bottom) + 8px);
+    background: #000000;
+    border-top: 1px solid var(--border);
+  }
+
+  .bottom-nav-bar__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    background: var(--surface);
+    font-size: 0.9rem;
+  }
+
+  .bottom-nav-toggle {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .bottom-nav-sheet {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .bottom-nav-sheet.is-open {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .bottom-nav-sheet__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .bottom-nav-sheet__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--surface-elevated);
+    border-top: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    padding: 12px 16px 20px;
+    transform: translateY(100%);
+    transition: transform 0.2s ease;
+  }
+
+  .bottom-nav-sheet.is-open .bottom-nav-sheet__panel {
+    transform: translateY(0);
+  }
+
+  .bottom-nav-sheet__handle {
+    width: 44px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 999px;
+    margin: 4px auto 10px;
+  }
+
+  .bottom-nav-sheet__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .bottom-nav-sheet__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bottom-nav-sheet__list a {
+    display: block;
+    text-align: center;
+    padding: 8px 6px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 0.86rem;
+    background: var(--surface);
+  }
 }
 
 @media (max-width: 480px) {
