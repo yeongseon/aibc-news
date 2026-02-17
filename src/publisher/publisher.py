@@ -22,6 +22,9 @@ class Publisher:
         filename: str = "",
         title: str = "",
         image: str | None = None,
+        input_at: str | None = None,
+        updated_at: str | None = None,
+        author: str | None = None,
         dry_run: bool = False,
         force: bool = False,
     ) -> Dict[str, Any]:
@@ -36,9 +39,17 @@ class Publisher:
             return {"status": "skipped", "path": str(post_path)}
 
         front_matter = self._build_front_matter(
-            run_date, summary, sources, category, title=title, image=image
+            run_date,
+            summary,
+            sources,
+            category,
+            title=title,
+            image=image,
+            input_at=input_at,
+            updated_at=updated_at,
         )
-        content = front_matter + "\n" + markdown_body + "\n"
+        author_line = f"\n\n작성자 {author}" if author else ""
+        content = front_matter + "\n" + markdown_body + author_line + "\n"
 
         if dry_run:
             return {"status": "dry_run", "path": str(post_path), "content": content}
@@ -54,6 +65,8 @@ class Publisher:
         category: str,
         title: str,
         image: str | None = None,
+        input_at: str | None = None,
+        updated_at: str | None = None,
     ) -> str:
         source_lines = "\n".join(
             f'  - "{source["name"]} - {source["url"]}"' for source in sources
@@ -61,16 +74,18 @@ class Publisher:
         category_label = CATEGORY_LABELS[category]
         image_line = f"image: {image}\n" if image else ""
         safe_title = title or category_label
-        now_kst = datetime.now(ZoneInfo(KST_TZ)).strftime("%Y-%m-%d %H:%M")
+        now_kst = datetime.now(ZoneInfo(KST_TZ)).strftime("%Y.%m.%d %H:%M KST")
+        input_value = input_at or now_kst
+        updated_value = updated_at or now_kst
         return (
             "---\n"
             "layout: single\n"
             f'title: "{safe_title}"\n'
-            f"author: {DEFAULT_AUTHOR}\n"
             f"categories: [ {category} ]\n"
-            f"date: {now_kst}\n"
-            f"created_at: {now_kst}\n"
-            f"updated_at: {now_kst}\n"
+            f"date: {input_value}\n"
+            f"created_at: {input_value}\n"
+            f"updated_at: {updated_value}\n"
+            f"input_at: {input_value}\n"
             f"{image_line}"
             f'summary: "{summary}"\n'
             "sources:\n"

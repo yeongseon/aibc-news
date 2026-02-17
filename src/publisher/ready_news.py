@@ -71,6 +71,7 @@ def publish_ready_items(
 
         image_url = _resolve_image_url(item)
 
+        meta = item.get("meta") if isinstance(item.get("meta"), dict) else {}
         result = publisher.publish(
             run_date=item["date"],
             markdown_body=item["body"],
@@ -80,6 +81,9 @@ def publish_ready_items(
             filename=filename,
             title=item["title"],
             image=image_url,
+            input_at=str(meta.get("input_at", "")).strip() or None,
+            updated_at=str(meta.get("updated_at", "")).strip() or None,
+            author=str(meta.get("author", "")).strip() or None,
             dry_run=dry_run,
             force=force,
         )
@@ -92,6 +96,14 @@ def _validate_item(item: Dict[str, Any], path: Path) -> None:
     for key in ("date", "category", "title", "summary", "body", "sources"):
         if key not in item or item[key] in (None, ""):
             raise ValueError(f"Missing required field '{key}' in {path}")
+
+    meta = item.get("meta")
+    if not isinstance(meta, dict):
+        raise ValueError(f"Field 'meta' must be an object in {path}")
+    if not str(meta.get("input_at", "")).strip():
+        raise ValueError(f"Field 'meta.input_at' is required in {path}")
+    if not str(meta.get("updated_at", "")).strip():
+        raise ValueError(f"Field 'meta.updated_at' is required in {path}")
 
     category = item["category"]
     if category not in CATEGORY_LABELS:
