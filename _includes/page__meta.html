@@ -2,5 +2,6 @@
 <span class="page__meta-date">입력 {{ page.input_at }}</span>
 {%- endif -%}
 {%- if page.updated_at -%}
-<span class="page__meta-date"> 수정 {{ page.updated_at }}</span>
+{%- if page.input_at -%}<br>{%- endif -%}
+<span class="page__meta-date">수정 {{ page.updated_at }}</span>
 {%- endif -%}
