@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-19",
+  "category": "weather",
+  "title": "[날씨] 아침 공기 차가워요, 내륙 더 추워",
+  "summary": "대전 -8°C(체감 -10°C)로 가장 낮고, 부산 -1°C로 해안이 상대적으로 온화합니다.",
+  "body": "2026-02-19 08:00 KST 기준 주요 도시 날씨입니다. 서울 -3°C(체감 -4°C, 맑음, 바람 4km/h), 인천 -6°C(체감 -7°C, 바람 4km/h)로 수도권이 차갑습니다. 대전 -8°C(체감 -10°C)로 중부 내륙이 가장 낮고, 대구 -5°C(체감 -6°C), 광주 -4°C(체감 -5°C)입니다. 부산은 -1°C(체감 -4°C, 바람 9km/h)로 비교적 덜 춥습니다. 바람이 약해도 체감이 떨어지니 보온과 결빙 구간 미끄럼에 유의하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.19 08:00 KST",
+    "updated_at": "2026.02.19 08:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
