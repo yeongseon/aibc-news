@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[정치] 다주택 논쟁, 사실 기반 토론 강조"
+title: "[이재명 대통령] 다주택 논쟁, 사실 기반 토론 강조"
 categories: [ politics ]
 date: 2026.02.18 04:07 KST
 created_at: 2026.02.18 04:07 KST
