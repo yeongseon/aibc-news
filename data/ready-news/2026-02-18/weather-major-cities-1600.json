@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-18",
+  "category": "weather",
+  "title": "[날씨] 오후 바람에 체감 쌀쌀, 남부는 기온 높아",
+  "summary": "서울 7°C(체감 4°C)·인천 7°C(체감 3°C)로 바람이 불어 쌀쌀하고, 대구 12°C로 남부가 상대적으로 포근합니다.",
+  "body": "2026-02-18 16:00 KST 기준 주요 도시 날씨입니다. 서울 7°C(체감 4°C, 맑음, 바람 19km/h), 인천 7°C(체감 3°C, 맑음, 바람 25km/h), 대전 7°C(체감 4°C, 맑음)으로 중부와 서해안은 체감이 낮습니다. 대구 12°C(체감 10°C, 맑음), 부산 10°C(체감 7°C, 맑음), 광주 7°C(체감 3°C, 맑음)으로 남부는 비교적 온화하니, 바람이 강한 곳은 방풍 겉옷을 챙겨 주세요. 해가 지면 기온이 빠르게 내려갈 수 있어 얇은 겉옷을 하나 더 준비해 주세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.18 16:00 KST",
+    "updated_at": "2026.02.18 16:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
