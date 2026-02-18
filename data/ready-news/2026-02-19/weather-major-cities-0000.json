@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-19",
+  "category": "weather",
+  "title": "[날씨] 자정 기준 전국 맑음, 중부 체감 강추위",
+  "summary": "대전 -6°C(체감 -8°C)로 가장 춥고, 부산 2°C·광주 1°C로 남부가 상대적으로 온화합니다.",
+  "body": "2026-02-19 00:00 KST 기준 주요 도시 날씨입니다. 서울 -1°C(체감 -3°C, 맑음, 바람 5km/h), 인천 -1°C(체감 -4°C, 맑음, 바람 10km/h), 대전 -6°C(체감 -8°C, 맑음)으로 중부 체감이 낮습니다. 대구 -1°C(체감 -2°C, 맑음), 부산 2°C(체감 -1°C, 맑음, 바람 11km/h), 광주 1°C(체감 0°C, 맑음)입니다. 해안은 체감이 더 낮을 수 있으니 외출 시 바람막이와 장갑을 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.19 00:00 KST",
+    "updated_at": "2026.02.19 00:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
