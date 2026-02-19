@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-19",
+  "category": "weather",
+  "title": "[날씨] 오후에도 바람 차가워 체감 낮습니다",
+  "summary": "서울 4°C, 인천·대전 2°C로 낮고 부산 6°C로 가장 높습니다. 체감은 0~4°C 안팎입니다.",
+  "body": "2026-02-19 16:00 KST 기준 주요 도시 날씨입니다. 서울 4°C(체감 3°C, 맑음, 바람 6km/h), 인천 2°C(체감 0°C, 바람 8km/h)로 수도권은 쌀쌀합니다. 대전 2°C(체감 0°C, 맑음, 바람 6km/h), 대구 4°C(체감 3°C), 광주 4°C(체감 2°C, 바람 10km/h)이며 부산은 6°C(체감 4°C, 맑음, 바람 9km/h)로 상대적으로 높습니다. 해가 져도 바람이 이어질 수 있으니 보온에 신경 쓰시는 게 좋겠습니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.19 16:00 KST",
+    "updated_at": "2026.02.19 16:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
