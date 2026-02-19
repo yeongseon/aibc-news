@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-19",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,445.89원, 전일 대비 +0.07원",
+  "summary": "USD/KRW(달러/원)는 1,445.89원으로 전일(2/17) 1,445.82원 대비 +0.07원(+0.00%)입니다. 7일 전(2/12) 1,438.29원보다 높아 7일 추세는 상승입니다. 최근 며칠은 1,440원대 중반에서 보합권을 이어가며 변동성이 제한적입니다. 단기적으로 원화 약세가 유지되지만 방향성은 뚜렷하지 않습니다. 레인지 거래가 이어질 가능성이 있어 포지션 관리에 신중함이 필요합니다. 수급 재료가 제한적인 가운데 주요 지표 발표와 위험선호 변화에 따라 변동성이 확대될 수 있습니다.",
+  "body": "USD/KRW(달러/원)는 1,445.89원으로 전일(2/17) 1,445.82원 대비 +0.07원(+0.00%)입니다. 7일 전(2/12) 1,438.29원보다 높아 7일 추세는 상승입니다. 최근 며칠은 1,440원대 중반에서 보합권을 이어가며 변동성이 제한적입니다. 단기적으로 원화 약세가 유지되지만 방향성은 뚜렷하지 않습니다. 레인지 거래가 이어질 가능성이 있어 포지션 관리에 신중함이 필요합니다. 수급 재료가 제한적인 가운데 주요 지표 발표와 위험선호 변화에 따라 변동성이 확대될 수 있습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/2026-02-12..2026-02-19?from=USD&to=KRW"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/2026-02-12..2026-02-19?from=USD&to=KRW"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.19 16:04 KST",
+    "updated_at": "2026.02.19 16:04 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
