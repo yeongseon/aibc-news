@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-22",
+  "category": "economy",
+  "title": "[환율] USD/KRW 약보합…7거래일 상승 흐름",
+  "summary": "USD/KRW는 1달러=1,449.66원으로 전일 종가(1,449.68원) 대비 0.02원(-0.00%) 하락했습니다. 최근 7거래일은 1,446.45원에서 1,449.66원으로 올라 상승 흐름입니다. 주말 구간이라 유동성이 낮아 변동폭은 제한적이고, 단기적으로는 박스권 등락이 이어질 가능성에 유의해야겠습니다.",
+  "body": "2026-02-22 00:00 KST 기준 USD/KRW는 1,449.66원입니다. 전일 종가(1,449.68원) 대비 0.02원(-0.00%) 하락했습니다. 최근 7거래일은 1,446.45원에서 1,449.66원으로 올라 상승 흐름입니다. 주말 구간으로 유동성이 낮아 변동폭은 제한적일 수 있어 단기 박스권 등락에 유의해야 합니다. 큰 방향성 변화보다는 미세한 등락에 초점을 두는 편이 좋겠습니다. 미국 주요 지표 발표 전까지는 방향성 확정이 어렵습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.22 00:00 KST",
+    "updated_at": "2026.02.22 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
