@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-21",
+  "category": "weather",
+  "title": "[날씨] 한낮 포근하지만 서해안 바람 강합니다",
+  "summary": "광주 14°C로 가장 높고 대전 10°C로 낮습니다. 인천은 바람 27km/h로 체감이 11°C까지 내려갑니다.",
+  "body": "2026-02-21 12:00 KST 기준 주요 도시 날씨입니다. 서울 13°C(체감 12°C, 맑음, 바람 16km/h), 인천 13°C(체감 11°C, 바람 27km/h)로 수도권은 바람이 강합니다. 대전 10°C(체감 8°C, 바람 12km/h)로 가장 낮고, 대구 12°C(체감 11°C), 광주 14°C(체감 13°C), 부산 13°C(체감 12°C, 바람 21km/h)입니다. 외출 시 바람막이와 겹겹이 옷차림, 건조 대비 보습도 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.21 12:00 KST",
+    "updated_at": "2026.02.21 12:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
