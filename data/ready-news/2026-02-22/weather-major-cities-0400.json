@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-22",
+  "category": "weather",
+  "title": "[날씨] 서해안 강풍, 내륙은 쌀쌀합니다",
+  "summary": "최고는 서울·인천·광주 12°C, 최저는 대전 3°C입니다. 인천은 바람 39km/h로 체감 9°C까지 내려갑니다.",
+  "body": "2026-02-22 04:00 KST 기준 주요 도시 날씨입니다. 서울 12°C(체감 11°C, 구름 조금, 바람 14km/h), 인천 12°C(체감 9°C, 바람 39km/h)로 서해안은 바람이 강합니다. 부산 9°C(체감 6°C, 바람 28km/h)이고, 대구 7°C(체감 5°C), 대전 3°C(체감 1°C), 광주 12°C(체감 12°C)입니다. 바람이 강한 지역은 체감 온도가 더 낮으니 바람막이와 목도리를 챙기시는 게 좋겠습니다. 맑은 하늘이라 일교차가 커서 실내외 온도차에 유의해 주세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "http://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "http://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.22 04:00 KST",
+    "updated_at": "2026.02.22 04:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
