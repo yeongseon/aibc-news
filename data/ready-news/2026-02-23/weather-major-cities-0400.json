@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-23",
+  "category": "weather",
+  "title": "[날씨] 중부는 체감 한파, 남부는 비교적 온화합니다",
+  "summary": "서울 -1°C(체감 -6°C)·인천 -1°C(체감 -7°C)로 바람이 매섭습니다. 부산 4°C로 남부가 상대적으로 포근하며 광주 3°C입니다.",
+  "body": "2026-02-23 04:00 KST 기준 주요 도시 날씨입니다. 서울 -1°C(체감 -6°C, 맑음, 바람 18km/h), 인천 -1°C(체감 -7°C, 바람 25km/h)로 체감이 낮습니다. 대전 -3°C(체감 -5°C), 대구 2°C(체감 0°C)이며 부산 4°C(구름 조금), 광주 3°C(맑음)입니다. 중부·서해안은 바람막이와 장갑이 필요하겠고, 건조 대비 보습도 챙기세요. 출근길에는 겹겹이 옷차림이 좋고, 실내 환기는 짧게 하는 편이 좋겠습니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.23 04:00 KST",
+    "updated_at": "2026.02.23 04:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
