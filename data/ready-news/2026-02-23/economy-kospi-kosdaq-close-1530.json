@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-23",
+  "category": "economy",
+  "title": "[국내증시] 코스피 상승·코스닥 약보합 마감",
+  "summary": "[국내증시] 코스피 5,837.29(+28.76, +0.50%) 마감, 코스닥 1,152.19(-1.81, -0.16%)로 혼조였습니다. 대형주 중심 매수로 코스피는 강세를 보였고, 코스닥은 성장주 차익실현 영향으로 약보합입니다. 반도체·2차전지 등 대형주의 수급이 지수를 지지한 반면, 중소형주는 실적 경계감으로 탄력이 제한됐습니다. 전반적으로 장중 고점 대비 차익매물이 나오며 변동성이 이어졌습니다. 단기 이벤트와 수급 변화에 유의하시기 바랍니다.",
+  "body": "[국내증시] 코스피 5,837.29(+28.76, +0.50%) 마감, 코스닥 1,152.19(-1.81, -0.16%)로 혼조였습니다. 대형주 중심 매수로 코스피는 강세를 보였고, 코스닥은 성장주 차익실현 영향으로 약보합입니다. 반도체·2차전지 등 대형주의 수급이 지수를 지지한 반면, 중소형주는 실적 경계감으로 탄력이 제한됐습니다. 전반적으로 장중 고점 대비 차익매물이 나오며 변동성이 이어졌습니다. 단기 이벤트와 수급 변화에 유의하시기 바랍니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.23 15:30 KST",
+    "updated_at": "2026.02.23 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
