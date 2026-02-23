@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-23",
+  "category": "economy",
+  "title": "[국내증시] 코스피 강보합·코스닥 약보합 마감",
+  "summary": "코스피는 5,836.18로 전일 대비 27.65p(+0.48%) 상승해 강보합 마감했습니다. 코스닥은 1,152.09로 1.91p(-0.17%) 하락했습니다. 대외 변수 관망 속 업종별 차별화가 이어졌고, 대형주 흐름이 지수를 지지한 반면 중소형주는 숨 고르기였습니다. 수급 방향성은 뚜렷하지 않아 변동성은 제한됐습니다. 실적·정책 이슈가 엇갈리며 종목별 온도차가 컸고, 당분간은 미국 지표와 환율 흐름이 단기 변수가 될 전망입니다. 관망세가 유지됐습니다.",
+  "body": "코스피는 5,836.18로 전일 대비 27.65p(+0.48%) 상승해 강보합 마감했습니다. 코스닥은 1,152.09로 1.91p(-0.17%) 하락했습니다. 대외 변수 관망 속 업종별 차별화가 이어졌고, 대형주 흐름이 지수를 지지한 반면 중소형주는 숨 고르기였습니다. 수급 방향성은 뚜렷하지 않아 변동성은 제한됐습니다. 실적·정책 이슈가 엇갈리며 종목별 온도차가 컸고, 당분간은 미국 지표와 환율 흐름이 단기 변수가 될 전망입니다. 관망세가 유지됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.23 15:30 KST",
+    "updated_at": "2026.02.23 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
