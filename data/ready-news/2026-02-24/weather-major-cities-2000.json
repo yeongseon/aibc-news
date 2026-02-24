@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-24",
+  "category": "weather",
+  "title": "[날씨] 수도권 맑고 쌀쌀, 남부 비와 강한 바람",
+  "summary": "서울 5°C(체감 5°C)·인천 1°C(체감 -2°C)로 맑지만 쌀쌀합니다. 부산은 4°C(체감 0°C) 비와 함께 바람이 강하고, 대구는 0°C(체감 -2°C)로 비·눈과 안개가 섞입니다.",
+  "body": "2026-02-24 20:00 KST 기준 주요 도시 날씨입니다. 서울 5°C(체감 5°C, 구름 조금, 북북서풍 4km/h), 인천 1°C(체감 -2°C, 맑음, 북풍 9km/h)입니다. 대전 1°C(체감 0°C, 흐림)이고, 부산 4°C(체감 0°C, 비, 북동풍 22km/h)·대구 0°C(체감 -2°C, 약한 비·눈과 엷은 안개)·광주 3°C(체감 2°C, 약한 비)입니다. 해안은 강풍 대비, 내륙은 보온에 유의하세요. 빗길은 미끄러울 수 있어 이동 시 주의 바랍니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.24 20:00 KST",
+    "updated_at": "2026.02.24 20:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
