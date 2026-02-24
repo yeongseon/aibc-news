@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-24",
+  "category": "weather",
+  "title": "[날씨] 중부 체감 영하, 남부 비·바람",
+  "summary": "대전 -2°C(체감 -3°C)로 가장 낮고, 부산 7°C(체감 4°C)로 가장 높습니다. 서울·인천은 2°C 내외지만 체감은 0~1°C로 쌀쌀합니다.",
+  "body": "2026-02-24 12:00 KST 기준 주요 도시 날씨입니다. 서울 2°C(체감 1°C, 약한 이슬비, 북북동풍 4km/h), 인천 2°C(체감 0°C, 약한 이슬비, 북북동풍 9km/h)입니다. 대전 -2°C(체감 -3°C, 약한 눈·안개)로 가장 낮고, 대구 5°C(체감 4°C)·부산 7°C(체감 4°C, 북풍 15km/h)·광주 2°C(싸락눈 섞인 비)입니다. 수도권은 체감이 낮아 보온에 신경 쓰시고, 특히 빙판과 젖은 노면에 주의하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.24 12:00 KST",
+    "updated_at": "2026.02.24 12:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
