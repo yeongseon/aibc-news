@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-26",
+  "category": "economy",
+  "title": "[환율] USD/KRW 하락…7일 흐름도 하락",
+  "summary": "USD/KRW는 1달러=1,427.90원으로 직전 종가(1,443.30원) 대비 15.40원(-1.07%) 하락했습니다. 최근 7일(영업일) 1,445.89원→1,427.90원으로 내려 흐름은 ‘하락’입니다. 단기적으로 1,430원대 지지 여부와 미 국채금리·달러지수 방향, 수출입 네고 및 역외 수급이 관건입니다. 글로벌 증시 흐름과 연준 발언에 따른 위험자산 선호 변화도 변동성을 키울 수 있어 유의가 필요합니다. 전일 대비 방향성은 하방 우위로 보입니다.",
+  "body": "USD/KRW는 1달러=1,427.90원으로 직전 종가(1,443.30원) 대비 15.40원(-1.07%) 하락했습니다. 최근 7일(영업일) 1,445.89원→1,427.90원으로 내려 흐름은 ‘하락’입니다. 단기적으로 1,430원대 지지 여부와 미 국채금리·달러지수 방향, 수출입 네고 및 역외 수급이 관건입니다. 글로벌 증시 흐름과 연준 발언에 따른 위험자산 선호 변화도 변동성을 키울 수 있어 유의가 필요합니다. 전일 대비 방향성은 하방 우위로 보입니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/2026-02-18..2026-02-25?from=USD&to=KRW"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/2026-02-18..2026-02-25?from=USD&to=KRW"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.26 08:00 KST",
+    "updated_at": "2026.02.26 08:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
