@@ -1,0 +1,45 @@
+{
+  "date": "2026-02-26",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,946.13(+0.81%), 나스닥 23,152.08(+1.26%), 다우 49,482.15(+0.63%)로 마감했습니다. 대형 기술주 강세와 실적 기대가 위험선호를 키웠고, 국채금리 안정이 매수세를 뒷받침했습니다. 일부 경제지표는 혼조였지만 달러 강세가 진정되며 투자심리가 개선됐습니다. 연준 인하 기대는 완만하게 유지됐고, 변동성 지수는 낮아져 성장주 비중 확대가 이어졌습니다. 거래는 관망 속에서도 점진적 유입이 관측됐습니다.",
+  "body": "[미국증시] S&P500 6,946.13(+0.81%), 나스닥 23,152.08(+1.26%), 다우 49,482.15(+0.63%)로 마감했습니다. 대형 기술주 강세와 실적 기대가 위험선호를 키웠고, 국채금리 안정이 매수세를 뒷받침했습니다. 일부 경제지표는 혼조였지만 달러 강세가 진정되며 투자심리가 개선됐습니다. 연준 인하 기대는 완만하게 유지됐고, 변동성 지수는 낮아져 성장주 비중 확대가 이어졌습니다. 거래는 관망 속에서도 점진적 유입이 관측됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.26 08:02 KST",
+    "updated_at": "2026.02.26 08:02 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
