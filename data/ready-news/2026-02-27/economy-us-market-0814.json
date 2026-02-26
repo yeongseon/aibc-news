@@ -1,0 +1,45 @@
+{
+  "date": "2026-02-27",
+  "category": "economy",
+  "title": "[미국증시] 기술주 약세에 혼조",
+  "summary": "[미국증시] S&P500 6,908.86(-0.54%)·나스닥 22,878.38(-1.18%) 하락, 다우 49,499.20(+0.03%) 보합 마감했습니다. 금리 경로 불확실성과 대형 기술주 차익실현이 위험선호를 눌렀고, 경제지표 발표를 앞둔 관망세가 장중 변동성을 키웠습니다. 반도체·성장주 약세가 나스닥 낙폭을 키운 반면, 경기방어주·금융주 매수와 일부 우량주 강세는 하락을 제한했고 투자자들은 연준 발언을 주시했으며 변동성지수는 소폭 상승했습니다.",
+  "body": "[미국증시] S&P500 6,908.86(-0.54%)·나스닥 22,878.38(-1.18%) 하락, 다우 49,499.20(+0.03%) 보합 마감했습니다. 금리 경로 불확실성과 대형 기술주 차익실현이 위험선호를 눌렀고, 경제지표 발표를 앞둔 관망세가 장중 변동성을 키웠습니다. 반도체·성장주 약세가 나스닥 낙폭을 키운 반면, 경기방어주·금융주 매수와 일부 우량주 강세는 하락을 제한했고 투자자들은 연준 발언을 주시했으며 변동성지수는 소폭 상승했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.27 08:14 KST",
+    "updated_at": "2026.02.27 08:14 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
