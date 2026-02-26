@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-26",
+  "category": "weather",
+  "title": "[날씨] 서늘한 중부, 부산은 강한 바람",
+  "summary": "대전 6°C(체감 4°C)로 가장 낮고, 서울 9°C·인천 10°C는 바람이 약해 체감 차가 크지 않습니다. 부산은 10°C지만 북동풍 29km/h로 체감 7°C까지 내려 쌀쌀합니다.",
+  "body": "2026-02-26 12:00 KST 기준 주요 도시 날씨입니다. 서울 9°C(체감 9°C, 맑음, 북북동풍 5km/h), 인천 10°C(체감 10°C, 흐림, 북북동풍 4km/h)입니다. 대전 6°C(체감 4°C)로 가장 낮고, 대구 9°C·광주 10°C는 구름 조금, 동풍 4~9km/h입니다. 부산 10°C(체감 7°C)는 북동풍 29km/h로 체감이 더 낮겠습니다. 중부는 보온에 신경 쓰시고, 해안 지역은 바람 대비가 필요합니다. 외출 시 방풍 겉옷이 좋겠습니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.26 12:00 KST",
+    "updated_at": "2026.02.26 12:05 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
