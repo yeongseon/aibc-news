@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-26",
+  "category": "economy",
+  "title": "[국내증시] KOSPI·KOSDAQ 동반 상승 마감",
+  "summary": "[국내증시] KOSPI는 6,303.49로 전일 대비 219.63p(+3.61%) 상승했고, KOSDAQ은 1,189.52로 24.52p(+2.10%) 올랐습니다. 장 초반 강세가 이어지며 상승 폭을 키워 마감했고, 대형주 중심의 매수세가 지수를 견인했습니다. 업종별로는 상승 업종이 우세했고, 거래는 비교적 활발했습니다. 위험선호 회복 기대 속에 투자심리가 개선됐으나 급등 이후 변동성 확대 가능성에는 유의가 필요합니다. 단기 과열 경계도 함께 부각됐습니다.",
+  "body": "[국내증시] KOSPI는 6,303.49로 전일 대비 219.63p(+3.61%) 상승했고, KOSDAQ은 1,189.52로 24.52p(+2.10%) 올랐습니다. 장 초반 강세가 이어지며 상승 폭을 키워 마감했고, 대형주 중심의 매수세가 지수를 견인했습니다. 업종별로는 상승 업종이 우세했고, 거래는 비교적 활발했습니다. 위험선호 회복 기대 속에 투자심리가 개선됐으나 급등 이후 변동성 확대 가능성에는 유의가 필요합니다. 단기 과열 경계도 함께 부각됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.26 15:33 KST",
+    "updated_at": "2026.02.26 15:33 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
