@@ -1,0 +1,45 @@
+{
+  "date": "2026-02-28",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 마감했습니다. 전일 상승 이후 차익실현과 국채금리 재상승, 인플레이션 경계감이 부담을 줬고, 실적 발표를 앞둔 관망 심리에 경기 둔화 우려·달러 강세가 겹치며 대형 기술주 중심 매도가 이어졌으며, 연준 정책 불확실성과 유가 약세로 위험자산 선호가 둔화됐고 거래량은 평균 수준이었으며 에너지·소비재도 약세였습니다.",
+  "body": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 마감했습니다. 전일 상승 이후 차익실현과 국채금리 재상승, 인플레이션 경계감이 부담을 줬고, 실적 발표를 앞둔 관망 심리에 경기 둔화 우려·달러 강세가 겹치며 대형 기술주 중심 매도가 이어졌으며, 연준 정책 불확실성과 유가 약세로 위험자산 선호가 둔화됐고 거래량은 평균 수준이었으며 에너지·소비재도 약세였습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.28 08:20 KST",
+    "updated_at": "2026.02.28 08:20 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
