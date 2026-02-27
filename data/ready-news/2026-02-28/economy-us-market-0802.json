@@ -1,0 +1,45 @@
+{
+  "date": "2026-02-28",
+  "category": "economy",
+  "title": "[미국증시] 금리 경계에 동반 하락",
+  "summary": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%) 하락 마감했습니다. 금리 경계와 대형 기술주 약세가 위험선호를 눌렀고, 경제지표·연준 발언을 앞둔 관망세 속에 반도체·소비주 중심의 차익실현이 이어졌으며, 달러 강세와 경기둔화 우려까지 겹치며 방어주·금융주 일부만 낙폭을 제한해 변동성이 확대됐고 장중 되돌림 시도도 있었지만 전반적으로 매수세 유입은 제한적이었습니다.",
+  "body": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%) 하락 마감했습니다. 금리 경계와 대형 기술주 약세가 위험선호를 눌렀고, 경제지표·연준 발언을 앞둔 관망세 속에 반도체·소비주 중심의 차익실현이 이어졌으며, 달러 강세와 경기둔화 우려까지 겹치며 방어주·금융주 일부만 낙폭을 제한해 변동성이 확대됐고 장중 되돌림 시도도 있었지만 전반적으로 매수세 유입은 제한적이었습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.28 08:02 KST",
+    "updated_at": "2026.02.28 08:02 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
