@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-28",
+  "category": "economy",
+  "title": "[환율] USD/KRW 상승…7일 흐름은 하락",
+  "summary": "USD/KRW는 2/27 기준 1달러=1,441.97원으로 전일 종가(1,425.64원) 대비 16.33원(+1.15%) 상승했습니다. 최근 7일 종가는 1,449.66→1,441.97원으로 내려 ‘하락’ 흐름입니다. 미 금리 기대와 위험선호 변화, 역외 수급에 따라 방향성이 흔들릴 수 있으니 레인지 관리와 급등락 대응, 스프레드 확인에 유의해 주시기 바랍니다. 주요 지표 발표 전후에는 변동폭이 확대될 수 있어 결제 시점 분산과 헤지 비율 점검이 필요합니다.",
+  "body": "USD/KRW는 2/27 기준 1달러=1,441.97원으로 전일 종가(1,425.64원) 대비 16.33원(+1.15%) 상승했습니다. 최근 7일 종가는 1,449.66→1,441.97원으로 내려 ‘하락’ 흐름입니다. 미 금리 기대와 위험선호 변화, 역외 수급에 따라 방향성이 흔들릴 수 있으니 레인지 관리와 급등락 대응, 스프레드 확인에 유의해 주시기 바랍니다. 주요 지표 발표 전후에는 변동폭이 확대될 수 있어 결제 시점 분산과 헤지 비율 점검이 필요합니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.28 16:00 KST",
+    "updated_at": "2026.02.28 16:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
