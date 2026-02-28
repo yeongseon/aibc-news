@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-01",
+  "category": "weather",
+  "title": "[날씨] 새벽 대체로 맑고 쌀쌀…부산은 강풍에 체감 더 낮아",
+  "summary": "서울·인천은 7°C 안팎으로 구름이 끼고, 대전은 2°C로 가장 서늘합니다. 부산은 바람이 강해 체감 4°C로 떨어져 외출 시 보온이 필요합니다.",
+  "body": "2026-03-01 04:00 KST 기준 주요 도시 날씨입니다. 서울 7°C(체감 6°C, 맑음, 동남동풍 9km/h), 인천 7°C(체감 4°C, 구름 조금, 17km/h). 대전 2°C(체감 -1°C, 맑음, 10km/h)로 가장 낮고, 대구 8°C(체감 7°C, 구름 조금, 6km/h)입니다. 부산은 8°C지만 바람 28km/h로 체감 4°C, 광주 5°C(체감 5°C, 맑음, 4km/h)입니다. 해안·강풍 지역은 바람막이를 꼭 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.01 04:00 KST",
+    "updated_at": "2026.03.01 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
