@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-28",
+  "category": "weather",
+  "title": "[날씨] 저녁에도 대체로 맑음…부산은 바람 강해 체감 낮아져",
+  "summary": "서울·인천·대구·광주는 10°C 안팎의 맑은 날씨가 이어집니다. 대전은 8°C로 비교적 선선하고, 부산은 구름 많은 가운데 바람 24km/h로 체감 7°C까지 내려갑니다.",
+  "body": "2026-02-28 20:00 KST 기준 주요 도시 날씨입니다. 서울 10°C(체감 10°C, 맑음, 바람 5km/h), 인천 10°C(체감 9°C, 맑음, 북동풍 9km/h)입니다. 대구 10°C(체감 10°C, 맑음, 동북동풍 6km/h), 대전 8°C(체감 8°C, 맑음, 동북동풍 6km/h)로 내륙은 비교적 선선합니다. 부산 10°C는 구름 많음에 바람 24km/h로 체감 7°C까지 내려가고, 광주 10°C는 맑은 하늘에 바람 5km/h입니다. 해안·강풍 지역은 얇은 겉옷을 챙기고, 일교차 대비로 가벼운 보온을 권합니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.02.28 20:00 KST",
+    "updated_at": "2026.02.28 20:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
