@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-02",
+  "category": "economy",
+  "title": "[미국증시] 금리·차익실현에 3대지수 하락",
+  "summary": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 동반 하락 마감했습니다. 국채금리 상승과 달러 강세로 위험회피가 강화됐고, 주말 앞 차익실현과 경제지표·연준 발언 대기 속 기술주 약세가 지수를 눌렀습니다. 방어주·에너지는 상대적으로 선방했으나 성장주 조정이 커지며 변동성이 확대됐고, 실적 눈높이 조정과 경기둔화 우려도 부담으로 작용하며 투자심리가 위축됐습니다.",
+  "body": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 동반 하락 마감했습니다. 국채금리 상승과 달러 강세로 위험회피가 강화됐고, 주말 앞 차익실현과 경제지표·연준 발언 대기 속 기술주 약세가 지수를 눌렀습니다. 방어주·에너지는 상대적으로 선방했으나 성장주 조정이 커지며 변동성이 확대됐고, 실적 눈높이 조정과 경기둔화 우려도 부담으로 작용하며 투자심리가 위축됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.02 08:29 KST",
+    "updated_at": "2026.03.02 08:29 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
