@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-02",
+  "category": "economy",
+  "title": "[미국증시] 금리 부담에 3대지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 동반 하락 마감했습니다. 금리 부담과 기술주 약세, 차익실현이 겹치며 위험회피 심리가 확대됐고 달러 강세·경기둔화 우려로 매수세가 제한됐습니다. 변동성 확대와 주말 앞 포지션 조정이 하락폭을 키웠으며, 방어주는 상대적으로 견조했으나 성장주 부담이 컸습니다. 국채금리 흐름과 연준 발언을 앞둔 경계감도 이어졌습니다.",
+  "body": "[미국증시] S&P500 6,878.88(-0.43%), 나스닥 22,668.21(-0.92%), 다우 48,977.92(-1.05%)로 동반 하락 마감했습니다. 금리 부담과 기술주 약세, 차익실현이 겹치며 위험회피 심리가 확대됐고 달러 강세·경기둔화 우려로 매수세가 제한됐습니다. 변동성 확대와 주말 앞 포지션 조정이 하락폭을 키웠으며, 방어주는 상대적으로 견조했으나 성장주 부담이 컸습니다. 국채금리 흐름과 연준 발언을 앞둔 경계감도 이어졌습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.02 08:22 KST",
+    "updated_at": "2026.03.02 08:22 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
