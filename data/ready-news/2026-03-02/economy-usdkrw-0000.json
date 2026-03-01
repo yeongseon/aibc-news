@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-02",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,439원대 상승",
+  "summary": "[환율] 달러/원은 1달러당 1,439.23원으로 전일 종가(1,432.32원) 대비 6.91원(+0.48%) 상승했습니다. 최근 7일 흐름은 1,440.16→1,439.23원으로 소폭 하락(보합권)입니다. 미 금리 기대와 위험선호 변화에 따라 방향성이 바뀔 수 있어, 수입·해외결제 비용과 환리스크 관리에 유의하시는 게 좋겠습니다. 단기 급등락 가능성도 염두에 두시는 편이 안전합니다. 당분간 변동성 지속 가능성이 있습니다. 기준시각은 2026.03.02 00:00 KST입니다.",
+  "body": "[환율] 달러/원은 1달러당 1,439.23원으로 전일 종가(1,432.32원) 대비 6.91원(+0.48%) 상승했습니다. 최근 7일 흐름은 1,440.16→1,439.23원으로 소폭 하락(보합권)입니다. 미 금리 기대와 위험선호 변화에 따라 방향성이 바뀔 수 있어, 수입·해외결제 비용과 환리스크 관리에 유의하시는 게 좋겠습니다. 단기 급등락 가능성도 염두에 두시는 편이 안전합니다. 당분간 변동성 지속 가능성이 있습니다. 기준시각은 2026.03.02 00:00 KST입니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Yahoo Finance Chart API",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/KRW=X?range=7d&interval=1d"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Yahoo Finance Chart API",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/KRW=X?range=7d&interval=1d"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.02 00:00 KST",
+    "updated_at": "2026.03.02 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
