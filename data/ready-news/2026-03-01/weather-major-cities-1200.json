@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-01",
+  "category": "weather",
+  "title": "[날씨] 한낮 구름 많은 곳…부산 강풍에 체감 온도 낮아",
+  "summary": "서울·인천·대전은 10°C 안팎으로 구름이 많습니다. 부산은 바람이 강해 체감 8°C로 낮아지고, 광주는 12°C로 가장 포근합니다.",
+  "body": "2026-03-01 12:00 KST 주요 도시 날씨입니다. 서울 10°C(체감 9°C, 구름 조금, 동풍 8km/h), 인천 10°C(체감 9°C, 구름 조금, 동남동풍 12km/h). 대전 10°C(체감 8°C, 동풍 15km/h), 대구 9°C(체감 7°C, 동북동풍 13km/h)로 내륙은 선선합니다. 부산 11°C지만 바람 33km/h로 체감 8°C, 광주 12°C(체감 12°C, 맑음, 동풍 7km/h)입니다. 해안은 방풍 겉옷을 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.01 12:00 KST",
+    "updated_at": "2026.03.01 12:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
