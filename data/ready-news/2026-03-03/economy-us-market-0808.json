@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-03",
+  "category": "economy",
+  "title": "[미국증시] 기술주 강세 속 혼조 마감",
+  "summary": "[미국증시] S&P500 6,881.62(+0.04%), 나스닥 22,748.86(+0.36%) 상승, 다우 48,904.78(-0.15%) 하락 마감했습니다. 기술주 매수세가 지수를 떠받쳤지만 금리 경계와 경기둔화 우려로 경기민감·가치주는 약세였고, 연준 발언·지표를 앞둔 관망과 차익실현이 겹치며 혼조 흐름이 이어졌습니다. 달러 강세 속에 금융·에너지도 탄력이 둔화되며 지수 상단을 제한했고, 장중 등락이 잦아 변동성은 소폭 확대됐습니다. 전반적으로 방향성은 제한적이었습니다.",
+  "body": "[미국증시] S&P500 6,881.62(+0.04%), 나스닥 22,748.86(+0.36%) 상승, 다우 48,904.78(-0.15%) 하락 마감했습니다. 기술주 매수세가 지수를 떠받쳤지만 금리 경계와 경기둔화 우려로 경기민감·가치주는 약세였고, 연준 발언·지표를 앞둔 관망과 차익실현이 겹치며 혼조 흐름이 이어졌습니다. 달러 강세 속에 금융·에너지도 탄력이 둔화되며 지수 상단을 제한했고, 장중 등락이 잦아 변동성은 소폭 확대됐습니다. 전반적으로 방향성은 제한적이었습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.03 08:08 KST",
+    "updated_at": "2026.03.03 08:08 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
