@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-03",
+  "category": "economy",
+  "title": "[미국증시] 혼조 마감",
+  "summary": "[미국증시] S&P500은 6,881.62(+0.04%), 나스닥은 22,748.86(+0.36%)로 상승했고, 다우는 48,904.78(-0.15%)로 소폭 하락했습니다. 대형 기술주 매수로 지수가 지지됐지만, 금리·경기 불확실성에 대한 경계와 차익실현이 맞물리며 순환매가 나타났습니다. 연준 정책 경로를 둘러싼 관망세가 이어지고 국채금리 변동성이 부담으로 작용해 전반적으로 시장은 혼조로 마감했습니다. 기준시각은 2026.03.03 08:14 KST입니다.",
+  "body": "[미국증시] S&P500은 6,881.62(+0.04%), 나스닥은 22,748.86(+0.36%)로 상승했고, 다우는 48,904.78(-0.15%)로 소폭 하락했습니다. 대형 기술주 매수로 지수가 지지됐지만, 금리·경기 불확실성에 대한 경계와 차익실현이 맞물리며 순환매가 나타났습니다. 연준 정책 경로를 둘러싼 관망세가 이어지고 국채금리 변동성이 부담으로 작용해 전반적으로 시장은 혼조로 마감했습니다. 기준시각은 2026.03.03 08:14 KST입니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.03 08:14 KST",
+    "updated_at": "2026.03.03 08:14 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
