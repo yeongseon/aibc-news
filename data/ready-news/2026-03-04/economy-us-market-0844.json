@@ -1,0 +1,53 @@
+{
+  "date": "2026-03-04",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,816.63(-0.94%), 나스닥 22,516.69(-1.02%), 다우 48,501.27(-0.83%)로 동반 하락했습니다. 유가 급등과 달러 강세로 인플레이션·금리 인하 기대가 약해지며 위험자산 선호가 후퇴했고, 미 국채금리 재상승과 연준 정책 경로 불확실성, 경기 둔화 우려 속에 주요 지표·기업 실적을 앞둔 관망 심리까지 겹치며 기술주 중심 차익실현이 이어져 변동성이 확대됐고 방어주로의 순환 매수도 제한적이었습니다.",
+  "body": "[미국증시] S&P500 6,816.63(-0.94%), 나스닥 22,516.69(-1.02%), 다우 48,501.27(-0.83%)로 동반 하락했습니다. 유가 급등과 달러 강세로 인플레이션·금리 인하 기대가 약해지며 위험자산 선호가 후퇴했고, 미 국채금리 재상승과 연준 정책 경로 불확실성, 경기 둔화 우려 속에 주요 지표·기업 실적을 앞둔 관망 심리까지 겹치며 기술주 중심 차익실현이 이어져 변동성이 확대됐고 방어주로의 순환 매수도 제한적이었습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/news/dollar-rallies-crude-oils-surge-153520544.html"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/news/dollar-rallies-crude-oils-surge-153520544.html"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.04 08:44 KST",
+    "updated_at": "2026.03.04 08:44 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
