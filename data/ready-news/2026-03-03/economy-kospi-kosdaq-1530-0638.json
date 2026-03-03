@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-03",
+  "category": "economy",
+  "title": "[국내증시] 코스피·코스닥 동반 하락 마감",
+  "summary": "[국내증시] 코스피는 5,815.57(-30.52p, -0.52%), 코스닥은 1,142.97(-9.02p, -0.78%)로 동반 하락 마감했습니다. 전일 반등 이후 차익실현과 외국인 순매도, 대형주 약세가 겹쳤고 반도체·2차전지 등 성장주가 부진했습니다. 개인 저가매수는 제한적이었으며 기관은 관망 속 제한적 매수에 그쳤습니다. 거래대금도 전일 대비 둔화했고 방어주는 상대적으로 선방했지만 상승 탄력은 약했습니다. 전반적으로 미국 지표와 환율 흐름을 앞두고 신중한 분위기였습니다.",
+  "body": "[국내증시] 코스피는 5,815.57(-30.52p, -0.52%), 코스닥은 1,142.97(-9.02p, -0.78%)로 동반 하락 마감했습니다. 전일 반등 이후 차익실현과 외국인 순매도, 대형주 약세가 겹쳤고 반도체·2차전지 등 성장주가 부진했습니다. 개인 저가매수는 제한적이었으며 기관은 관망 속 제한적 매수에 그쳤습니다. 거래대금도 전일 대비 둔화했고 방어주는 상대적으로 선방했지만 상승 탄력은 약했습니다. 전반적으로 미국 지표와 환율 흐름을 앞두고 신중한 분위기였습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.03 15:30 KST",
+    "updated_at": "2026.03.03 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
