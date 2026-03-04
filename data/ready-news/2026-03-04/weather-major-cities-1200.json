@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-04",
+  "category": "weather",
+  "title": "[날씨] 한낮 맑고 선선…인천은 구름 많고 체감 낮아",
+  "summary": "서울·대전·대구는 맑은 하늘에 6~9°C로 선선하고, 광주도 구름 사이 햇살이 이어집니다. 인천은 구름 많고 바람이 11km/h로 체감 5°C까지 내려가며, 부산은 맑은 날씨에 체감이 다소 높습니다.",
+  "body": "2026-03-04 12:00 KST 기준. 서울 6°C(체감 5, 구름 조금, 서북서풍 6km/h), 인천 7°C(체감 5, 흐림, 북서풍 11km/h)입니다. 대전 8°C(체감 7, 맑음, 북서풍 8km/h), 대구 9°C(맑음, 북북서풍 5km/h)로 내륙은 맑습니다. 광주 9°C(체감 8, 구름 조금, 북풍 8km/h), 부산 10°C(체감 11, 맑음, 북북서풍 4km/h)입니다. 바람이 있어 얇은 겉옷을 챙기고, 일교차에도 유의하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.04 12:00 KST",
+    "updated_at": "2026.03.04 12:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
