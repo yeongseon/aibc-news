@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-05",
+  "category": "economy",
+  "title": "[국내증시] 코스피·코스닥 동반 급등 마감",
+  "summary": "코스피는 5,584.23에 마감하며 490.69포인트(+9.63%) 급등했고, 코스닥도 1,121.34로 142.90포인트(+14.60%) 상승했습니다. 코스피는 개인 순매수(약 1.63조원) 유입이 지수 상승을 견인했고, 코스닥은 외국인·기관 동반 순매수와 거래대금 확대(약 15.4조원)가 상승세를 뒷받침했습니다. 코스피 거래대금도 약 44.8조원으로 늘었습니다.",
+  "body": "3월 5일 15:30 KST 기준 코스피는 5,584.23으로 전일 대비 490.69포인트(+9.63%) 급등 마감했고, 코스닥도 1,121.34로 142.90포인트(+14.60%) 올랐습니다. 코스피는 개인 순매수(약 1.63조원) 유입에도 외국인·기관 순매도가 나타났고, 코스닥은 외국인·기관 동반 순매수가 상승을 지지했습니다. 거래대금은 코스피 약 44.8조원, 코스닥 약 15.4조원 수준이며, 수급 차이가 양 시장 흐름에 영향을 줬습니다.",
+  "sources": [
+    {
+      "name": "Naver Finance",
+      "url": "https://finance.naver.com/sise/sise_index.nhn?code=KOSDAQ"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Naver Finance",
+        "url": "https://finance.naver.com/sise/sise_index.nhn?code=KOSDAQ"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.05 15:30 KST",
+    "updated_at": "2026.03.05 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
