@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import re
+from urllib.parse import urlparse
 from typing import Dict, Any
 
 
@@ -15,7 +16,8 @@ def _hash(value: str, size: int = 8) -> str:
 
 
 def _symbol_slug(symbol: str) -> str:
-    return symbol.lower().replace("^", "").replace("=", "-")
+    cleaned = symbol.lower().replace("^", "").replace("=", "-")
+    return slugify(cleaned)
 
 
 def make_post_id(item: Dict[str, Any]) -> str:
@@ -26,7 +28,10 @@ def make_post_id(item: Dict[str, Any]) -> str:
         sources = item.get("sources", [])
         if sources:
             url = sources[0].get("url", "")
-            symbol = url.split("/")[-1]
+            parsed = urlparse(url)
+            symbol = parsed.path.rstrip("/").split("/")[-1]
+            if parsed.query:
+                symbol = f"{symbol}-{parsed.query}"
             slug = _symbol_slug(symbol)
 
     if not slug and item_type == "weather":

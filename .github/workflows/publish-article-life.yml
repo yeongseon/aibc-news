@@ -52,20 +52,30 @@ jobs:
         run: |
           python scripts/run_publish_article.py
 
+      - name: Commit and push outputs
+        if: ${{ (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true') && (github.event_name != 'repository_dispatch' || (github.event.client_payload.dry_run != true && github.event.client_payload.dry_run != 'true')) }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/
+          git diff --quiet && git diff --staged --quiet || git commit -m "publish: update generated posts ($(date +'%Y-%m-%d %H:%M'))"
+          git push
+
       - name: Upload pipeline artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-life-${{ inputs.run_date || github.run_id }}
+          name: pipeline-life-${{ inputs.run_date || github.event.client_payload.run_date || github.run_id }}
           path: |
             data/**
             logs/**
+            _posts/**
 
       - name: Create failure issue
         if: ${{ failure() }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          RUN_DATE=${{ inputs.run_date }}
+          RUN_DATE=${{ inputs.run_date || github.event.client_payload.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
           gh api --method POST /repos/${{ github.repository }}/issues             -f title="Article publish (life) failed: ${RUN_DATE}"             -f body="Workflow run failed. Logs/quality artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"             -f labels[]=automation             -f labels[]=publish-article

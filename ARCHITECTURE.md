@@ -1,16 +1,16 @@
 # [Architecture] AI Broadcasting Channel (AIBC)
 
 **작성일:** 2026-01-25
-**최종 수정:** 2026-02-15
+**최종 수정:** 2026-03-07
 **기준 PRD:** `PRD.md`
-**범위:** Phase 1 (카테고리별 자동 발행)
+**범위:** 현재 저장소 기준 Phase 1 발행 경로 (Ready News → Publisher → GitHub Pages)
 
 ---
 
 ## 1. 문서 목적 및 범위
 
-* AIBC Phase 1의 아키텍처를 정의합니다.
-* **카테고리별 독립 발행**과 **REST 트리거(repository_dispatch)**를 포함합니다.
+* AIBC Phase 1의 현재 구현 아키텍처를 정의합니다.
+* **Ready News 적재 후 발행**과 **REST 트리거(repository_dispatch)**를 포함합니다.
 * 카테고리(한글): 정치, 경제, 사회, 세계, 기술, 문화, 스포츠, 연예, 생활, 날씨
 * 배포 대상은 Jekyll 기반 GitHub Pages이며, 운영은 GitHub Actions + REST 병행합니다.
 
@@ -20,8 +20,7 @@
 
 ### 2.1 외부 시스템
 
-* **데이터 소스**: 공개 지표/기관 데이터/API
-* **LLM API**: Writer Agent의 기사 작성
+* **콘텐츠 공급자**: Ready News JSON을 생성하는 외부 도구/운영 프로세스
 * **GitHub Actions**: 카테고리별 스케줄 실행
 * **GitHub Pages**: 정적 사이트 호스팅
 * **Azure Functions**: REST 발행 엔드포인트
@@ -36,16 +35,16 @@
 
 ### 3.1 기능 요구사항
 
-* 카테고리별 Collector → Writer → Publisher 파이프라인 독립 실행
-* GitHub Actions cron 스케줄 또는 REST로 즉시 발행
-* 발행 실패 시 **부분 발행 금지**
-* Quality Gate 불통과 시 발행 중단
+* 날짜별 `data/ready-news/YYYY-MM-DD/*.json` 적재 후 발행
+* GitHub Actions push/workflow_dispatch 또는 REST(repository_dispatch)로 발행
+* 스키마 검증 실패 시 발행 중단
+* 동일 파일명은 기본 skip, `force` 시 overwrite
 
 ### 3.2 품질 및 편집 가드레일
 
 * 1 포스트 = 1 뉴스
-* 2~4문장, 출처 최소 1개
-* 금칙어 금지, 수치 포함 시 기준시점/발표일 표기
+* 출처 최소 1개
+* `meta.input_at`, `meta.updated_at` 필수
 * (선택) 대표 이미지
 
 ---
@@ -62,16 +61,11 @@
    * HTTP 요청으로 repository_dispatch 트리거
    * 멱등성 보장
 
-3) **Collector Agent**
-   * 카테고리별 데이터 수집
+3) **Ready News Validator**
+   * JSON 파일 로드
+   * 필수 필드/카테고리/이미지 메타 검증
 
-4) **Writer Agent**
-   * 수집 결과 → 마크다운 본문 생성
-
-5) **Quality Gate**
-   * 문장 수/금칙어/출처/기준시점 검증
-
-6) **Publisher Agent**
+4) **Publisher Agent**
    * Front Matter 생성
    * 파일명 생성
    * `_posts`에 저장
@@ -81,31 +75,24 @@
 
 ## 5. 상세 설계
 
-### 5.1 Collector
+### 5.1 Ready News Intake
 
-**카테고리별 분리**
-- MarketCollector
-- WeatherCollector
-- LifestyleCollector
-- HeadlineCollector (추후 확장)
+* 입력 위치: `data/ready-news/YYYY-MM-DD/*.json`
+* 단일 JSON 또는 `items` 배열 포맷 지원
+* 카테고리 필터 적용 가능
 
-### 5.2 Writer
+### 5.2 Validation
 
-* 2~4문장 구성
-* 중립적 보도체 유지
-* 수치 포함 시 기준시점/발표일 명시
+* 필수 필드 검사: `date`, `category`, `title`, `summary`, `body`, `sources`, `meta.input_at`, `meta.updated_at`
+* 카테고리 허용값 검사
+* `media.hero_image` 사용 시 `url`, `alt` 검사
 
-### 5.3 Quality Gate
-
-* 카테고리별 규칙 적용
-* 문장 수, 금칙어, 출처, 기준시점 검사
-
-### 5.4 Publisher
+### 5.3 Publisher
 
 * Front Matter 생성
 * 파일명 규칙 적용: `YYYY-MM-DD-HHMM-<category>-<slug>.md`
 * 멱등성 검사 (기본 skip, force 시 overwrite)
-* Git 커밋/푸시 수행
+* GitHub Actions에서 Git 커밋/푸시 수행
 
 ---
 
@@ -113,15 +100,15 @@
 
 ### 6.1 GitHub Actions
 
-* 카테고리별 워크플로
-* 각 워크플로는 CATEGORY 환경 변수로 필터 실행
+* `publish-article.yml`: push 기반 일괄 발행
+* `publish-article-*.yml`: 카테고리별 수동 실행 및 `repository_dispatch` 발행
 
 ### 6.2 REST API
 
 * `POST /api/publish`
 * `category`, `run_date`, `force`, `idempotency_key` 지원
 * REST는 **repository_dispatch 트리거** 역할만 수행
-* 실제 발행/커밋은 Actions에서 처리
+* 카테고리별 workflow가 조건부로 실행되어 실제 발행/커밋 수행
 
 ---
 
@@ -132,14 +119,8 @@
 ├─ _posts/
 │  └─ YYYY-MM-DD-HHMM-<category>-<slug>.md
 ├─ data/
-│  ├─ collector/YYYY-MM-DD.json
-│  └─ quality/YYYY-MM-DD.json
-├─ logs/
-│  └─ YYYY-MM-DD.log
+│  └─ ready-news/YYYY-MM-DD/*.json
 ├─ src/
-│  ├─ collector/
-│  ├─ writer/
-│  ├─ quality/
 │  └─ publisher/
 └─ .github/workflows/
    └─ publish-article-*.yml
@@ -149,15 +130,15 @@
 
 ## 8. 운영 및 모니터링
 
-* 단계별 로그 기록
 * GitHub Actions 실패 시 이슈 생성
-* REST 호출은 멱등성 키로 중복 방지
+* 발행 결과는 `_posts/`와 Actions artifact로 확인
+* REST 호출은 `client_payload` 기반으로 카테고리별 workflow에 전달
 
 ---
 
 ## 9. 결정 사항 요약
 
-* 카테고리별 독립 발행 구조
+* Ready News 적재 후 발행하는 구조
 * Actions/REST 병행 지원 (REST는 repository_dispatch 트리거)
 * 커밋/푸시는 Actions에서 수행
-* 멱등성은 파일명 규칙 + Actions 재실행 정책으로 보장
+* 멱등성은 파일명 규칙 + `force` 정책으로 보장
