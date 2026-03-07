@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-08",
+  "category": "weather",
+  "title": "[날씨] 맑은 새벽, 내륙 체감 영하권 지속",
+  "summary": "서울 -4°C·대전 -5°C로 차갑고 체감은 -5~-6°C 수준입니다. 인천은 -2°C에 체감 -6°C로 바람이 상대적으로 강합니다. 부산은 -1°C지만 체감 -4°C로 해안도 쌀쌀합니다.",
+  "body": "2026-03-08 04:00 KST 기준. 전국은 대체로 맑고 내륙 체감 영하권입니다. 서울 -4°C(체감 -5°C, 서북서풍 4km/h), 대전 -5°C(체감 -6°C)로 중부가 가장 춥습니다. 인천 -2°C(체감 -6°C, 북북서풍 12km/h)로 바람 체감이 큽니다. 부산 -1°C(체감 -4°C, 북북서풍 9km/h), 대구·광주 -2°C(체감 -3°C)입니다. 수도권·충청권 중심으로 한기가 강해 체감이 더 낮습니다. 새벽 외출은 보온에 유의하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.08 04:00 KST",
+    "updated_at": "2026.03.08 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
