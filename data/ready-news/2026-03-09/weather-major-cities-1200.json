@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-09",
+  "category": "weather",
+  "title": "[날씨] 서해안 북서풍, 남부는 맑고 온화",
+  "summary": "서해안(서울·인천)은 북서풍 영향으로 체감 3°C 안팎이고, 대전은 2°C로 가장 낮습니다. 남부는 부산 8°C 맑음, 대구 7°C·광주 5°C로 비교적 온화합니다.",
+  "body": "2026-03-09 12:00 KST 기준입니다. 서울 5°C(체감 3°C, 북서풍 11km/h), 인천 6°C(체감 3°C, 북서풍 20km/h)로 서해안 체감이 낮습니다. 대전은 2°C(체감 0°C, 서풍 7km/h)로 가장 낮습니다. 부산 8°C(체감 5°C, 북서풍 19km/h) 맑음, 대구 7°C(체감 4°C, 북서풍 15km/h) 구름 조금, 광주 5°C(체감 1°C) 안개입니다. 바람이 강해 체온이 빨리 떨어질 수 있습니다. 해안은 보온, 안개 지역은 서행이 안전합니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.09 12:00 KST",
+    "updated_at": "2026.03.09 12:00 KST",
+    "author": "gpt-5"
+  },
+  "schema_version": "1.1"
+}
