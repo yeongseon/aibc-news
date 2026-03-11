@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-12",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,470원대, 전일 대비 하락",
+  "summary": "[환율] 달러/원은 1달러=1,470.12원 수준입니다. 전일 종가 1,485.12원 대비 15.00원 내려 -1.01%입니다. 최근 7일은 1,464.80원→1,470.12원으로 완만한 상승 흐름입니다. 7일 고점 1,485.12원·저점 1,464.80원 범위에서 등락했고, 전일 하락에도 주간 기준으론 오름세입니다. 미국 금리 기대와 위험선호 변화에 따라 단기 변동성이 커질 수 있어 체결 레벨 확인이 필요하며, 당분간 변동성 확대 가능성을 염두에 두는 게 좋겠습니다.",
+  "body": "[환율] 달러/원은 1달러=1,470.12원 수준입니다. 전일 종가 1,485.12원 대비 15.00원 내려 -1.01%입니다. 최근 7일은 1,464.80원→1,470.12원으로 완만한 상승 흐름입니다. 7일 고점 1,485.12원·저점 1,464.80원 범위에서 등락했고, 전일 하락에도 주간 기준으론 오름세입니다. 미국 금리 기대와 위험선호 변화에 따라 단기 변동성이 커질 수 있어 체결 레벨 확인이 필요하며, 당분간 변동성 확대 가능성을 염두에 두는 게 좋겠습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/latest?from=USD&to=KRW"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/latest?from=USD&to=KRW"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.12 00:00 KST",
+    "updated_at": "2026.03.12 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
