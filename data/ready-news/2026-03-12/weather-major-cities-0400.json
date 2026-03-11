@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-12",
+  "category": "weather",
+  "title": "[날씨] 새벽 수도권 안개, 대전 영하권…부산은 약한 비와 바람",
+  "summary": "서울은 1°C로 맑지만 인천·대전은 안개로 체감이 더 낮겠습니다. 대전은 -2°C(체감 -3°C)로 가장 춥고, 부산은 3°C에 약한 비와 북동풍 12km/h로 쌀쌀합니다.",
+  "body": "2026-03-12 04:00 KST 기준 주요 도시 날씨입니다. 서울 1°C(체감 1°C, 맑음, 북풍 4km/h), 인천 1°C(체감 -1°C, 안개, 북풍 8km/h), 대전 -2°C(체감 -3°C, 안개)로 시야와 체감이 낮겠습니다. 대구 2°C, 광주 2°C는 맑습니다. 부산 3°C(체감 0°C, 약한 비, 북북동풍 12km/h)로 쌀쌀합니다. 습도가 높아 노면이 미끄러울 수 있어 우산과 미끄럼 주의가 필요합니다. 출근길에는 방풍 외투가 낫겠습니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.12 04:00 KST",
+    "updated_at": "2026.03.12 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
