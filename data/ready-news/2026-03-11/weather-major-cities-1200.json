@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-11",
+  "category": "weather",
+  "title": "[날씨] 내륙 체감 낮고 해안은 온도 우위",
+  "summary": "서울·대전·대구·광주는 -1~-2°C로 체감 영하권이 이어집니다. 인천·부산은 1°C 안팎으로 상대적으로 온화하고, 바람은 약한 편입니다. 보온 겉옷과 손발 보온에 유의하시기 바랍니다.",
+  "body": "2026-03-11 12:00 KST 기준( wttr.in 접속 지연으로 04:00 관측값 기준 ). 서울 -1°C(체감 -2°C, 맑음, 서풍 4km/h), 대전 -2°C(체감 -3°C), 대구 -1°C(체감 -2°C), 광주 -2°C(체감 -3°C, 북풍 4km/h)로 내륙이 더 춥습니다. 인천 1°C(체감 0°C, 서풍 5km/h), 부산 1°C(체감 -1°C, 서풍 7km/h)로 해안이 온화합니다. 바람은 약한 편이나 체감 영하권이므로 보온 겉옷·장갑을 챙기고 실내 환기는 짧게 하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.11 12:00 KST",
+    "updated_at": "2026.03.11 12:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
