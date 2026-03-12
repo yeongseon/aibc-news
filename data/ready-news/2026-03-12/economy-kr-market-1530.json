@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-12",
+  "category": "economy",
+  "title": "[국내증시] 혼조 마감",
+  "summary": "[국내증시] KOSPI 5,575.43(-34.52, -0.62%), KOSDAQ 1,146.28(+9.45, +0.83%)로 마감했습니다. 전일 글로벌 증시 조정과 원/달러 상승 부담으로 대형주가 약세를 보였고, 외국인·기관 매도 우위가 지수 하락을 압박했습니다. 반면 코스닥은 개인 매수와 성장주·바이오 중심의 순환매가 이어지며 상승했고, 장중 변동성은 컸지만 업종별 차별화가 뚜렷했습니다. 수급은 경기민감주에서 성장주로 이동하는 흐름이 관측됐습니다.",
+  "body": "[국내증시] KOSPI 5,575.43(-34.52, -0.62%), KOSDAQ 1,146.28(+9.45, +0.83%)로 마감했습니다. 전일 글로벌 증시 조정과 원/달러 상승 부담으로 대형주가 약세를 보였고, 외국인·기관 매도 우위가 지수 하락을 압박했습니다. 반면 코스닥은 개인 매수와 성장주·바이오 중심의 순환매가 이어지며 상승했고, 장중 변동성은 컸지만 업종별 차별화가 뚜렷했습니다. 수급은 경기민감주에서 성장주로 이동하는 흐름이 관측됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+    }
+  ],
+  "generation": {
+    "model": "GPT-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.12 15:30 KST",
+    "updated_at": "2026.03.12 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
