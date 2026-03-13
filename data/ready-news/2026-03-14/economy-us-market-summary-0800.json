@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-14",
+  "category": "economy",
+  "title": "[미국증시] S&P·나스닥·다우 동반 하락 마감",
+  "summary": "[미국증시] S&P 500 6,632.19(-0.61%), 나스닥 22,105.36(-0.93%), 다우 46,558.47(-0.26%)로 동반 하락했습니다. 대형 기술주 중심 매물이 이어졌고 금리 경계감도 부담으로 작용했습니다. 장중 변동성은 컸으나 종가는 약세로 마감했으며, 주말을 앞두고 차익실현이 나오며 위험자산 선호가 다소 식었습니다. 기업 실적 관련 추가 재료가 제한적이어서 방향성 탐색이 이어졌습니다. 다음 주 지표와 연준 발언에 주목할 필요가 있겠습니다.",
+  "body": "[미국증시] S&P 500 6,632.19(-0.61%), 나스닥 22,105.36(-0.93%), 다우 46,558.47(-0.26%)로 동반 하락했습니다. 대형 기술주 중심 매물이 이어졌고 금리 경계감도 부담으로 작용했습니다. 장중 변동성은 컸으나 종가는 약세로 마감했으며, 주말을 앞두고 차익실현이 나오며 위험자산 선호가 다소 식었습니다. 기업 실적 관련 추가 재료가 제한적이어서 방향성 탐색이 이어졌습니다. 다음 주 지표와 연준 발언에 주목할 필요가 있겠습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.14 08:00 KST",
+    "updated_at": "2026.03.14 08:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
