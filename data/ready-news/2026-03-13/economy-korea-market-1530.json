@@ -1,0 +1,53 @@
+{
+  "date": "2026-03-13",
+  "category": "economy",
+  "title": "[국내증시] 코스피 하락, 코스닥 상승",
+  "summary": "[국내증시] 코스피는 5,487.24(-1.72%, -96.01p)로 하락 마감했고, 코스닥은 1,152.97(+0.40%, +4.57p)로 상승했습니다. 달러 강세와 글로벌 금리 부담, 대형 수출주의 차익실현이 코스피를 압박했습니다. 외국인과 기관 매도가 집중된 반면, 개인 순매수가 방어했습니다. 반도체·바이오 등 일부 성장주가 반등하며 코스닥은 저가 매수 유입으로 강보합에 그쳤고, 다음주 지표 발표를 앞둔 경계감 속 거래는 관망세로 변동성이 확대됐습니다.",
+  "body": "[국내증시] 코스피는 5,487.24(-1.72%, -96.01p)로 하락 마감했고, 코스닥은 1,152.97(+0.40%, +4.57p)로 상승했습니다. 달러 강세와 글로벌 금리 부담, 대형 수출주의 차익실현이 코스피를 압박했습니다. 외국인과 기관 매도가 집중된 반면, 개인 순매수가 방어했습니다. 반도체·바이오 등 일부 성장주가 반등하며 코스닥은 저가 매수 유입으로 강보합에 그쳤고, 다음주 지표 발표를 앞둔 경계감 속 거래는 관망세로 변동성이 확대됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11"
+    },
+    {
+      "name": "Naver Finance",
+      "url": "https://finance.naver.com/sise/sise_index.naver?code=KOSPI"
+    },
+    {
+      "name": "Naver Finance",
+      "url": "https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11"
+      },
+      {
+        "name": "Naver Finance",
+        "url": "https://finance.naver.com/sise/sise_index.naver?code=KOSPI"
+      },
+      {
+        "name": "Naver Finance",
+        "url": "https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.13 15:30 KST",
+    "updated_at": "2026.03.13 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
