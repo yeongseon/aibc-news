@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-15",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,490원대, 전일 대비 상승",
+  "summary": "[환율] 달러/원은 1달러=1,491.70원 수준입니다. 전일 종가 1,480.84원 대비 10.86원 상승(+0.73%)했습니다. 최근 7일은 1,485.18원→1,491.70원으로 상승 흐름입니다. 변동성 확대에 대비해 체결 시점과 스프레드도 함께 확인하시길 바랍니다. 수입·수출 기업은 분할 환전 등 리스크 관리가 유효합니다. 주말·휴장 구간에는 지표 공백으로 갭이 커질 수 있어 예약 주문은 보수적으로 설정하는 편이 안전합니다. 단기 변동은 확대될 수 있습니다.",
+  "body": "[환율] 달러/원은 1달러=1,491.70원 수준입니다. 전일 종가 1,480.84원 대비 10.86원 상승(+0.73%)했습니다. 최근 7일은 1,485.18원→1,491.70원으로 상승 흐름입니다. 변동성 확대에 대비해 체결 시점과 스프레드도 함께 확인하시길 바랍니다. 수입·수출 기업은 분할 환전 등 리스크 관리가 유효합니다. 주말·휴장 구간에는 지표 공백으로 갭이 커질 수 있어 예약 주문은 보수적으로 설정하는 편이 안전합니다. 단기 변동은 확대될 수 있습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW%3DX"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/latest?from=USD&to=KRW"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/2026-03-06..2026-03-13?from=USD&to=KRW"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW%3DX"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/latest?from=USD&to=KRW"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app/2026-03-06..2026-03-13?from=USD&to=KRW"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.15 08:00 KST",
+    "updated_at": "2026.03.15 08:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
