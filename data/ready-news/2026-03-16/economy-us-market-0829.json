@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-16",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] S&P500 -0.61%, 나스닥 -0.93%, 다우 -0.26%로 3대 지수가 동반 하락했습니다. 장중 금리 흐름과 향후 경기 지표에 대한 경계가 이어지며 위험자산 선호가 약해졌고, 성장주 비중이 높은 나스닥이 상대적으로 더 밀렸습니다. 뚜렷한 호재가 부족한 가운데 전통 경기민감주도 약세를 보였으며, 전반적으로 매도 우위 흐름 속에 투자자들은 다음 주 물가·고용 지표와 연준 발언을 앞두고 포지션을 가볍게 하며 변동성 확대 가능성에 대비하는 분위기였습니다.",
+  "body": "[미국증시] S&P500 -0.61%, 나스닥 -0.93%, 다우 -0.26%로 3대 지수가 동반 하락했습니다. 장중 금리 흐름과 향후 경기 지표에 대한 경계가 이어지며 위험자산 선호가 약해졌고, 성장주 비중이 높은 나스닥이 상대적으로 더 밀렸습니다. 뚜렷한 호재가 부족한 가운데 전통 경기민감주도 약세를 보였으며, 전반적으로 매도 우위 흐름 속에 투자자들은 다음 주 물가·고용 지표와 연준 발언을 앞두고 포지션을 가볍게 하며 변동성 확대 가능성에 대비하는 분위기였습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.16 08:29 KST",
+    "updated_at": "2026.03.16 08:29 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
