@@ -1,0 +1,33 @@
+{
+  "date": "2026-03-16",
+  "category": "economy",
+  "title": "[환율] USD/KRW 동향",
+  "summary": "[환율] USD/KRW는 1달러=1,491.70원으로 직전 종가(1,480.84원) 대비 +10.86원 상승했습니다. 최근 7일은 1,485.18→1,491.70으로 올라 상승 흐름입니다. 달러 강세와 위험선호 변화에 민감해 단기 변동성이 커질 수 있어 수입·외화결제 일정은 보수적으로 관리하는 게 좋겠습니다. 당분간 1,490원대 상단 돌파 여부와 1,480원대 지지 유지가 관건이며, 미 금리·달러지수 흐름 점검이 필요합니다. 국내외 이벤트에 따라 급등락 가능성도 있습니다.",
+  "body": "[환율] USD/KRW는 1달러=1,491.70원으로 직전 종가(1,480.84원) 대비 +10.86원 상승했습니다. 최근 7일은 1,485.18→1,491.70으로 올라 상승 흐름입니다. 달러 강세와 위험선호 변화에 민감해 단기 변동성이 커질 수 있어 수입·외화결제 일정은 보수적으로 관리하는 게 좋겠습니다. 당분간 1,490원대 상단 돌파 여부와 1,480원대 지지 유지가 관건이며, 미 금리·달러지수 흐름 점검이 필요합니다. 국내외 이벤트에 따라 급등락 가능성도 있습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app/latest?from=USD&to=KRW"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.16 16:00 KST",
+    "updated_at": "2026.03.16 16:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
