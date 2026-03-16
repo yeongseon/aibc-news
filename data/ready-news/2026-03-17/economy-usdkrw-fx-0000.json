@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-17",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,499원대, 전일 대비 하락",
+  "summary": "[환율] 달러/원은 1달러=1,499.25원 수준입니다. 전일 종가 1,502.28원 대비 -3.03원(-0.20%) 변동했습니다. 최근 7일은 1,493.92원→1,499.25원으로 상승 흐름입니다. 수입·수출 기업은 분할 환전과 간단한 헤지 점검이 유효합니다. 휴장 전후에는 유동성이 줄어 갭이 커질 수 있어 예약 주문은 보수적으로 설정하는 편이 안전합니다. 단기 이벤트에 따라 방향 전환이 빠를 수 있어 체결 타이밍을 여유 있게 가져가시는 게 좋습니다.",
+  "body": "[환율] 달러/원은 1달러=1,499.25원 수준입니다. 전일 종가 1,502.28원 대비 -3.03원(-0.20%) 변동했습니다. 최근 7일은 1,493.92원→1,499.25원으로 상승 흐름입니다. 수입·수출 기업은 분할 환전과 간단한 헤지 점검이 유효합니다. 휴장 전후에는 유동성이 줄어 갭이 커질 수 있어 예약 주문은 보수적으로 설정하는 편이 안전합니다. 단기 이벤트에 따라 방향 전환이 빠를 수 있어 체결 타이밍을 여유 있게 가져가시는 게 좋습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW%3DX"
+    },
+    {
+      "name": "FXRatesAPI",
+      "url": "https://api.fxratesapi.com/timeseries?base=USD&symbols=KRW&start_date=2026-03-08&end_date=2026-03-16"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW%3DX"
+      },
+      {
+        "name": "FXRatesAPI",
+        "url": "https://api.fxratesapi.com/timeseries?base=USD&symbols=KRW&start_date=2026-03-08&end_date=2026-03-16"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.17 00:00 KST",
+    "updated_at": "2026.03.17 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
