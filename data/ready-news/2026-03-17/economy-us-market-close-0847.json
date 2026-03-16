@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-17",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,699.38(+1.01%), 나스닥 22,374.18(+1.22%), 다우 46,946.41(+0.83%)로 동반 상승했습니다. 기술주 강세와 국채금리 안정, 연준 정책 기대가 위험선호를 높였습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI",
+  "body": "[미국증시] S&P500 6,699.38(+1.01%), 나스닥 22,374.18(+1.22%), 다우 46,946.41(+0.83%)로 동반 상승했습니다. 기술주 강세와 국채금리 안정, 연준 정책 기대가 위험선호를 높였습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.17 08:47 KST",
+    "updated_at": "2026.03.17 08:47 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
