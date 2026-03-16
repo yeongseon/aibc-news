@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-17",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,699.38(+1.01%), 나스닥 22,374.18(+1.22%), 다우 46,946.41(+0.83%)로 3대지수 모두 상승했습니다. 금리 하락 기대와 대형 기술주 매수세가 지수 상승을 이끌었고, 변동성 완화 속 위험선호가 이어지며 에너지·금융 등 경기민감주까지 매수세가 확산됐습니다. 채권금리 안정과 달러 흐름 완화, 실적 가이던스 개선 기대가 보탬이 됐으나, 물가·연준 발언 대기 속 일부 차익실현과 관망도 공존했습니다.",
+  "body": "[미국증시] S&P500 6,699.38(+1.01%), 나스닥 22,374.18(+1.22%), 다우 46,946.41(+0.83%)로 3대지수 모두 상승했습니다. 금리 하락 기대와 대형 기술주 매수세가 지수 상승을 이끌었고, 변동성 완화 속 위험선호가 이어지며 에너지·금융 등 경기민감주까지 매수세가 확산됐습니다. 채권금리 안정과 달러 흐름 완화, 실적 가이던스 개선 기대가 보탬이 됐으나, 물가·연준 발언 대기 속 일부 차익실현과 관망도 공존했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.17 08:29 KST",
+    "updated_at": "2026.03.17 08:29 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
