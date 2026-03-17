@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-18",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 기술주 매수와 위험선호 개선이 지수를 끌어올렸습니다. 채권금리 안정과 변동성 완화도 지지 요인이었으나, 주요 지표를 앞둔 경계감으로 상승폭은 제한됐습니다. 섹터별로는 기술·소비재가 상대적으로 강했고 방어주는 혼조세였습니다. 거래는 비교적 차분했고 시장은 연준 경로에 주목했습니다.",
+  "body": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 기술주 매수와 위험선호 개선이 지수를 끌어올렸습니다. 채권금리 안정과 변동성 완화도 지지 요인이었으나, 주요 지표를 앞둔 경계감으로 상승폭은 제한됐습니다. 섹터별로는 기술·소비재가 상대적으로 강했고 방어주는 혼조세였습니다. 거래는 비교적 차분했고 시장은 연준 경로에 주목했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.18 08:25 KST",
+    "updated_at": "2026.03.18 08:25 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
