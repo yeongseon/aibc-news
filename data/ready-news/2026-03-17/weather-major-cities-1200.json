@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-17",
+  "category": "weather",
+  "title": "[날씨] 남부 맑고 온화, 수도권은 연무…기온 차 뚜렷",
+  "summary": "서울·인천은 연무 속 9°C 안팎으로 체감이 비슷하고, 부산·대구는 13°C로 더 포근합니다. 대전·광주는 맑은 하늘에 7~10°C 수준입니다.",
+  "body": "2026-03-17 12:00 KST 기준. 서울 9°C(체감 9, 연무, 바람 4km/h), 인천 9°C(체감 9, 연무, 바람 4km/h)입니다. 대전 7°C(체감 7, 맑음)·광주 10°C(체감 11, 맑음)로 남부가 더 포근하겠습니다. 부산 13°C(체감 13, 맑음), 대구 13°C(체감 14, 맑음)입니다. 바람은 4~5km/h로 약한 편입니다. 생활 팁: 연무가 있는 수도권은 실외 활동 시 마스크 착용과 충분한 수분 섭취를 권합니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.17 12:00 KST",
+    "updated_at": "2026.03.17 12:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
