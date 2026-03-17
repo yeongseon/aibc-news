@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-18",
+  "category": "weather",
+  "title": "[날씨] 남부는 비, 중부는 안개…서해안·내륙 체감 낮아요",
+  "summary": "광주 9°C로 남부가 비교적 온화하지만 비가 내리고, 인천·대전은 4~5°C로 체감이 낮습니다. 서울 7°C·부산 7°C로 비슷한 기온이며, 바람은 4~8km/h로 약한 편입니다.",
+  "body": "2026-03-18 04:00 KST 기준. 인천 5°C(체감 4°C, 흐림, 바람 6km/h), 대전 4°C(체감 4°C, 안개, 바람 4km/h)로 서해안·내륙이 쌀쌀합니다. 서울 7°C(체감 7°C, 구름 조금, 바람 4km/h). 광주 9°C(체감 8°C, 비, 바람 7km/h), 대구 8°C(체감 8°C, 가까운 곳 비, 바람 4km/h), 부산 7°C(체감 6°C, 흐림, 바람 8km/h)입니다. 생활 팁: 안개 구간 안전거리 확보, 우산 준비.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.18 04:00 KST",
+    "updated_at": "2026.03.18 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
