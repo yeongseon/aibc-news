@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-18",
+  "category": "economy",
+  "title": "[미국증시] 기술주·경기민감주 동반 강세",
+  "summary": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 대형 기술주와 경기방어주가 동반 강세를 보이고 금리 안정 기대가 이어지면서 위험선호가 유지됐고, 차익실현 압력은 제한됐습니다. 경제지표 발표와 연준 발언을 앞둔 관망 속에서도 에너지·금융 등 경기민감주가 동반 상승해 지수 흐름을 보탰고, 전반적 변동성은 낮은 수준에 머물렀습니다.",
+  "body": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 대형 기술주와 경기방어주가 동반 강세를 보이고 금리 안정 기대가 이어지면서 위험선호가 유지됐고, 차익실현 압력은 제한됐습니다. 경제지표 발표와 연준 발언을 앞둔 관망 속에서도 에너지·금융 등 경기민감주가 동반 상승해 지수 흐름을 보탰고, 전반적 변동성은 낮은 수준에 머물렀습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.18 08:17 KST",
+    "updated_at": "2026.03.18 08:17 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
