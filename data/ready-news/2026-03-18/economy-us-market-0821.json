@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-18",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 세 지수 동반 상승과 함께 변동성지수(VIX)는 22.37로 4.85% 하락했습니다. 전일 대비 상승 폭은 크지 않았지만 상승 흐름이 이어졌습니다. 지수는 소폭 상승에 그쳐 방향성은 제한됐습니다. 종합적으로 위험선호가 완만히 개선됐습니다. 당분간 변동성 축소가 지속될지에 관심이 모였습니다.",
+  "body": "[미국증시] S&P500 6,716.09(+0.25%) 상승, 나스닥 22,479.53(+0.47%) 상승, 다우 46,993.26(+0.10%) 상승으로 마감했습니다. 세 지수 동반 상승과 함께 변동성지수(VIX)는 22.37로 4.85% 하락했습니다. 전일 대비 상승 폭은 크지 않았지만 상승 흐름이 이어졌습니다. 지수는 소폭 상승에 그쳐 방향성은 제한됐습니다. 종합적으로 위험선호가 완만히 개선됐습니다. 당분간 변동성 축소가 지속될지에 관심이 모였습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.18 08:21 KST",
+    "updated_at": "2026.03.18 08:21 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
