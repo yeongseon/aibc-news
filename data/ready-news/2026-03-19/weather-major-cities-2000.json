@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-19",
+  "category": "weather",
+  "title": "[날씨] 서해안 바람 강해…대구 12°C로 포근",
+  "summary": "대구 12°C·부산 10°C로 남부가 비교적 온화합니다. 인천은 바람 22km/h에 체감 1°C로 쌀쌀하고, 서울도 체감 4°C로 바람의 영향이 큽니다.",
+  "body": "2026-03-19 20:00 KST 기준. 대구 12°C(체감 12°C, Clear, 바람 9km/h), 부산 10°C(체감 10°C, Clear, 바람 4km/h), 서울 7°C(체감 4°C, Clear, 바람 17km/h), 대전 7°C(체감 6°C, Clear, 바람 8km/h), 광주 6°C(체감 5°C, Clear, 바람 6km/h), 인천 5°C(체감 1°C, Clear, 바람 22km/h)입니다. 생활 팁: 서해안은 바람이 강해 체감 온도가 더 낮으니 외출 시 바람막이 겉옷과 목 보온을 챙기시면 좋겠습니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.19 20:00 KST",
+    "updated_at": "2026.03.19 20:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
