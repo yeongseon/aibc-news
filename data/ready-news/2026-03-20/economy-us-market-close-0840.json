@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-20",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 소폭 하락",
+  "summary": "[미국증시] S&P500 6,606.49(-0.27%) 하락, 나스닥 22,090.69(-0.28%) 하락, 다우 46,021.43(-0.44%) 하락 마감했습니다. 새로운 재료가 제한된 가운데 관망 심리가 우세했고, 최근 상승에 대한 차익실현이 나오며 지수들이 동반 약세를 보였습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "body": "[미국증시] S&P500 6,606.49(-0.27%) 하락, 나스닥 22,090.69(-0.28%) 하락, 다우 46,021.43(-0.44%) 하락 마감했습니다. 새로운 재료가 제한된 가운데 관망 심리가 우세했고, 최근 상승에 대한 차익실현이 나오며 지수들이 동반 약세를 보였습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.20 08:40 KST",
+    "updated_at": "2026.03.20 08:40 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
