@@ -1,0 +1,33 @@
+{
+  "date": "2026-03-20",
+  "category": "weather",
+  "title": "[날씨] 주요 도시 새벽 날씨: 부산 비교적 온화, 대전 영하권",
+  "summary": "기준시각 2026.03.20 04:00 KST 현재, 서울·인천·대구·광주·부산은 대체로 맑고 대전은 흐립니다. 부산은 6℃로 비교적 온화한 반면 대전은 -3℃로 체감 -4℃까지 내려 쌀쌀합니다. 서해안·수도권은 바람이 다소 강해 체감온도가 낮겠습니다.",
+  "body": "기준시각 2026.03.20 04:00 KST 기준입니다. 서울 1℃(체감 -1℃)·인천 2℃(체감 -1℃)로 맑고, 인천은 남서풍 14km/h로 바람이 강합니다. 대구 3℃로 맑은 반면 대전은 -3℃(체감 -4℃)에 흐립니다. 부산 6℃(체감 4℃)로 가장 온화하고, 광주는 2℃로 맑습니다. 습도는 대부분 60~80%대로 공기는 건조하지 않겠습니다. 낮아진 기온에 노출되지 않도록 얇은 겉옷을 겹쳐 입는 것이 좋겠습니다. 생활 팁: 수도권·서해안은 체감이 낮아 외출 시 보온을 챙기면 좋겠습니다.",
+  "meta": {
+    "input_at": "2026.03.20 04:00 KST",
+    "updated_at": "2026.03.20 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1",
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {"name": "wttr.in (Seoul)", "url": "https://wttr.in/Seoul"},
+      {"name": "wttr.in (Busan)", "url": "https://wttr.in/Busan"},
+      {"name": "wttr.in (Incheon)", "url": "https://wttr.in/Incheon"},
+      {"name": "wttr.in (Daegu)", "url": "https://wttr.in/Daegu"},
+      {"name": "wttr.in (Daejeon)", "url": "https://wttr.in/Daejeon"},
+      {"name": "wttr.in (Gwangju)", "url": "https://wttr.in/Gwangju"}
+    ]
+  },
+  "sources": [
+    {"name": "wttr.in (Seoul)", "url": "https://wttr.in/Seoul"},
+    {"name": "wttr.in (Busan)", "url": "https://wttr.in/Busan"},
+    {"name": "wttr.in (Incheon)", "url": "https://wttr.in/Incheon"},
+    {"name": "wttr.in (Daegu)", "url": "https://wttr.in/Daegu"},
+    {"name": "wttr.in (Daejeon)", "url": "https://wttr.in/Daejeon"},
+    {"name": "wttr.in (Gwangju)", "url": "https://wttr.in/Gwangju"}
+  ]
+}
