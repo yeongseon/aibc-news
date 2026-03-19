@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-19",
+  "category": "economy",
+  "title": "[미국증시] 뉴욕증시 3대 지수 동반 하락",
+  "summary": "[미국증시] S&P500 -1.36%, 나스닥 -1.46%, 다우 -1.63%로 3대 지수가 동반 하락했습니다. 국채금리 반등과 경기 둔화 우려로 위험회피 심리가 커지며 대형 기술주와 경기민감주 중심으로 매도세가 확대됐고, 전일 상승분을 일부 되돌리는 흐름이 나타났습니다. 장중 낙폭이 커지자 변동성 지표도 상승했고, 달러 강세가 부담으로 작용했습니다. 투자자들은 기업 실적 전망과 주요 지표, 연준 발언을 기다리며 단기 방향성 탐색에 집중했습니다.",
+  "body": "18일(현지시간) 미국 증시는 S&P500 6,624.70(-1.36%), 나스닥 22,152.42(-1.46%), 다우 46,225.15(-1.63%)로 3대 지수가 동반 하락 마감했습니다. 국채금리 반등과 경기 둔화 우려로 위험회피 심리가 커지며 대형 기술주와 경기민감주 중심으로 매도세가 확대됐고, 전일 상승분을 일부 되돌리는 흐름이 나타났습니다. 장중 낙폭이 커지자 변동성 지표도 상승했고, 투자자들은 기업 실적 전망과 주요 지표, 연준 발언을 기다리며 단기 방향성 탐색에 집중했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "meta": {
+    "input_at": "2026.03.19 09:15 KST",
+    "updated_at": "2026.03.19 09:15 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1",
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  }
+}
