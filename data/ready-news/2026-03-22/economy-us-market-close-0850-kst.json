@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-22",
+  "category": "economy",
+  "title": "[미국증시] 위험회피 심리에 3대 지수 하락",
+  "summary": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 3대 지수 모두 하락 마감했습니다. VIX 상승 등 위험회피 심리가 강해지며 기술주 중심 매도가 이어졌고, 금리 경계감과 주말 앞둔 포지션 조정이 겹치며 낙폭이 확대됐습니다. 시장은 국채금리 흐름과 연준 통화정책 경로를 재확인하려는 관망세가 우세했고, 단기적으로 변동성 확대에 유의하는 분위기입니다. 전반적으로 약세장 분위기입니다.",
+  "body": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 3대 지수 모두 하락 마감했습니다. VIX 상승 등 위험회피 심리가 강해지며 기술주 중심 매도가 이어졌고, 금리 경계감과 주말 앞둔 포지션 조정이 겹치며 낙폭이 확대됐습니다. 시장은 국채금리 흐름과 연준 통화정책 경로를 재확인하려는 관망세가 우세했고, 단기적으로 변동성 확대에 유의하는 분위기입니다. 전반적으로 약세장 분위기입니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.22 08:50 KST",
+    "updated_at": "2026.03.22 08:50 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
