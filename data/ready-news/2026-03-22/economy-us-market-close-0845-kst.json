@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-22",
+  "category": "economy",
+  "title": "[미국증시] 기술주 약세에 3대 지수 하락",
+  "summary": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 3대 지수 모두 하락했습니다. 금리 경계와 기술주 중심 매도, 위험회피 심리가 겹치며 투자심리가 둔화됐습니다. 특히 대형 성장주 약세가 지수 하락을 주도했고, 안전자산 선호가 강화됐습니다. 연준 정책 경로에 대한 불확실성과 밸류에이션 부담이 재부각되며 매도세가 이어졌습니다. 전반적으로 위험자산 선호가 약했습니다.",
+  "body": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 3대 지수 모두 하락했습니다. 금리 경계와 기술주 중심 매도, 위험회피 심리가 겹치며 투자심리가 둔화됐습니다. 특히 대형 성장주 약세가 지수 하락을 주도했고, 안전자산 선호가 강화됐습니다. 연준 정책 경로에 대한 불확실성과 밸류에이션 부담이 재부각되며 매도세가 이어졌습니다. 전반적으로 위험자산 선호가 약했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.22 08:45 KST",
+    "updated_at": "2026.03.22 08:45 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
