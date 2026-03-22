@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-23",
+  "category": "economy",
+  "title": "[미국증시] 빅테크 약세로 동반 하락",
+  "summary": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 모두 하락 마감했습니다. 빅테크 약세와 위험회피 심리로 매도세가 이어졌고 변동성도 확대됐습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "body": "[미국증시] S&P500 6,506.48(-1.51%), 나스닥 21,647.61(-2.01%), 다우 45,577.47(-0.96%)로 모두 하락 마감했습니다. 빅테크 약세와 위험회피 심리로 매도세가 이어졌고 변동성도 확대됐습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.23 08:48 KST",
+    "updated_at": "2026.03.23 08:48 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
