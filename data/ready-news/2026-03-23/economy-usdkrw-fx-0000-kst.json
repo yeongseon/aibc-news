@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-23",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,499.84원",
+  "summary": "[환율] 3월 23일 00:00 KST 기준 달러/원은 1달러당 1,499.84원입니다. 전일 종가(1,499.65원) 대비 +0.19원(+0.01%) 상승했습니다. 최근 7일 흐름은 상승이며 1,464.57→1,499.84원으로 달러 강세가 이어졌습니다. 주말·휴장 영향으로 최신 수치는 3월 20일 종가 기준입니다. 주요 변수(미 금리, 위험선호)에 따라 단기 등락 가능성이 있습니다. 출처: https://finance.yahoo.com/quote/KRW=X",
+  "body": "[환율] 3월 23일 00:00 KST 기준 달러/원은 1달러당 1,499.84원입니다. 전일 종가(1,499.65원) 대비 +0.19원(+0.01%) 상승했습니다. 최근 7일 흐름은 상승이며 1,464.57→1,499.84원으로 달러 강세가 이어졌습니다. 주말·휴장 영향으로 최신 수치는 3월 20일 종가 기준입니다. 주요 변수(미 금리, 위험선호)에 따라 단기 등락 가능성이 있습니다. 출처: https://finance.yahoo.com/quote/KRW=X",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Stooq",
+      "url": "https://stooq.com/q/d/l/?s=usdkrw&i=d"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Stooq",
+        "url": "https://stooq.com/q/d/l/?s=usdkrw&i=d"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.23 00:00 KST",
+    "updated_at": "2026.03.23 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
