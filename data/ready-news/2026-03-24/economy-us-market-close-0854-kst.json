@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] S&P500·나스닥·다우 동반 상승",
+  "summary": "[미국증시] 현지 3월 23일 미국증시는 상승 마감했습니다. S&P 500은 +1.15%, 나스닥은 +1.38%, 다우는 +1.38%로 위험자산 선호가 이어졌습니다. 대형 기술주 강세와 금리 안정 기대가 매수심리를 지지했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC, https://finance.yahoo.com/quote/%5EIXIC, https://finance.yahoo.com/quote/%5EDJI",
+  "body": "[미국증시] 현지 3월 23일 미국증시는 상승 마감했습니다. S&P 500은 +1.15%, 나스닥은 +1.38%, 다우는 +1.38%로 위험자산 선호가 이어졌습니다. 대형 기술주 강세와 금리 안정 기대가 매수심리를 지지했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC, https://finance.yahoo.com/quote/%5EIXIC, https://finance.yahoo.com/quote/%5EDJI",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 08:54 KST",
+    "updated_at": "2026.03.24 08:54 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
