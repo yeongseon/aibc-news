@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,500.80원",
+  "summary": "[환율] 3월 24일 00:00 KST 기준 달러/원은 1달러당 1,500.80원입니다. 전일 종가(1,501.61원) 대비 -0.81원(-0.05%) 하락했습니다. 최근 7일은 1,491.70→1,500.80원으로 상승 흐름입니다. 주요 재료 부재 시 박스권 가능성이 있으며, 단기 변동성 확대에 유의하시기 바랍니다. 출처: https://finance.yahoo.com/quote/KRW=X , https://api.frankfurter.app",
+  "body": "[환율] 3월 24일 00:00 KST 기준 달러/원은 1달러당 1,500.80원입니다. 전일 종가(1,501.61원) 대비 -0.81원(-0.05%) 하락했습니다. 최근 7일은 1,491.70→1,500.80원으로 상승 흐름입니다. 주요 재료 부재 시 박스권 가능성이 있으며, 단기 변동성 확대에 유의하시기 바랍니다. 출처: https://finance.yahoo.com/quote/KRW=X , https://api.frankfurter.app",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    },
+    {
+      "name": "Frankfurter",
+      "url": "https://api.frankfurter.app"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      },
+      {
+        "name": "Frankfurter",
+        "url": "https://api.frankfurter.app"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 00:00 KST",
+    "updated_at": "2026.03.24 00:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
