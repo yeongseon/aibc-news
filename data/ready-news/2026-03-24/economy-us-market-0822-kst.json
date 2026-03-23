@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 모두 상승 마감했습니다. 위험선호가 되살아나며 대형 기술주와 산업·금융주가 동반 강세를 보였고, 업종 전반 매수세가 확산되면서 금리 부담 완화 기대와 변동성 둔화 인식이 겹쳐 장 후반까지 매수 우위가 이어졌으며 방어주보다 성장주 선호가 두드러지고 위험자산 비중을 늘리는 흐름이 나타났다는 분석도 나옵니다.",
+  "body": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 모두 상승 마감했습니다. 위험선호가 되살아나며 대형 기술주와 산업·금융주가 동반 강세를 보였고, 업종 전반 매수세가 확산되면서 금리 부담 완화 기대와 변동성 둔화 인식이 겹쳐 장 후반까지 매수 우위가 이어졌으며 방어주보다 성장주 선호가 두드러지고 위험자산 비중을 늘리는 흐름이 나타났다는 분석도 나옵니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 08:22 KST",
+    "updated_at": "2026.03.24 08:22 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
