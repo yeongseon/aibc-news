@@ -1,0 +1,53 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] S&P500·나스닥·다우 동반 상승",
+  "summary": "[미국증시] 현지 3월 23일 뉴욕증시는 상승 마감했습니다. S&P 500은 +1.15%, 나스닥은 +1.38%, 다우는 +1.38%로 모두 올랐고 우량주와 기술주가 동반 강세를 보였습니다. 미 국채금리 하락(10년물 -1.30%)과 VIX 하락(-2.35%)이 위험선호를 자극했으며, 달러지수 소폭 강세(+0.20%) 속에서도 기술(+1.65%)·소비경기(+2.87%)·산업재(+1.93%) 등 주요 섹터의 고른 상승이 지수 반등을 뒷받침했습니다.",
+  "body": "[미국증시] 현지 3월 23일 뉴욕증시는 상승 마감했습니다. S&P 500은 +1.15%, 나스닥은 +1.38%, 다우는 +1.38%로 모두 올랐고 우량주와 기술주가 동반 강세를 보였습니다. 미 국채금리 하락(10년물 -1.30%)과 VIX 하락(-2.35%)이 위험선호를 자극했으며, 달러지수 소폭 강세(+0.20%) 속에서도 기술(+1.65%)·소비경기(+2.87%)·산업재(+1.93%) 등 주요 섹터의 고른 상승이 지수 반등을 뒷받침했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/markets/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 08:56 KST",
+    "updated_at": "2026.03.24 08:56 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
