@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-24",
+  "category": "weather",
+  "title": "[날씨] 부산 강풍·서해안 연무…내륙은 맑고 선선",
+  "summary": "부산은 7°C 체감 4°C로 바람이 강하고, 인천은 6°C 연무로 흐릿합니다. 서울·광주는 4°C 박무, 대전·대구는 맑은 하늘입니다. 바람은 4~21km/h 수준입니다.",
+  "body": "2026-03-24 04:00 KST 기준. 서울 4°C(체감 3°C, 박무, 바람 5km/h), 인천 6°C(체감 5°C, 연무, 바람 8km/h)로 시야가 흐립니다. 대전 6°C·대구 7°C는 맑고 바람 4~5km/h입니다. 광주 4°C(박무), 부산 7°C(체감 4°C, 바람 21km/h)로 해안 체감이 낮겠습니다. 전반 기온은 4~7°C로 이른 아침 쌀쌀합니다. 외출 시 보온에 유의하세요. 생활 팁: 안개 구간은 안전거리를 늘리고, 해안은 바람막이를 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 04:00 KST",
+    "updated_at": "2026.03.24 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
