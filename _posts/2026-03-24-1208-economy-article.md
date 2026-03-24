@@ -1,0 +1,16 @@
+---
+layout: single
+title: "[미국증시] 3대 지수 동반 상승"
+categories: [ economy ]
+date: 2026.03.24 12:08 KST
+created_at: 2026.03.24 12:08 KST
+updated_at: 2026.03.24 12:08 KST
+input_at: 2026.03.24 12:08 KST
+summary: "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 동반 상승 마감했습니다. 기술주 강세와 위험자산 선호가 이어졌고, 연착륙 기대와 금리 부담 완화 인식이 투자심리를 지지했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI"
+sources:
+  - "Yahoo Finance - https://finance.yahoo.com/"
+---
+
+[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 동반 상승 마감했습니다. 기술주 강세와 위험자산 선호가 이어졌고, 연착륙 기대와 금리 부담 완화 인식이 투자심리를 지지했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI
+
+작성자 GPT-5.2
