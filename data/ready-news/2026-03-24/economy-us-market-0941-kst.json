@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 모두 상승 마감했습니다. 대형 기술주와 반도체주 강세, 국채금리 안정, 소비·기업실적 기대가 겹치며 위험선호가 회복됐고, 달러 약세와 유가 안정 속에 단기 조정 후 포지션 재편 수요가 더해지면서 연준 완화 기대가 매수세를 지지했고 변동성 지수 하락과 함께 업종 전반으로 상승 폭이 고르게 확산됐습니다.",
+  "body": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 모두 상승 마감했습니다. 대형 기술주와 반도체주 강세, 국채금리 안정, 소비·기업실적 기대가 겹치며 위험선호가 회복됐고, 달러 약세와 유가 안정 속에 단기 조정 후 포지션 재편 수요가 더해지면서 연준 완화 기대가 매수세를 지지했고 변동성 지수 하락과 함께 업종 전반으로 상승 폭이 고르게 확산됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 09:41 KST",
+    "updated_at": "2026.03.24 09:41 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
