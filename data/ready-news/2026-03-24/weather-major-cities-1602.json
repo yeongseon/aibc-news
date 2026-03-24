@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-24",
+  "category": "weather",
+  "title": "[날씨] 내륙은 18~19°C, 해안은 바람…도시별 체감 차",
+  "summary": "16:02 KST 기준 서울 16°C(체감 16°C)로 온화하며, 대전은 19°C로 더 따뜻합니다. 인천은 13°C로 비교적 선선하고, 부산은 16°C지만 바람 19km/h로 체감이 다소 낮습니다.",
+  "body": "2026-03-24 16:02 KST 기준. 서울 16°C(체감 16°C, 구름 조금, 바람 15km/h)·대전 19°C(바람 5km/h)·대구 18°C(흐림, 바람 4km/h)로 내륙이 포근합니다. 인천은 13°C(체감 12°C)로 가장 선선하며, 부산 16°C는 동북동풍 19km/h로 바람이 도드라집니다. 광주 17°C는 습도 52%로 비교적 촉촉합니다. 생활 팁: 해안은 바람막이, 내륙은 얇은 겉옷으로 일교차를 대비하면 좋겠습니다. 외출 시 미세먼지 정보도 확인하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 16:02 KST",
+    "updated_at": "2026.03.24 16:02 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
