@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 동반 상승 마감했습니다. 금리 안정 기대와 대형 기술주 강세가 위험선호를 지지했고, 경기 지표 둔화가 연준 긴축 부담을 완화했다는 평가가 매수세를 도왔습니다. 달러 강세가 완화되고 변동성 지수 하락이 심리를 개선했으며, 이번 주 주요 지표와 실적 발표를 앞둔 포지션 재진입도 관측됐습니다. 전반적인 위험자산 선호가 이어졌습니다.",
+  "body": "[미국증시] S&P500 6,581.00(+1.15%), 나스닥 21,946.76(+1.38%), 다우 46,208.47(+1.38%)로 3대지수 동반 상승 마감했습니다. 금리 안정 기대와 대형 기술주 강세가 위험선호를 지지했고, 경기 지표 둔화가 연준 긴축 부담을 완화했다는 평가가 매수세를 도왔습니다. 달러 강세가 완화되고 변동성 지수 하락이 심리를 개선했으며, 이번 주 주요 지표와 실적 발표를 앞둔 포지션 재진입도 관측됐습니다. 전반적인 위험자산 선호가 이어졌습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    },
+    {
+      "name": "Stooq",
+      "url": "https://stooq.com/q/d/l/?s=^spx&i=d"
+    },
+    {
+      "name": "Stooq",
+      "url": "https://stooq.com/q/d/l/?s=^ndq&i=d"
+    },
+    {
+      "name": "Stooq",
+      "url": "https://stooq.com/q/d/l/?s=^dji&i=d"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      },
+      {
+        "name": "Stooq",
+        "url": "https://stooq.com/q/d/l/?s=^spx&i=d"
+      },
+      {
+        "name": "Stooq",
+        "url": "https://stooq.com/q/d/l/?s=^ndq&i=d"
+      },
+      {
+        "name": "Stooq",
+        "url": "https://stooq.com/q/d/l/?s=^dji&i=d"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 11:13 KST",
+    "updated_at": "2026.03.24 11:13 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
