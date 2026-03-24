@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-24",
+  "category": "weather",
+  "title": "[날씨] 내륙 15°C 안팎, 인천은 9°C로 서늘…부산 바람 강해",
+  "summary": "대구·대전은 15°C로 포근한 반면 인천은 9°C(체감 8°C)로 서늘합니다. 부산은 12°C지만 바람이 21km/h로 비교적 강해 체감이 10°C까지 내려갑니다.",
+  "body": "2026-03-24 20:00 KST 기준. 서울 14°C(체감 14°C, 구름 조금, 바람 10km/h), 인천 9°C(체감 8°C, 바람 9km/h), 대전 15°C(체감 15°C, 바람 7km/h)로 중부는 서늘함과 온화함이 교차합니다. 남부는 대구 15°C(바람 6km/h), 부산 12°C(체감 10°C, 바람 21km/h), 광주 11°C(흐림, 바람 4km/h)입니다. 생활 팁: 해안은 바람 대비 얇은 겉옷, 내륙은 일교차 대비 겉옷을 준비하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 20:00 KST",
+    "updated_at": "2026.03.24 20:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
