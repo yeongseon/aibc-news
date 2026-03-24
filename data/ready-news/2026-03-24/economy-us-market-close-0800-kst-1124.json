@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[미국증시] 빅테크 강세에 3대 지수 동반 상승",
+  "summary": "[미국증시] S&P500 6,581.00(1.15%) 상승, 나스닥 21,946.76(1.38%) 상승, 다우 46,208.47(1.38%) 상승으로 3대 지수가 동반 강세였습니다. 빅테크 강세와 금리 안정 기대가 위험선호를 지지했고, 투자자들은 주 후반 주요 지표를 앞두고 신중한 매매를 이어갔습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "body": "[미국증시] S&P500 6,581.00(1.15%) 상승, 나스닥 21,946.76(1.38%) 상승, 다우 46,208.47(1.38%) 상승으로 3대 지수가 동반 강세였습니다. 빅테크 강세와 금리 안정 기대가 위험선호를 지지했고, 투자자들은 주 후반 주요 지표를 앞두고 신중한 매매를 이어갔습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 11:24 KST",
+    "updated_at": "2026.03.24 11:24 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
