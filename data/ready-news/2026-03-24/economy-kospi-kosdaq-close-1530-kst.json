@@ -1,0 +1,37 @@
+{
+  "date": "2026-03-24",
+  "category": "economy",
+  "title": "[국내증시] 저가매수 유입에 코스피·코스닥 동반 반등",
+  "summary": "[국내증시] 코스피 5,560.61(+154.86p, +2.86%), 코스닥 1,118.62(+21.73p, +1.98%)로 동반 상승 마감했습니다. 전일 급락 이후 저가매수와 외국인·기관 순매수 유입, 반도체·2차전지 등 대형 성장주 강세가 지수 반등을 이끌었고, 미 증시 반등과 위험선호 회복도 투자심리 개선에 보탬이 됐습니다. 출처: https://finance.yahoo.com/quote/%5EKS11 https://finance.yahoo.com/quote/%5EKQ11",
+  "body": "[국내증시] 코스피 5,560.61(+154.86p, +2.86%), 코스닥 1,118.62(+21.73p, +1.98%)로 동반 상승 마감했습니다. 전일 급락 이후 저가매수와 외국인·기관 순매수 유입, 반도체·2차전지 등 대형 성장주 강세가 지수 반등을 이끌었고, 미 증시 반등과 위험선호 회복도 투자심리 개선에 보탬이 됐습니다. 출처: https://finance.yahoo.com/quote/%5EKS11 https://finance.yahoo.com/quote/%5EKQ11",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKS11/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKS11/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EKQ11/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.24 15:30 KST",
+    "updated_at": "2026.03.24 15:30 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
