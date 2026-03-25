@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] 전일 대비 S&P500 6,556.37(-159.72, -2.38%), 나스닥 21,761.90(-717.63, -3.19%), 다우 46,124.06(-869.20, -1.85%)로 3대 지수가 하락 마감했습니다. 대형 기술주 약세와 금리 부담, 경기 둔화 우려가 겹치며 위험회피 심리가 확대됐습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI",
+  "body": "[미국증시] 전일 대비 S&P500 6,556.37(-159.72, -2.38%), 나스닥 21,761.90(-717.63, -3.19%), 다우 46,124.06(-869.20, -1.85%)로 3대 지수가 하락 마감했습니다. 대형 기술주 약세와 금리 부담, 경기 둔화 우려가 겹치며 위험회피 심리가 확대됐습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC https://finance.yahoo.com/quote/%5EIXIC https://finance.yahoo.com/quote/%5EDJI",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 09:28 KST",
+    "updated_at": "2026.03.25 09:28 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
