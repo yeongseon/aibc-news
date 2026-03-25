@@ -1,0 +1,53 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.90(-0.84%), 다우 46,124.06(-0.18%)로 3대지수가 동반 하락 마감했습니다. 미국 1월 건설지출 감소 등 경기지표 둔화가 부담이 됐고, 금리 경계감 속 기술주 중심의 차익실현 매물이 이어졌습니다. 에너지·경기민감주도 약세를 보였고, 투자자들은 연준의 통화정책 경로와 기업 실적 전망을 주시했습니다. 변동성 지표가 오르며 전반적으로 위험회피 심리가 반영됐습니다.",
+  "body": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.90(-0.84%), 다우 46,124.06(-0.18%)로 3대지수가 동반 하락 마감했습니다. 미국 1월 건설지출 감소 등 경기지표 둔화가 부담이 됐고, 금리 경계감 속 기술주 중심의 차익실현 매물이 이어졌습니다. 에너지·경기민감주도 약세를 보였고, 투자자들은 연준의 통화정책 경로와 기업 실적 전망을 주시했습니다. 변동성 지표가 오르며 전반적으로 위험회피 심리가 반영됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    },
+    {
+      "name": "Yahoo Finance (Reuters)",
+      "url": "https://finance.yahoo.com/economy/articles/us-construction-spending-unexpectedly-falls-145901961.html"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      },
+      {
+        "name": "Yahoo Finance (Reuters)",
+        "url": "https://finance.yahoo.com/economy/articles/us-construction-spending-unexpectedly-falls-145901961.html"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 12:29 KST",
+    "updated_at": "2026.03.25 12:29 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
