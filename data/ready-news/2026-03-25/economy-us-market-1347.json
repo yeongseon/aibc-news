@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.89(-0.84%), 다우 46,124.06(-0.18%)로 3대지수가 하락했습니다. 뚜렷한 재료가 약한 가운데 금리 부담과 차익실현이 겹치며 위험자산 선호가 둔화됐고, 기술주 중심의 매도와 주중 지표·연준 발언을 앞둔 관망 심리가 부담으로 작용했으며, 달러는 비교적 안정적이었지만 변동성 확대 우려로 순환주 매수는 제한적이었고, 시장 전반에 방어적 포지셔닝이 강화됐습니다.",
+  "body": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.89(-0.84%), 다우 46,124.06(-0.18%)로 3대지수가 하락했습니다. 뚜렷한 재료가 약한 가운데 금리 부담과 차익실현이 겹치며 위험자산 선호가 둔화됐고, 기술주 중심의 매도와 주중 지표·연준 발언을 앞둔 관망 심리가 부담으로 작용했으며, 달러는 비교적 안정적이었지만 변동성 확대 우려로 순환주 매수는 제한적이었고, 시장 전반에 방어적 포지셔닝이 강화됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 13:47 KST",
+    "updated_at": "2026.03.25 13:47 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
