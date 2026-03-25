@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-26",
+  "category": "weather",
+  "title": "[날씨] 새벽 기온 3~8°C…대전 가장 낮고 인천은 안개",
+  "summary": "26일 04:00 KST 기준 대전이 3°C로 가장 낮고, 광주는 8°C로 비교적 높습니다. 인천은 안개가 끼어 시야가 흐린 가운데 부산은 체감 3°C로 바닷바람에 더 서늘합니다.",
+  "body": "2026-03-26 04:00 KST 기준. 수도권은 서울 7°C(체감 7°C, 맑음, 바람 4km/h), 인천 7°C(체감 6°C, 안개, 바람 6km/h)입니다. 충청권은 대전 3°C(체감 3°C, 맑음)로 가장 낮습니다. 영남권은 대구 6°C(맑음)·부산 5°C(체감 3°C, 바람 9km/h)이고, 호남은 광주 8°C(박무)입니다. 바람은 대체로 약하지만 해안은 체감이 더 낮습니다. 생활 팁: 안개 구간은 서행하고, 일교차에 대비해 겉옷을 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.26 04:00 KST",
+    "updated_at": "2026.03.26 04:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
