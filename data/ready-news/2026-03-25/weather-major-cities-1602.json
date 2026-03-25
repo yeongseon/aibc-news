@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-25",
+  "category": "weather",
+  "title": "[날씨] 중부 맑고 남부는 구름…대전 19°C로 포근",
+  "summary": "대전 19°C·서울 17°C로 중부가 포근한 가운데, 인천은 12°C 체감 10°C로 바람에 서늘합니다. 부산은 흐림 속 14°C, 남부는 대체로 14~16°C 수준입니다.",
+  "body": "2026-03-25 16:02 KST 기준. 중부는 대전 19°C(체감 19°C, 맑음, 바람 9km/h), 서울 17°C(체감 17°C, 맑음, 바람 13km/h)로 포근하겠습니다. 인천은 12°C(체감 10°C, 맑음, 바람 17km/h)로 해풍이 불어 체감이 낮습니다. 남부는 대구 16°C(체감 16°C), 광주 15°C(바람 17km/h), 부산 14°C(체감 13°C, 흐림, 바람 17km/h) 수준입니다. 생활 팁: 해안은 바람 대비 얇은 겉옷을 챙기세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 16:02 KST",
+    "updated_at": "2026.03.25 16:02 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
