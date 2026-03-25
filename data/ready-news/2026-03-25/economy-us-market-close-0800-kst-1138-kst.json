@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 기술주 약세에 3대 지수 하락",
+  "summary": "[미국증시] S&P500 6,556.37(-0.37%) 하락, 나스닥 21,761.90(-0.84%) 하락, 다우 46,124.06(-0.18%) 하락으로 3대 지수 모두 내렸습니다. 기술주 약세와 금리 경계감이 부담이었고, 중동 관련 뉴스 등 불확실성이 위험회피 심리를 키웠습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "body": "[미국증시] S&P500 6,556.37(-0.37%) 하락, 나스닥 21,761.90(-0.84%) 하락, 다우 46,124.06(-0.18%) 하락으로 3대 지수 모두 내렸습니다. 기술주 약세와 금리 경계감이 부담이었고, 중동 관련 뉴스 등 불확실성이 위험회피 심리를 키웠습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC/ https://finance.yahoo.com/quote/%5EIXIC/ https://finance.yahoo.com/quote/%5EDJI/",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI/"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI/"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 11:38 KST",
+    "updated_at": "2026.03.25 11:38 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
