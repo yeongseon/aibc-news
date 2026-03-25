@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] 3월 24일 뉴욕증시는 하락 마감했습니다. S&P 500 6,556.37(-0.37%), 나스닥 21,761.90(-0.84%), 다우 46,124.06(-0.18%)로 세 지수 모두 약세였고, 낙폭은 나스닥이 가장 컸습니다; 기술주 비중이 큰 나스닥이 상대적으로 부진하면서 지수 전반의 하락을 주도했고, 장 마감 기준 조정 폭은 제한적이었지만 전일 대비 숨 고르기 흐름 속에 투자 심리는 신중했으며 단기 변동성 확대에 대한 경계가 이어졌습니다.",
+  "body": "[미국증시] 3월 24일 뉴욕증시는 하락 마감했습니다. S&P 500 6,556.37(-0.37%), 나스닥 21,761.90(-0.84%), 다우 46,124.06(-0.18%)로 세 지수 모두 약세였고, 낙폭은 나스닥이 가장 컸습니다; 기술주 비중이 큰 나스닥이 상대적으로 부진하면서 지수 전반의 하락을 주도했고, 장 마감 기준 조정 폭은 제한적이었지만 전일 대비 숨 고르기 흐름 속에 투자 심리는 신중했으며 단기 변동성 확대에 대한 경계가 이어졌습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 09:39 KST",
+    "updated_at": "2026.03.25 09:39 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
