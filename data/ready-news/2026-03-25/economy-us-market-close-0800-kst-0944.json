@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-25",
+  "category": "economy",
+  "title": "[미국증시] 3대지수 하락 마감",
+  "summary": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.89(-0.84%), 다우 46,124.06(-0.18%)로 하락 마감했습니다. 금리 경계감 속 대형 기술주 약세가 부담이었고, 경제지표·연준 발언 대기를 앞두고 관망 심리가 이어졌습니다. 방어주 선호가 일부 나타났지만 매수 유입이 제한돼 낙폭을 만회하지 못했습니다. 장중 반등 시도도 있었으나 채권금리 부담과 실적 경계감이 재차 눌렀고, 변동성 확대 우려로 위험자산 선호가 둔화됐습니다.",
+  "body": "[미국증시] S&P500 6,556.37(-0.37%), 나스닥 21,761.89(-0.84%), 다우 46,124.06(-0.18%)로 하락 마감했습니다. 금리 경계감 속 대형 기술주 약세가 부담이었고, 경제지표·연준 발언 대기를 앞두고 관망 심리가 이어졌습니다. 방어주 선호가 일부 나타났지만 매수 유입이 제한돼 낙폭을 만회하지 못했습니다. 장중 반등 시도도 있었으나 채권금리 부담과 실적 경계감이 재차 눌렀고, 변동성 확대 우려로 위험자산 선호가 둔화됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 09:44 KST",
+    "updated_at": "2026.03.25 09:44 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
