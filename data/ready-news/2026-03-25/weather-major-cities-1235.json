@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-25",
+  "category": "weather",
+  "title": "[날씨] 서울 16°C로 포근, 인천은 12°C로 선선…남부는 11~13°C",
+  "summary": "12:35 KST 기준 서울 16°C로 포근하고 인천은 12°C(체감 11°C)로 선선합니다. 대전 15°C, 대구·부산 13°C, 광주 11°C로 남부는 비교적 서늘합니다.",
+  "body": "2026-03-25 12:35 KST 기준. 서울 16°C(체감 16°C, 구름 조금, 바람 7km/h, 습도 48%)로 포근합니다. 인천 12°C(체감 11°C, 맑음, 바람 12km/h, 습도 67%)입니다. 대전 15°C(연무), 대구 13°C(흐림), 부산 13°C(체감 12°C, 바람 14km/h), 광주 11°C(체감 10°C, 흐림)로 남부가 다소 서늘합니다. 생활 팁: 해안은 바람 대비 얇은 겉옷, 연무 대비 마스크를 준비하세요.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.25 12:35 KST",
+    "updated_at": "2026.03.25 12:35 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
