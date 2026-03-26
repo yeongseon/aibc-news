@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-26",
+  "category": "weather",
+  "title": "[날씨] 내륙 포근, 서해안은 선선…인천 체감 6°C",
+  "summary": "26일 16:06 KST 기준 서울 18°C·대전 22°C·대구 23°C로 내륙이 포근합니다. 인천은 8°C(체감 6°C)로 선선하고, 부산·광주는 17°C 안팎입니다. 대부분 맑거나 구름이 적습니다.",
+  "body": "2026-03-26 16:06 KST 기준. 서울 18°C(체감 18°C, 맑음, 바람 15km/h), 인천 8°C(체감 6°C, 구름 조금, 바람 15km/h)로 서해안은 기온 대비 체감이 낮습니다. 대전 22°C(체감 23°C, 맑음, 바람 13km/h), 대구 23°C(맑음, 바람 15km/h)로 내륙은 포근합니다. 부산 17°C(맑음), 광주 17°C(흐림, 바람 17km/h)입니다. 생활 팁: 해안은 얇은 겉옷과 보온 대비가 좋겠습니다.",
+  "sources": [
+    {
+      "name": "OpenWeather",
+      "url": "https://openweathermap.org"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "OpenWeather",
+        "url": "https://openweathermap.org"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.26 16:06 KST",
+    "updated_at": "2026.03.26 16:06 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
