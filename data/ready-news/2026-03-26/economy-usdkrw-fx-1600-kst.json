@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-26",
+  "category": "economy",
+  "title": "[환율] 달러/원 1,504.62원",
+  "summary": "[환율] 3월 26일 16:00 KST 기준 달러/원은 1달러당 1,504.62원입니다. 전일 종가(1,491.88원) 대비 +12.74원(+0.85%) 상승했습니다. 최근 7일은 1,500.48→1,504.62원으로 상승 흐름입니다. 미 금리 기대와 위험선호 변화가 단기 변동성을 키울 수 있어 주요 지표와 수급 변화에 유의하시기 바랍니다. 변동 구간에서는 분할 대응이 유리할 수 있습니다. 출처: https://finance.yahoo.com/quote/KRW=X",
+  "body": "[환율] 3월 26일 16:00 KST 기준 달러/원은 1달러당 1,504.62원입니다. 전일 종가(1,491.88원) 대비 +12.74원(+0.85%) 상승했습니다. 최근 7일은 1,500.48→1,504.62원으로 상승 흐름입니다. 미 금리 기대와 위험선호 변화가 단기 변동성을 키울 수 있어 주요 지표와 수급 변화에 유의하시기 바랍니다. 변동 구간에서는 분할 대응이 유리할 수 있습니다. 출처: https://finance.yahoo.com/quote/KRW=X",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/KRW=X"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/KRW=X"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.26 16:00 KST",
+    "updated_at": "2026.03.26 16:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
