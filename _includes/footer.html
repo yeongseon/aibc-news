@@ -28,7 +28,7 @@
 </div>
 {% endif %}
 
-<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} {{ site.copyright | default: site.title | escape_once | strip }}.</div>
+<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} {{ site.copyright | default: site.title | escape_once | strip }}. <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" style="white-space:nowrap;">CC BY 4.0</a> &mdash; 자유롭게 가져가세요.</div>
 
 <div class="bottom-nav-bar" role="navigation" aria-label="하단 메뉴">
   <a class="bottom-nav-bar__item" href="{{ '/' | relative_url }}" aria-label="홈">홈</a>
