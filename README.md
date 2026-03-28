@@ -47,7 +47,7 @@ GitHub Actions로 **Ready News 기반 발행**을 구성했습니다.
 2) JSON 파일 추가
 - 파일명 권장: `{category}-{slug}.json`
 - 필수 필드: `date`, `category`, `title`, `summary`, `body`, `sources`, `meta.input_at`, `meta.updated_at`
-- 권장 필드: `schema_version` (`1.1`), `generation.model`, `generation.data_sources`
+- 필수 필드: `schema_version` (`1.1`), `generation.model`, `generation.reporter_id`, `generation.data_sources`
 - 이미지 확장 필드(선택): `media.hero_image`
   - `url`, `alt`는 hero image를 넣을 때 필수
   - `asset_id`, `credit`, `license`, `variants.thumb|card|original` 지원
