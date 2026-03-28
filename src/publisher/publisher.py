@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 from typing import Dict, Any, List
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -32,7 +33,13 @@ class Publisher:
             raise ValueError(f"Unsupported category: {category}")
 
         if not filename:
-            filename = f"{run_date}-politics-unknown.md"
+            filename = f"{run_date}-{category}-unknown.md"
+
+        # Defence-in-depth: sanitize filename to prevent bad chars reaching disk
+        stem = Path(filename).stem
+        ext = Path(filename).suffix or ".md"
+        safe_stem = re.sub(r"[^a-zA-Z0-9._-]+", "-", stem).strip("-") or "article"
+        filename = f"{safe_stem}{ext}"
         post_path = self.posts_dir / filename
 
         if post_path.exists() and not force:

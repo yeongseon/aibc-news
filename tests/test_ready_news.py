@@ -13,10 +13,18 @@ def test_load_ready_items_filters_category(tmp_path: Path) -> None:
     ready_dir.mkdir(parents=True, exist_ok=True)
 
     economy_item = {
+        "schema_version": "1.1",
         "category": "economy",
         "title": "코스피 동향",
         "summary": "요약",
         "body": "본문",
+        "generation": {
+            "model": "gpt-5",
+            "reporter_id": "economy-reporter",
+            "data_sources": [
+                {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/"}
+            ],
+        },
         "meta": {
             "input_at": "2026.02.16 09:00 KST",
             "updated_at": "2026.02.16 09:10 KST",
@@ -24,10 +32,18 @@ def test_load_ready_items_filters_category(tmp_path: Path) -> None:
         "sources": [{"name": "Yahoo Finance", "url": "https://finance.yahoo.com/"}],
     }
     weather_item = {
+        "schema_version": "1.1",
         "category": "weather",
         "title": "날씨 동향",
         "summary": "요약",
         "body": "본문",
+        "generation": {
+            "model": "gpt-5",
+            "reporter_id": "weather-reporter",
+            "data_sources": [
+                {"name": "OpenWeather", "url": "https://openweathermap.org"}
+            ],
+        },
         "meta": {
             "input_at": "2026.02.16 09:00 KST",
             "updated_at": "2026.02.16 09:10 KST",
@@ -57,10 +73,16 @@ def test_load_ready_items_rejects_invalid_category(tmp_path: Path) -> None:
     ready_dir.mkdir(parents=True, exist_ok=True)
 
     invalid_item = {
+        "schema_version": "1.1",
         "category": "market",
         "title": "시장",
         "summary": "요약",
         "body": "본문",
+        "generation": {
+            "model": "gpt-5",
+            "reporter_id": "economy-reporter",
+            "data_sources": [{"name": "출처", "url": "https://example.com"}],
+        },
         "meta": {
             "input_at": "2026.02.16 09:00 KST",
             "updated_at": "2026.02.16 09:10 KST",
@@ -129,10 +151,16 @@ def test_load_ready_items_rejects_media_without_alt(tmp_path: Path) -> None:
     ready_dir.mkdir(parents=True, exist_ok=True)
 
     invalid_item = {
+        "schema_version": "1.1",
         "category": "economy",
         "title": "시장",
         "summary": "요약",
         "body": "본문",
+        "generation": {
+            "model": "gpt-5",
+            "reporter_id": "economy-reporter",
+            "data_sources": [{"name": "출처", "url": "https://example.com"}],
+        },
         "meta": {
             "input_at": "2026.02.16 09:00 KST",
             "updated_at": "2026.02.16 09:10 KST",
@@ -149,4 +177,62 @@ def test_load_ready_items_rejects_media_without_alt(tmp_path: Path) -> None:
     )
 
     with pytest.raises(ValueError, match="media.hero_image.alt"):
+        load_ready_items(ready_dir=tmp_path / "ready-news", run_date=run_date)
+
+
+def test_load_ready_items_rejects_missing_generation_model(tmp_path: Path) -> None:
+    run_date = "2026-02-16"
+    ready_dir = tmp_path / "ready-news" / run_date
+    ready_dir.mkdir(parents=True, exist_ok=True)
+
+    invalid_item = {
+        "schema_version": "1.1",
+        "category": "economy",
+        "title": "시장",
+        "summary": "요약",
+        "body": "본문",
+        "generation": {
+            "reporter_id": "economy-reporter",
+            "data_sources": [{"name": "출처", "url": "https://example.com"}],
+        },
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
+        "sources": [{"name": "출처", "url": "https://example.com"}],
+    }
+    (ready_dir / "market.json").write_text(
+        json.dumps(invalid_item, ensure_ascii=False), encoding="utf-8"
+    )
+
+    with pytest.raises(ValueError, match="generation.model"):
+        load_ready_items(ready_dir=tmp_path / "ready-news", run_date=run_date)
+
+
+def test_load_ready_items_rejects_missing_schema_version(tmp_path: Path) -> None:
+    run_date = "2026-02-16"
+    ready_dir = tmp_path / "ready-news" / run_date
+    ready_dir.mkdir(parents=True, exist_ok=True)
+
+    invalid_item = {
+        "category": "economy",
+        "title": "시장",
+        "summary": "요약",
+        "body": "본문",
+        "generation": {
+            "model": "gpt-5",
+            "reporter_id": "economy-reporter",
+            "data_sources": [{"name": "출처", "url": "https://example.com"}],
+        },
+        "meta": {
+            "input_at": "2026.02.16 09:00 KST",
+            "updated_at": "2026.02.16 09:10 KST",
+        },
+        "sources": [{"name": "출처", "url": "https://example.com"}],
+    }
+    (ready_dir / "market.json").write_text(
+        json.dumps(invalid_item, ensure_ascii=False), encoding="utf-8"
+    )
+
+    with pytest.raises(ValueError, match="schema_version"):
         load_ready_items(ready_dir=tmp_path / "ready-news", run_date=run_date)

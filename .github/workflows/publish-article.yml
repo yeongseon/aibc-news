@@ -32,7 +32,7 @@ on:
         required: false
 
 concurrency:
-  group: publish-article-${{ inputs.idempotency_key || inputs.run_date || github.run_id }}
+  group: publish-main-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -91,13 +91,13 @@ jobs:
 
       - name: Upload pipeline artifacts
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: pipeline-${{ env.RUN_DATE || inputs.run_date || github.run_id }}
+          if-no-files-found: warn
           path: |
             data/ready-news/**
-            _posts/**
-
       - name: Create failure issue
         if: ${{ failure() }}
         env:
@@ -105,8 +105,15 @@ jobs:
         run: |
           RUN_DATE=${{ env.RUN_DATE || inputs.run_date }}
           if [ -z "$RUN_DATE" ]; then RUN_DATE=$(date +'%Y-%m-%d'); fi
-          gh api --method POST /repos/${{ github.repository }}/issues \
-            -f title="Article publish failed: ${RUN_DATE}" \
-            -f body="Workflow run failed. Publish artifacts attached in Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-            -f labels[]=automation \
-            -f labels[]=publish-article
+          TITLE="Article publish failed: ${RUN_DATE}"
+          EXISTING=$(gh issue list --repo ${{ github.repository }} --state open --label publish-article --search "${TITLE}" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --repo ${{ github.repository }} \
+              --body "Another failure in run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            gh api --method POST /repos/${{ github.repository }}/issues \
+              -f title="${TITLE}" \
+              -f body="Workflow run failed. See Actions run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -f labels[]=automation \
+              -f labels[]=publish-article
+          fi

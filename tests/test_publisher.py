@@ -33,3 +33,36 @@ def test_publisher_rejects_unsupported_category(tmp_path: Path):
             category="market",
             dry_run=True,
         )
+
+
+def test_publisher_sanitizes_bad_filename(tmp_path: Path):
+    publisher = Publisher(posts_dir=tmp_path)
+    result = publisher.publish(
+        run_date="2026-02-17",
+        markdown_body="## Test",
+        summary="summary",
+        sources=[{"name": "src", "url": "https://example.com"}],
+        category="economy",
+        filename="2026-02-17-2251-economy-latest?from=USD&to=KRW.md",
+        dry_run=True,
+    )
+    # ? and = should be sanitized out
+    assert "?" not in result["path"]
+    assert "=" not in result["path"]
+    assert result["path"].endswith(".md")
+
+
+def test_publisher_sanitizes_percent_encoded_filename(tmp_path: Path):
+    publisher = Publisher(posts_dir=tmp_path)
+    result = publisher.publish(
+        run_date="2026-03-02",
+        markdown_body="## Test",
+        summary="summary",
+        sources=[{"name": "src", "url": "https://example.com"}],
+        category="economy",
+        filename="2026-03-02-0804-economy-%5egspc.md",
+        dry_run=True,
+    )
+    # %5e should be sanitized out (% is not alphanumeric)
+    assert "%" not in result["path"]
+    assert result["path"].endswith(".md")

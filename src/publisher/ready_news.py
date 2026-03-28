@@ -103,6 +103,9 @@ def _validate_item(item: Dict[str, Any], path: Path) -> None:
         if key not in item or item[key] in (None, ""):
             raise ValueError(f"Missing required field '{key}' in {path}")
 
+    if item.get("schema_version") != "1.1":
+        raise ValueError(f"Field 'schema_version' must be '1.1' in {path}")
+
     meta = item.get("meta")
     if not isinstance(meta, dict):
         raise ValueError(f"Field 'meta' must be an object in {path}")
@@ -139,13 +142,29 @@ def _validate_item(item: Dict[str, Any], path: Path) -> None:
             raise ValueError(f"Field 'media.hero_image.alt' is required in {path}")
 
     generation = item.get("generation")
-    if generation is not None:
-        if not isinstance(generation, dict):
-            raise ValueError(f"Field 'generation' must be an object in {path}")
-        reporter_id = generation.get("reporter_id")
-        if reporter_id is not None and not str(reporter_id).strip():
+    if not isinstance(generation, dict):
+        raise ValueError(f"Field 'generation' must be an object in {path}")
+
+    if not str(generation.get("model", "")).strip():
+        raise ValueError(f"Field 'generation.model' is required in {path}")
+
+    if not str(generation.get("reporter_id", "")).strip():
+        raise ValueError(f"Field 'generation.reporter_id' is required in {path}")
+
+    data_sources = generation.get("data_sources")
+    if not isinstance(data_sources, list) or not data_sources:
+        raise ValueError(
+            f"Field 'generation.data_sources' must be a non-empty list in {path}"
+        )
+
+    for source in data_sources:
+        if (
+            not isinstance(source, dict)
+            or not source.get("name")
+            or not source.get("url")
+        ):
             raise ValueError(
-                f"Field 'generation.reporter_id' must be non-empty in {path}"
+                f"Each generation.data_sources entry must include 'name' and 'url' in {path}"
             )
 
 

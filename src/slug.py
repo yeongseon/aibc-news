@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 from typing import Dict, Any
 
 
@@ -29,7 +29,7 @@ def make_post_id(item: Dict[str, Any]) -> str:
         if sources:
             url = sources[0].get("url", "")
             parsed = urlparse(url)
-            symbol = parsed.path.rstrip("/").split("/")[-1]
+            symbol = unquote(parsed.path.rstrip("/").split("/")[-1])
             if parsed.query:
                 symbol = f"{symbol}-{parsed.query}"
             slug = _symbol_slug(symbol)

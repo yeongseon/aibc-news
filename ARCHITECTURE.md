@@ -84,6 +84,8 @@
 ### 5.2 Validation
 
 * 필수 필드 검사: `date`, `category`, `title`, `summary`, `body`, `sources`, `meta.input_at`, `meta.updated_at`
+* 스키마 버전 검사: `schema_version == 1.1`
+* 생성 메타 검사: `generation.model`, `generation.reporter_id`, `generation.data_sources`
 * 카테고리 허용값 검사
 * `media.hero_image` 사용 시 `url`, `alt` 검사
 
