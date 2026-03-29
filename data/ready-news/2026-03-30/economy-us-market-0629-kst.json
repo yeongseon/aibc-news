@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-30",
+  "category": "economy",
+  "title": "[미국증시] S&P500·나스닥·다우 동반 하락",
+  "summary": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 동반 하락했습니다. 세 지수 모두 1%대 중후반 낙폭으로 마감했고 기술주 중심 매도, 변동성 확대, 금리·지표 불확실성과 채권금리·달러 흐름이 위험회피 심리를 키워 안전자산 선호가 커졌으며, 전반적으로 투자자들은 연준 경로와 실적 가이던스에 촉각을 곤두세우고 다음 거래일 지표 발표에 따른 변동성 지속을 경계한 모습입니다.",
+  "body": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 동반 하락했습니다. 세 지수 모두 1%대 중후반 낙폭으로 마감했고 기술주 중심 매도, 변동성 확대, 금리·지표 불확실성과 채권금리·달러 흐름이 위험회피 심리를 키워 안전자산 선호가 커졌으며, 전반적으로 투자자들은 연준 경로와 실적 가이던스에 촉각을 곤두세우고 다음 거래일 지표 발표에 따른 변동성 지속을 경계한 모습입니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.30 06:29 KST",
+    "updated_at": "2026.03.30 06:29 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
