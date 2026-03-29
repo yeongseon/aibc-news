@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-29",
+  "category": "economy",
+  "title": "[미국증시] S&P·나스닥·다우 동반 하락",
+  "summary": "[미국증시] 3월 29일 23:16 KST 기준(최근 가용치 3월 28일) S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 모두 하락했습니다. 기술주 약세와 차익실현, 위험회피 심리가 부담으로 작용했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC, https://finance.yahoo.com/quote/%5EIXIC, https://finance.yahoo.com/quote/%5EDJI",
+  "body": "[미국증시] 3월 29일 23:16 KST 기준(최근 가용치 3월 28일) S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 모두 하락했습니다. 기술주 약세와 차익실현, 위험회피 심리가 부담으로 작용했습니다. 출처: https://finance.yahoo.com/quote/%5EGSPC, https://finance.yahoo.com/quote/%5EIXIC, https://finance.yahoo.com/quote/%5EDJI",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.29 23:16 KST",
+    "updated_at": "2026.03.29 23:16 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
