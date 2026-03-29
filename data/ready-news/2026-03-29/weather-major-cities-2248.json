@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-29",
+  "category": "weather",
+  "title": "[날씨] 남부 맑고 내륙 온화…대구 15°C, 인천 9°C",
+  "summary": "29일 22:48 KST 기준 대구 15°C로 가장 높고, 서울 13°C·대전/광주 11°C 수준입니다. 인천은 9°C로 비교적 낮으며 부산은 맑고 12°C입니다. 광주는 옅은 안개가 있습니다.",
+  "body": "2026-03-29 22:48 KST 기준. 영남권은 대구 15°C(체감 15°C, 맑음, 바람 7km/h), 부산 12°C(체감 12°C, 맑음, 바람 7km/h)로 비교적 온화합니다. 수도권은 서울 13°C(체감 13°C, 구름 조금, 바람 5km/h), 인천 9°C(체감 9°C, 맑음, 바람 5km/h)로 서해안이 더 쌀쌀합니다. 대전 11°C, 광주 11°C(옅은 안개)입니다. 생활 팁: 밤공기와 안개에 대비해 겉옷과 서행 운전을 권합니다.",
+  "sources": [
+    {
+      "name": "wttr.in",
+      "url": "https://wttr.in"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5",
+    "reporter_id": "weather-reporter",
+    "data_sources": [
+      {
+        "name": "wttr.in",
+        "url": "https://wttr.in"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.29 22:48 KST",
+    "updated_at": "2026.03.29 22:48 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
