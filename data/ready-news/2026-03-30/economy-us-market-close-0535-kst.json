@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-30",
+  "category": "economy",
+  "title": "[미국증시] 기술주 매도에 3대지수 하락",
+  "summary": "[미국증시] S&P500 6,368.85(-2.12%), 나스닥 20,948.36(-3.23%), 다우 45,166.64(-0.90%)로 동반 하락했습니다. 기술주 중심의 매도와 변동성지수 상승이 위험회피를 키웠고, 채권금리 상승·연준 발언 경계·경기 둔화 우려가 겹치며 분기말 차익실현 매물까지 더해졌고, 에너지·금융 등 경기민감주 약세와 달러 강세, 지정학 리스크 경계가 안전자산 선호를 높였으며, 시장은 다음 주 주요 지표와 실적 가이던스를 앞두고 포지션을 보수적으로 조정했습니다.",
+  "body": "[미국증시] S&P500 6,368.85(-2.12%), 나스닥 20,948.36(-3.23%), 다우 45,166.64(-0.90%)로 동반 하락했습니다. 기술주 중심의 매도와 변동성지수 상승이 위험회피를 키웠고, 채권금리 상승·연준 발언 경계·경기 둔화 우려가 겹치며 분기말 차익실현 매물까지 더해졌고, 에너지·금융 등 경기민감주 약세와 달러 강세, 지정학 리스크 경계가 안전자산 선호를 높였으며, 시장은 다음 주 주요 지표와 실적 가이던스를 앞두고 포지션을 보수적으로 조정했습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.30 05:35 KST",
+    "updated_at": "2026.03.30 05:35 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
