@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-30",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "[미국증시] S&P500 6,368.85(-2.12%), 나스닥 20,948.36(-3.23%), 다우 45,166.64(-0.90%)로 3대 지수 모두 하락 마감했습니다. 기술주 중심 매도와 장기금리 경계가 위험회피를 키웠고, 변동성 확대 속 차익실현과 포지션 조정이 겹쳤습니다. 연준 발언·주요 지표 대기를 앞둔 관망 심리가 확산되며 경기민감주와 금융·에너지도 약세를 보였고, 달러 강세와 원자재 변동성 부담 속에 시장 전반의 방어적 포지션이 강화됐습니다.",
+  "body": "[미국증시] S&P500 6,368.85(-2.12%), 나스닥 20,948.36(-3.23%), 다우 45,166.64(-0.90%)로 3대 지수 모두 하락 마감했습니다. 기술주 중심 매도와 장기금리 경계가 위험회피를 키웠고, 변동성 확대 속 차익실현과 포지션 조정이 겹쳤습니다. 연준 발언·주요 지표 대기를 앞둔 관망 심리가 확산되며 경기민감주와 금융·에너지도 약세를 보였고, 달러 강세와 원자재 변동성 부담 속에 시장 전반의 방어적 포지션이 강화됐습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.30 08:00 KST",
+    "updated_at": "2026.03.30 08:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
