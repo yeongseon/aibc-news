@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-30",
+  "category": "economy",
+  "title": "[미국증시] 3대 지수 동반 하락",
+  "summary": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 3대 지수가 동반 하락했습니다. 중동 긴장 고조와 유가 부담, 장기금리 고점 우려가 위험회피 심리를 키웠고 대형 기술주 약세가 낙폭을 키웠습니다. 달러 강세와 변동성 확대 속에 주말을 앞둔 차익실현, 다음 주 지표·연준 발언 경계, 경기 둔화 우려가 겹치며 금융·에너지 등 경기민감주까지 약세가 확산돼 투자심리도 위축됐습니다.",
+  "body": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 3대 지수가 동반 하락했습니다. 중동 긴장 고조와 유가 부담, 장기금리 고점 우려가 위험회피 심리를 키웠고 대형 기술주 약세가 낙폭을 키웠습니다. 달러 강세와 변동성 확대 속에 주말을 앞둔 차익실현, 다음 주 지표·연준 발언 경계, 경기 둔화 우려가 겹치며 금융·에너지 등 경기민감주까지 약세가 확산돼 투자심리도 위축됐습니다.",
+  "sources": [
+    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EGSPC"},
+    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EIXIC"},
+    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EDJI"},
+    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/m/f8793997-684f-3947-8c8c-598c37075c68/iran-accuses-us-of-plotting.html"}
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EGSPC"},
+      {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EIXIC"},
+      {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/%5EDJI"},
+      {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/m/f8793997-684f-3947-8c8c-598c37075c68/iran-accuses-us-of-plotting.html"}
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.30 04:08 KST",
+    "updated_at": "2026.03.30 04:08 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
