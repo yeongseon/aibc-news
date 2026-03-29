@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-30",
+  "category": "economy",
+  "title": "[미국증시] S&P500·나스닥·다우 동반 하락",
+  "summary": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 동반 하락했습니다. 기술주 약세와 변동성 확대가 위험회피를 자극했고, 달러 강세·국채금리 불확실성이 부담으로 작용했습니다. 에너지·경기민감주도 동반 약세를 보이며 반등이 제한됐습니다. 시장 전반에서 거래가 위축되며 방어주 선호가 상대적으로 강화됐습니다. 투자자들은 연준 인사 발언과 인플레이션 지표 발표를 주시하고 있습니다.",
+  "body": "S&P500 6,368.85(-1.67%), 나스닥 20,948.36(-2.15%), 다우 45,166.64(-1.73%)로 동반 하락했습니다. 기술주 약세와 변동성 확대가 위험회피를 자극했고, 달러 강세·국채금리 불확실성이 부담으로 작용했습니다. 에너지·경기민감주도 동반 약세를 보이며 반등이 제한됐습니다. 시장 전반에서 거래가 위축되며 방어주 선호가 상대적으로 강화됐습니다. 투자자들은 연준 인사 발언과 인플레이션 지표 발표를 주시하고 있습니다.",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    }
+  ],
+  "generation": {
+    "model": "gpt-5.2",
+    "reporter_id": "economy-reporter",
+    "data_sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      }
+    ]
+  },
+  "meta": {
+    "input_at": "2026.03.30 08:00 KST",
+    "updated_at": "2026.03.30 08:00 KST",
+    "author": "GPT-5.2"
+  },
+  "schema_version": "1.1"
+}
